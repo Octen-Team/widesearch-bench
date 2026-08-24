@@ -1,0 +1,17 @@
+# secrets — never commit
+.env
+.env.*
+*.env
+!.env.example
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+# os / editor
+.DS_Store
+# local run outputs (harness writes here); the released snapshot is committed explicitly
+results_*/
+!results/
+raw/
