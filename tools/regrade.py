@@ -1,25 +1,40 @@
 """Offline re-grade: score stored run traces against a specified gold file.
-No retrieval is re-run — reads answer_entities from grades and recomputes
-Entity-F1 against the given gold. Emits a grades jsonl + prints per-arm means.
+
+No retrieval is re-run — this reads `detail.answer_entities` out of a grades
+file and re-scores it, so you can check the published numbers, or score the same
+runs against a different gold (pooled vs strict).
+
+Scoring goes through the same `match_sets` greedy 1:1 matching the live harness
+uses in `grading.grade_t1`. An earlier version of this script counted gold
+entities that had any matching prediction, which let one prediction be credited
+against several gold entities; it disagreed with the harness on 21% of rows and
+scored every arm 0.05-0.07 too high. `detail.missed` / `detail.extra` are
+recomputed from the same match, so each row's detail agrees with its own score.
 
 Usage:
-  python tools/regrade.py --grades results/grades_expanded.jsonl \
-      --gold data/tasks.jsonl --out results/grades_regraded.jsonl
+  python tools/regrade.py --grades results/2026-08/grades_expanded.jsonl \\
+      --gold data/2026-08/tasks.jsonl --out /tmp/regraded.jsonl
 """
-import argparse, json, statistics as st
+import argparse
+import json
+import statistics as st
 from collections import defaultdict
-from widesearch_bench.normalize import entity_match
+
+from widesearch_bench.normalize import match_sets
 from widesearch_bench.schema import load_tasks
 
 
-def f1(pred, gold):
-    if not pred and not gold:
-        return 1.0, 1.0, 1.0
-    tp = sum(1 for g in gold if any(entity_match(p, g) for p in pred))
-    P = tp / len(pred) if pred else 0.0
-    R = tp / len(gold) if gold else 0.0
-    F = 2 * P * R / (P + R) if (P + R) else 0.0
-    return F, P, R
+def score(preds, golds):
+    """Return (f1, precision, recall, missed, extra) exactly as grade_t1 would."""
+    if not preds and not golds:
+        return 1.0, 1.0, 1.0, [], []
+    mg, mp = match_sets(preds, golds)
+    precision = len(mp) / len(preds) if preds else 0.0
+    recall = len(mg) / len(golds) if golds else 0.0
+    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) else 0.0
+    missed = [g.canonical for i, g in enumerate(golds) if i not in mg]
+    extra = [p for i, p in enumerate(preds) if i not in mp]
+    return f1, precision, recall, missed, extra
 
 
 def main():
@@ -28,20 +43,26 @@ def main():
     ap.add_argument("--gold", required=True)
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
+
     tasks = {t.id: t for t in load_tasks(a.gold)}
     per = defaultdict(list)
     out = []
-    for line in open(a.grades):
+    for line in open(a.grades, encoding="utf-8"):
         if not line.strip():
             continue
         r = json.loads(line)
-        tid = r["task_id"]
-        if tid not in tasks:
+        task = tasks.get(r["task_id"])
+        if task is None:
             continue
-        F, P, R = f1(r["detail"].get("answer_entities", []), tasks[tid].gold_entities)
-        r = dict(r); r["f1"], r["precision"], r["recall"] = round(F, 6), round(P, 6), round(R, 6)
-        out.append(r); per[r["arm"]].append(F)
-    with open(a.out, "w") as f:
+        preds = [p for p in r["detail"].get("answer_entities", []) if p and p.strip()]
+        f1, p, rc, missed, extra = score(preds, task.gold_entities)
+        r = dict(r)
+        r["f1"], r["precision"], r["recall"] = round(f1, 6), round(p, 6), round(rc, 6)
+        r["detail"] = {**r["detail"], "missed": missed, "extra": extra}
+        out.append(r)
+        per[r["arm"]].append(f1)
+
+    with open(a.out, "w", encoding="utf-8") as f:
         for r in out:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     print(f"regraded {len(out)} rows vs {a.gold} -> {a.out}")
