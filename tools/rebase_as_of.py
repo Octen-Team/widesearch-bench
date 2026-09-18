@@ -44,6 +44,18 @@ RULES = [
 ]
 HAS_DATE = re.compile(r"[Aa]s of|截至")
 
+# A question can also pin the snapshot as the END of an interval — "between
+# 2020-01-01 and 2026-07-23", "从2023年1月到2026年7月23日为止". Only the closing
+# bound moves; the opening bound is part of what the question asks.
+INTERVAL = [
+    (re.compile(r"(至|到)\s*20\d\d年\d{1,2}月\d{1,2}日"), rf"\g<1>{ZH_FULL}"),
+    (re.compile(r"(至|到)\s*20\d\d年\d{1,2}月底"), rf"\g<1>{Y}年{M}月底"),
+    (re.compile(r"(至|到)\s*20\d\d年\d{1,2}月"), rf"\g<1>{Y}年{M}月"),
+    (re.compile(r"(\band\s+|\bto\s+|\bup to\s+)20\d\d-\d{2}-\d{2}"), rf"\g<1>{ISO}"),
+    (re.compile(r"(\band\s+|\bto\s+|\bup to\s+)\d{1,2}\s+[A-Z][a-z]+\s+20\d\d"), rf"\g<1>{EN_LONG}"),
+    (re.compile(r"(\bup to\s+)mid-20\d\d"), rf"\g<1>{EN_MONTH}"),
+]
+
 rows = [json.loads(l) for l in open(path, encoding="utf-8") if l.strip()]
 rewritten = 0
 undated = []
@@ -55,6 +67,8 @@ for r in rows:
         if new_q2 != new_q:
             new_q = new_q2
             break
+    for pat, rep in INTERVAL:
+        new_q = pat.sub(rep, new_q)
     if new_q != q:
         r["question"] = new_q
         rewritten += 1
