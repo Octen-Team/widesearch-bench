@@ -79,7 +79,16 @@ def _subforms(s: str) -> tuple[set[str], set[str]]:
     if not raw:
         return prim, sec
     prim.add(raw)
-    prim.add(re.split(r"[\(（]", raw, maxsplit=1)[0].strip())
+    head = re.split(r"[\(（]", raw, maxsplit=1)[0].strip()
+    prim.add(head)
+    # "A / B" lists two names for the same entity (a rename, a JV partner, a
+    # network/brand pair). Each side is a primary form in its own right —
+    # without this the corporate-suffix stripper only fires on the trailing
+    # name, so "Sierra Nevada Corporation" never lines up with the gold
+    # "Sierra Nevada Corporation / Sierra Space".
+    for part in re.split(r"\s+/\s+", head):
+        if part.strip():
+            prim.add(part.strip())
     dash_parts = _DASH.split(raw, maxsplit=1)
     prim.add(dash_parts[0].strip())
     if len(dash_parts) > 1:                 # tail after "X — Y": Y is a candidate entity
@@ -155,10 +164,21 @@ def _token_contained(shorter: str, longer: str) -> bool:
         return False
     if len(st) == 1 and len(st[0]) < 5:
         return False
-    if len(st) / len(lt) < 0.5:
+    ratio = len(st) / len(lt)
+    # A mid-span match needs the halves to be comparable in length, so a short
+    # name can't be pulled out of a long unrelated phrase. An ANCHORED match is
+    # different evidence: when the shorter name is exactly how the longer one
+    # begins or ends, the longer is almost always the same entity described more
+    # fully ("Apollo 11" vs "Apollo 11 Passive Seismic Experiment"). Agent loops
+    # answer with those fuller forms far more often than a one-shot reader does,
+    # so a flat ratio floor silently penalises verbosity rather than error.
+    if ratio < 0.25:
         return False
     for i in range(len(lt) - len(st) + 1):
         if lt[i:i + len(st)] == st:
+            anchored = (i == 0 or i + len(st) == len(lt))
+            if ratio < 0.5 and not (anchored and len(st) >= 2):
+                continue
             nxt = lt[i + len(st)] if i + len(st) < len(lt) else ""
             if nxt and _VERSION_TOK.fullmatch(nxt):
                 continue  # version boundary — not the same entity
