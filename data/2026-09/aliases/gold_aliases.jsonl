@@ -1,0 +1,42 @@
+{"task_id": "ws-0028", "canonical": "北京月之暗面科技有限公司（Moonshot AI）", "aliases": ["Moonshot AI"]}
+{"task_id": "ws-0050", "canonical": "万事达卡 — 万事网联信息技术（北京）有限公司 (Mastercard, via 万事网联信息技术（北京）有限公司)", "aliases": ["Mastercard"]}
+{"task_id": "ws-0073", "canonical": "苏联/俄罗斯", "aliases": ["Russia", "Soviet Union", "USSR"]}
+{"task_id": "ws-0073", "canonical": "美国", "aliases": ["US", "USA", "United States", "United States of America"]}
+{"task_id": "ws-0073", "canonical": "法国", "aliases": ["France"]}
+{"task_id": "ws-0073", "canonical": "日本", "aliases": ["Japan"]}
+{"task_id": "ws-0073", "canonical": "英国", "aliases": ["Britain", "UK", "United Kingdom"]}
+{"task_id": "ws-0073", "canonical": "欧洲空间局(ESA)", "aliases": ["ESA", "European Space Agency"]}
+{"task_id": "ws-0073", "canonical": "印度", "aliases": ["India"]}
+{"task_id": "ws-0073", "canonical": "以色列", "aliases": ["Israel"]}
+{"task_id": "ws-0073", "canonical": "伊朗", "aliases": ["Iran"]}
+{"task_id": "ws-0142", "canonical": "苏联（俄罗斯国家航天集团/俄罗斯）", "aliases": ["Roscosmos", "Russia", "Soviet Union", "USSR"]}
+{"task_id": "ws-0142", "canonical": "中国（中国载人航天工程办公室）", "aliases": ["CMSA", "China", "China Manned Space Agency"]}
+{"task_id": "ws-0189", "canonical": "NFL Mobile (Verizon/NFL官方应用)", "aliases": ["NFL Mobile"]}
+{"task_id": "ws-0189", "canonical": "CBS官方应用/网站", "aliases": ["CBS"]}
+{"task_id": "ws-0189", "canonical": "Fox官方应用/网站", "aliases": ["FOX", "Fox"]}
+{"task_id": "ws-0189", "canonical": "Yahoo Sports应用", "aliases": ["Yahoo Sports"]}
+{"task_id": "ws-0220", "canonical": "Alibaba (Qwen / 阿里巴巴)", "aliases": ["Alibaba"]}
+{"task_id": "ws-0220", "canonical": "Moonshot AI (Kimi / 月之暗面)", "aliases": ["Moonshot AI"]}
+{"task_id": "ws-0220", "canonical": "Zhipu AI (GLM / 智谱AI)", "aliases": ["Z.ai", "Zhipu AI"]}
+{"task_id": "ws-0220", "canonical": "Tencent (Hunyuan / 腾讯混元)", "aliases": ["Tencent", "Tencent Hunyuan"]}
+{"task_id": "ws-0220", "canonical": "StepFun (阶跃星辰)", "aliases": ["StepFun"]}
+{"task_id": "ws-0252", "canonical": "Kimi K2", "aliases": ["Kimi-K2", "Kimi K2 Instruct", "moonshotai/Kimi-K2"]}
+{"task_id": "ws-0252", "canonical": "DeepSeek V3.1", "aliases": ["DeepSeek-V3.1"]}
+{"task_id": "ws-0252", "canonical": "Qwen3-235B", "aliases": ["Qwen 3 235B", "Qwen3 235B-A22B", "Qwen3-235B-A22B-Instruct-2507"]}
+{"task_id": "ws-0252", "canonical": "Llama 4 Maverick", "aliases": ["Llama-4 Maverick"]}
+{"task_id": "ws-0252", "canonical": "MiniMax-M1", "aliases": ["MiniMax M1"]}
+{"task_id": "ws-0252", "canonical": "GLM-4.5", "aliases": ["GLM 4.5", "zai GLM-4.5"]}
+{"task_id": "ws-0286", "canonical": "Jaywan", "aliases": ["Al Etihad Payments"]}
+{"task_id": "ws-0286", "canonical": "KNET", "aliases": ["K-Net", "KNet"]}
+{"task_id": "ws-0286", "canonical": "BENEFIT", "aliases": ["Benefit Company", "BENEFIT Company"]}
+{"task_id": "ws-0286", "canonical": "OmanNet", "aliases": ["Oman Net", "Oman national payment card", "OmanNet national card"]}
+{"task_id": "ws-0286", "canonical": "NAPS", "aliases": ["QPay", "Himyan", "National ATM and POS Switch"]}
+{"task_id": "ws-0296", "canonical": "Exa", "aliases": ["Exa AI", "exa.ai"]}
+{"task_id": "ws-0296", "canonical": "Tavily", "aliases": ["tavily.com"]}
+{"task_id": "ws-0296", "canonical": "Brave Search API", "aliases": ["Brave", "Brave Search"]}
+{"task_id": "ws-0296", "canonical": "Perplexity", "aliases": ["Perplexity Sonar", "Perplexity API"]}
+{"task_id": "ws-0296", "canonical": "Octen", "aliases": ["octen.ai"]}
+{"task_id": "ws-0296", "canonical": "Linkup", "aliases": ["linkup.so"]}
+{"task_id": "ws-0296", "canonical": "SerpApi", "aliases": ["SERP API"]}
+{"task_id": "ws-0296", "canonical": "You.com", "aliases": ["You API", "ydc"]}
+{"task_id": "ws-0296", "canonical": "秘塔搜索 (Metaso)", "aliases": ["Metaso"]}
