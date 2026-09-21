@@ -46,8 +46,8 @@ def summarize(rows):
         ci = np.percentile(x[rng.integers(0, len(x), size=(10000, len(x)))].mean(axis=1), [2.5, 97.5])
         entry = {k: statistics.mean(r[k] for r in ar) for k in ('f1', 'precision', 'recall')}
         entry.update(n=len(ar), successes=len(ok), failures=len(ar)-len(ok), ci=list(ci))
-        for key in ['api_calls', 'downstream_tokens', 'e2e_time_s', 'http_requests']:
-            values = [r['detail'].get(key) if key == 'e2e_time_s' else r.get(key) for r in ok]
+        for key in ['api_calls', 'n_queries', 'downstream_tokens', 'e2e_time_s', 'source_diversity', 'http_requests']:
+            values = [r['detail'].get(key) if key in {'e2e_time_s', 'n_queries'} else r.get(key) for r in ok]
             known = [v for v in values if v is not None]
             entry[key] = statistics.mean(known) if known else None
             entry[key + '_n'] = len(known)
@@ -83,16 +83,22 @@ def build():
                    missing_query_traces=sum(r['detail'].get('subqueries') is None for r in rows),
                    recorded_tokens=sum(r['downstream_tokens'] or 0 for r in rows))
     emit('results/summary.json', json.dumps(summary,ensure_ascii=False,indent=2))
-    lines = ['| Configuration | Pooled F1 | Strict F1 | Precision | Recall | E2E s | Recorded LLM tokens |',
-             '|---|---:|---:|---:|---:|---:|---:|']
+    lines = ['Pooled references:', '',
+             '| Configuration | F1 | Precision | Recall | API calls | Searches | Tokens | E2E (s) | Source domains |',
+             '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
     for arm,s in stats.items():
-        lines.append(f"| {LABEL[arm]} | {s['f1']:.4f} | {strict_stats[arm]['f1']:.4f} | {s['precision']:.4f} | {s['recall']:.4f} | {s['e2e_time_s']:.2f} | {s['downstream_tokens']:,.0f} |")
+        lines.append(f"| {LABEL[arm]} | {s['f1']:.4f} | {s['precision']:.4f} | {s['recall']:.4f} | {s['api_calls']:.2f} | {s['n_queries']:.2f} | {s['downstream_tokens']:,.0f} | {s['e2e_time_s']:.2f} | {s['source_diversity']:.2f} |")
+    lines += ['', '<details>', '<summary>Strict reference scores</summary>', '',
+              '| Configuration | F1 | Precision | Recall |', '|---|---:|---:|---:|']
+    for arm,s in strict_stats.items():
+        lines.append(f"| {LABEL[arm]} | {s['f1']:.4f} | {s['precision']:.4f} | {s['recall']:.4f} |")
+    lines += ['', '</details>']
     best = max(stats, key=lambda a: stats[a]['f1'])
     if (best == max(strict_stats, key=lambda a: strict_stats[a]['f1'])
             and best == min(stats, key=lambda a: stats[a]['e2e_time_s'])
             and best == min(stats, key=lambda a: stats[a]['downstream_tokens'])):
         lines += ['', f"On this dataset, {LABEL[best]} has the highest mean Entity-F1 against both reference sets and the lowest recorded mean latency and downstream-token usage."]
-    lines += ['', f'F1 averages all {len(gold)} tasks; latency and token means use completed runs. Precision and recall use pooled references.']
+    lines += ['', f'Quality metrics average all {len(gold)} tasks; other columns average completed runs. API calls count logical retrieval invocations; searches count recorded subqueries/search actions. Tokens are recorded downstream LLM usage; source domains count distinct retrieved domains per run.']
     block='\n'.join(lines)
     emit('results/RESULTS.md', '# Results\n\n'+block+'\n\n[All pairwise comparisons](PAIRED_STATS.md) · [Configuration and measurements](../data/PROVENANCE.md)')
     emit('results/PAIRED_STATS.md','# Paired Entity-F1 comparisons\n\nBootstrap 95% intervals and two-sided sign-flip permutation tests; 10,000 samples, seed '+str(SEED)+'. Holm correction covers all six arm pairs separately within each gold variant. No significant difference does not establish equivalence.\n\n## Pooled gold\n\n'+table(paired)+'\n\n## Strict gold\n\n'+table(paired_strict))
@@ -105,7 +111,8 @@ def build():
                               f1=r['f1'],precision=r['precision'],recall=r['recall'],
                               missed=r['detail']['missed'],extra=r['detail']['extra'],
                               error=r['detail'].get('error'),subqueries=r['detail'].get('subqueries'),
-                              http_requests=r.get('http_requests'),n_real_queries=r['detail']['n_queries'],
+                              http_requests=r.get('http_requests'),api_calls=r.get('api_calls'),
+                              n_real_queries=r['detail']['n_queries'],source_diversity=r['source_diversity'],
                               e2e_time_s=r['detail']['e2e_time_s'],downstream_tokens=r['downstream_tokens'])
                                 for r in sorted(rows,key=lambda r:r['arm']) if r['task_id']==tid}))
     emit('results/cases.jsonl','\n'.join(json.dumps(r,ensure_ascii=False) for r in cases))

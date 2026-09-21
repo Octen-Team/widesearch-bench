@@ -12,6 +12,6 @@ The recorded Octen client could retry successful responses containing fewer than
 
 ## Metrics
 
-Entity-F1, precision and recall average all 313 task attempts per configuration. Terminal errors score zero. Latency and recorded downstream-token means use completed runs; denominators are in [summary.json](../results/summary.json). Logical call counts represent orchestration invocations or agent search actions, not HTTP attempts. Downstream tokens exclude provider-internal work; historical JSON-retry usage may be incomplete. Unavailable measurements are `null`.
+Entity-F1, precision and recall average all 313 task attempts per configuration. Terminal errors score zero. The other table columns average completed runs; denominators are in [summary.json](../results/summary.json). API calls count logical retrieval invocations, not HTTP attempts. Searches count recorded broad-search subqueries or issued agent search actions. Source domains count distinct domains among retrieved URLs per run, regardless of whether they support a correct answer. Downstream tokens exclude provider-internal work; historical JSON-retry usage may be incomplete. Unavailable measurements are `null`.
 
 The same stored answers are scored against pooled and strict references. Paired bootstrap intervals and sign-flip tests use 10,000 samples and seed 20260810; Holm correction covers all six pairs separately for each reference set. These comparisons describe the tested configurations on this dataset.
