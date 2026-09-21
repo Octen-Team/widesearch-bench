@@ -1,30 +1,11 @@
 # Changelog
 
-Because public benchmark questions can enter future training data, this is a
-**time-stamped evaluation snapshot**, not an evergreen set — pin the release when
-reporting.
-
 ## 2026.09
 
-First public release.
+Dated reference questions with `as_of` 2026-09-18 and four recorded search configurations. Pooled and strict gold, stored answers, run failures and generated comparisons are included.
 
-- **313 multi-entity T1 questions**, `as_of` 2026-09-18, bilingual (EN / ZH).
-  Every question is verified to require retrieval width by a mechanical
-  fake-fanout filter.
-- Two gold variants: `data/tasks.jsonl` (pooled, TREC-style dual-source +
-  dual-model consensus, 2,003 entities) and `data/tasks_strict.jsonl`
-  (precision-oriented, non-pooled). Alias tables in `data/aliases/`.
-- Reference run (`results/`, 1,252 runs, 0 errors): one Octen `broad_search` vs.
-  Exa-instant / Tavily-ultrafast / Parallel-turbo agent loops under an identical
-  `gpt-5-mini` reader, grounding prompt, grader, and search budget (8 searches
-  x 5 results). No snippet truncation in any arm: each vendor's excerpt is
-  passed through at its default length, and each arm's answering model receives
-  all of the evidence that arm retrieved.
-- Grading is a zero-LLM Entity-F1 with Unicode / alias / version-aware and
-  cross-language matching; significance via paired bootstrap + permutation with
-  Holm correction (`results/PAIRED_STATS.md`).
-- **Summary:** broad_search reaches the highest Entity-F1 (0.5688) and recall
-  (0.6138) of the four. Against Parallel (0.5154) and Exa (0.5284) the gap is
-  significant after Holm correction; against Tavily (0.5542) it is not — those
-  two are a statistical tie on quality. Cost is not close: 1 API call instead of
-  6.0-6.7, 20.8K tokens instead of 70-87K, 10.2s instead of 32-36s.
+Entity identity uses reviewed per-question decisions; distinct languages, model variants, services and award categories remain separate. The scorer preserves distinguishing symbols and requires explicit aliases for identity beyond narrow presentation suffixes.
+
+Quality includes every attempted run. Cost means use successful attempts with reported denominators. Historical missing telemetry is marked unknown. Current instrumentation records HTTP attempts per task and queries for every agent configuration.
+
+Reports and the figure derive from the stored answers and current gold. All configurations receive equal visual emphasis; paired testing covers all six pairs in each gold variant. See `data/PROVENANCE.md` for evidence gaps and the scope of identity corrections. Pin the commit when citing: changes to gold or matching can change scores without a new retrieval run.

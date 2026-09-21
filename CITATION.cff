@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "WideSearch-Bench: Isolating How Retrieval Width Is Delivered"
+title: "WideSearch-Bench: Multi-entity Web Search Configurations"
 message: "If you use this benchmark, please cite it and pin the version."
 authors:
   - name: Octen

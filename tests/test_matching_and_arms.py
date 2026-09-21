@@ -183,4 +183,4 @@ if __name__ == "__main__":
     for n, f in sorted(globals().items()):
         if n.startswith("test_"):
             f(); print(f"PASS {n}")
-    print("p0.5 tests passed")
+    print("matching and arm tests passed")

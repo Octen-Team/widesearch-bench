@@ -15,6 +15,7 @@ import os
 from typing import Optional
 
 import httpx
+from .telemetry import record_request
 
 from .octen_client import SearchHit
 
@@ -24,6 +25,7 @@ _TIMEOUT = 45.0
 async def exa_search(query: str, count: int = 10) -> list[SearchHit]:
     key = os.environ["EXA_API_KEY"]
     async with httpx.AsyncClient(timeout=_TIMEOUT) as c:
+        record_request()
         r = await c.post("https://api.exa.ai/search",
                          headers={"x-api-key": key, "Content-Type": "application/json"},
                          json={"query": query[:500], "numResults": max(1, min(count, 100)),
@@ -43,6 +45,7 @@ async def exa_search(query: str, count: int = 10) -> list[SearchHit]:
 async def tavily_search(query: str, count: int = 10) -> list[SearchHit]:
     key = os.environ["TAVILY_API_KEY"]
     async with httpx.AsyncClient(timeout=_TIMEOUT) as c:
+        record_request()
         r = await c.post("https://api.tavily.com/search",
                          headers={"Authorization": f"Bearer {key}",
                                   "Content-Type": "application/json"},
@@ -62,6 +65,7 @@ async def brave_search(query: str, count: int = 10) -> list[SearchHit]:
     # 422 otherwise. Truncate to the limit (a Brave limitation, noted in report).
     q = " ".join(query.split()[:50])[:390]
     async with httpx.AsyncClient(timeout=_TIMEOUT) as c:
+        record_request()
         r = await c.get("https://api.search.brave.com/res/v1/web/search",
                         headers={"X-Subscription-Token": key,
                                  "Accept": "application/json"},
@@ -81,9 +85,10 @@ async def brave_search(query: str, count: int = 10) -> list[SearchHit]:
 
 
 async def exa_instant_search(query: str, count: int = 10) -> list[SearchHit]:
-    """Exa 'instant' tier (type=instant, highlights) — per Octen search-eval repo."""
+    """Exa 'instant' tier with highlights."""
     key = os.environ["EXA_API_KEY"]
     async with httpx.AsyncClient(timeout=_TIMEOUT) as c:
+        record_request()
         r = await c.post("https://api.exa.ai/search",
                          headers={"x-api-key": key, "Content-Type": "application/json"},
                          json={"query": query[:500], "numResults": max(1, min(count, 100)),
@@ -100,9 +105,10 @@ async def exa_instant_search(query: str, count: int = 10) -> list[SearchHit]:
 
 
 async def tavily_ultrafast_search(query: str, count: int = 10) -> list[SearchHit]:
-    """Tavily 'ultra-fast' search depth — per Octen search-eval repo."""
+    """Tavily 'ultra-fast' search depth; retain the requested top hits."""
     key = os.environ["TAVILY_API_KEY"]
     async with httpx.AsyncClient(timeout=_TIMEOUT) as c:
+        record_request()
         r = await c.post("https://api.tavily.com/search",
                          json={"api_key": key, "query": query[:400],
                                "max_results": min(max(count * 2, count + 5), 20),
@@ -119,9 +125,10 @@ async def tavily_ultrafast_search(query: str, count: int = 10) -> list[SearchHit
 
 
 async def parallel_turbo_search(query: str, count: int = 10) -> list[SearchHit]:
-    """Parallel 'turbo' mode — per Octen search-eval repo."""
+    """Parallel 'turbo' mode with excerpts."""
     key = os.environ["PARALLEL_API_KEY"]
     async with httpx.AsyncClient(timeout=_TIMEOUT) as c:
+        record_request()
         r = await c.post("https://api.parallel.ai/v1/search",
                          headers={"x-api-key": key, "Content-Type": "application/json"},
                          json={"objective": query[:400], "search_queries": [query[:400]],

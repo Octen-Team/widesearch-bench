@@ -8,9 +8,8 @@ Normalization pipeline (order matters):
 5. corporate suffix strip (inc, ltd, corp, and CJK equivalents ...) — optional, on by default
 
 Matching: a predicted string matches a GoldEntity if its normalized form equals
-the normalized form of ANY alias (canonical included), or if one strictly
-contains the other at token level with length ratio >= 0.6 (handles
-"OpenAI GPT-4o" vs "GPT-4o" without letting "AI" match "OpenAI").
+the normalized form of ANY alias (canonical included), including presentation
+variants described below. Arbitrary substring containment is not identity.
 """
 from __future__ import annotations
 
@@ -31,6 +30,8 @@ _SUFFIXES = (
 def normalize(s: str, strip_suffix: bool = True) -> str:
     s = unicodedata.normalize("NFKC", s)
     s = s.casefold()
+    # Programming-language and product-name symbols distinguish identities.
+    s = s.replace("+", " plus ").replace("#", " sharp ")
     s = _PUNCT.sub(" ", s)
     s = _WS.sub(" ", s).strip()
     if strip_suffix:
@@ -64,8 +65,8 @@ _DASH = re.compile(r"\s[‐-―\-]\s|\s[—–]|[—–]")
 def _subforms(s: str) -> tuple[set[str], set[str]]:
     """Return (primary, secondary) normalized sub-forms.
 
-    primary   = full string, head-before-paren, head-before-appositive-dash.
-                These may participate in loose token-containment.
+    primary   = full string and string with parenthetical descriptions removed,
+                preserving identity qualifiers that follow the parentheses.
     secondary = parenthetical contents AND the tail after an appositive dash
                 (often a brand/generic alt, a per-market label, or the entity
                 itself in a "Country — Scheme" listing). These match ONLY by
@@ -79,7 +80,7 @@ def _subforms(s: str) -> tuple[set[str], set[str]]:
     if not raw:
         return prim, sec
     prim.add(raw)
-    head = re.split(r"[\(（]", raw, maxsplit=1)[0].strip()
+    head = _PAREN.sub(" ", raw).strip()
     prim.add(head)
     # "A / B" lists two names for the same entity (a rename, a JV partner, a
     # network/brand pair). Each side is a primary form in its own right —
@@ -90,7 +91,8 @@ def _subforms(s: str) -> tuple[set[str], set[str]]:
         if part.strip():
             prim.add(part.strip())
     dash_parts = _DASH.split(raw, maxsplit=1)
-    prim.add(dash_parts[0].strip())
+    # An appositive head alone can be a family name (e.g. a prize),
+    # so do not manufacture an alias by discarding its category.
     if len(dash_parts) > 1:                 # tail after "X — Y": Y is a candidate entity
         sec.add(dash_parts[1].strip())
     for m in _PAREN.findall(raw):
@@ -105,6 +107,22 @@ def _subforms(s: str) -> tuple[set[str], set[str]]:
 
 def entity_match(pred: str, gold: GoldEntity) -> bool:
     p_prim, p_sec = _subforms(pred)
+    # Answers may append explanatory prose. Strip it only on the prediction
+    # side; stripping gold would turn category-specific awards into a family.
+    parts = _DASH.split(pred, maxsplit=1)
+    head = parts[0].strip()
+    # Strip a prose explanation, not a short model/category qualifier.
+    descriptive = len(parts) > 1 and bool(re.search(
+        r"\b(reached|launched|operated|governed|inaugural|founded|introduced|released|"
+        r"began|withdrawn|shut down|first orbital success)\b|"
+        r"已获|获批|获准|获得|正式推出|开始运营|成立于|发射于",
+        parts[1], re.I))
+    if len(parts) > 1 and re.match(r"^(pro|max|air|plus|extreme|ultra|tv)\b", parts[1].strip(), re.I):
+        descriptive = False
+    if descriptive:
+        a, b = _subforms(head)
+        p_prim |= a
+        p_sec |= b
     if not (p_prim or p_sec):
         return False
     g_prim: set[str] = set()
@@ -141,61 +159,17 @@ def entity_match(pred: str, gold: GoldEntity) -> bool:
     return False
 
 
-# After normalization, dots split ("K2.5" -> "k2 5"), so a version suffix is a
-# pure digit run or v<digits> token right after the matched span.
-_VERSION_TOK = re.compile(r"v?\d+")
-
-# A trailing "in X" / "for X" narrows a name to one member of a family, the same
-# way a version suffix does: "Nobel Prize" is not "Nobel Prize in Chemistry" any
-# more than "Kimi K2" is "Kimi K2.5". Without this the generic name matches every
-# sibling, so an answer that never named the specific award still scores.
-_QUALIFIER_TOK = {"in", "for", "of", "at"}
-
-
 def _token_contained(shorter: str, longer: str) -> bool:
-    """Token-level containment with guards.
+    """Allow only explicit presentation suffixes, never arbitrary containment.
 
-    Match iff the shorter string's tokens appear as a contiguous subsequence
-    of the longer's tokens, AND the shorter side is substantive:
-    >= 2 tokens, or a single token of >= 5 chars. Plus token-count ratio
-    >= 0.5 so a 2-token name can't match a 10-token sentence.
-    Blocks: 'ai' vs 'openai' (not token-boundary), 'k2' vs 'kimi k2'
-    (1 token, 2 chars). Allows: 'kimi k2' vs 'kimi k2 moonshot'.
-
-    Version-aware guard: a version-style token (digits or v<digits>)
-    immediately after the matched span marks a DIFFERENT release
-    ('kimi k2 5' i.e. K2.5 must not match 'kimi k2'); such forms only match
-    when present verbatim in the alias table (exact equality fires before
-    containment in entity_match). Non-version suffixes ('... series',
-    '... instruct') still match.
+    A substring does not establish entity identity: Node.js Foundation differs
+    from JS Foundation, and model suffixes such as Pro/Max/Air are significant.
+    Other equivalent surface forms must be recorded as reviewed aliases.
     """
     st, lt = shorter.split(), longer.split()
-    if not st or len(st) > len(lt):
+    if len(st) < 2 or lt[:len(st)] != st:
         return False
-    if len(st) == 1 and len(st[0]) < 5:
-        return False
-    ratio = len(st) / len(lt)
-    # A mid-span match needs the halves to be comparable in length, so a short
-    # name can't be pulled out of a long unrelated phrase. An ANCHORED match is
-    # different evidence: when the shorter name is exactly how the longer one
-    # begins or ends, the longer is almost always the same entity described more
-    # fully ("Apollo 11" vs "Apollo 11 Passive Seismic Experiment"). Agent loops
-    # answer with those fuller forms far more often than a one-shot reader does,
-    # so a flat ratio floor silently penalises verbosity rather than error.
-    if ratio < 0.25:
-        return False
-    for i in range(len(lt) - len(st) + 1):
-        if lt[i:i + len(st)] == st:
-            anchored = (i == 0 or i + len(st) == len(lt))
-            if ratio < 0.5 and not (anchored and len(st) >= 2):
-                continue
-            nxt = lt[i + len(st)] if i + len(st) < len(lt) else ""
-            if nxt and _VERSION_TOK.fullmatch(nxt):
-                continue  # version boundary — not the same entity
-            if nxt in _QUALIFIER_TOK:
-                continue  # the longer side is narrowed to one of a family
-            return True
-    return False
+    return lt[len(st):] in (["series"], ["model"], ["instruct"])
 
 
 def match_sets(preds: list[str], golds: list[GoldEntity]) -> tuple[set[int], set[int]]:

@@ -1,0 +1,299 @@
+{
+  "arms": {
+    "exa-instant-agent": {
+      "f1": 0.483548482428115,
+      "precision": 0.4725901501597444,
+      "recall": 0.5484117859424921,
+      "n": 313,
+      "successes": 311,
+      "failures": 2,
+      "ci": [
+        0.4497735520766773,
+        0.5177307583067093
+      ],
+      "api_calls": 6.051446945337621,
+      "api_calls_n": 311,
+      "downstream_tokens": 88031.08360128617,
+      "downstream_tokens_n": 311,
+      "e2e_time_s": 32.46992926045016,
+      "e2e_time_s_n": 311,
+      "http_requests": null,
+      "http_requests_n": 0
+    },
+    "octen-broad-search": {
+      "f1": 0.5427862907348243,
+      "precision": 0.5709294984025559,
+      "recall": 0.5848580191693291,
+      "n": 313,
+      "successes": 312,
+      "failures": 1,
+      "ci": [
+        0.5142816231629393,
+        0.5710292877795526
+      ],
+      "api_calls": 1,
+      "api_calls_n": 312,
+      "downstream_tokens": 20910.69871794872,
+      "downstream_tokens_n": 312,
+      "e2e_time_s": 10.196407051282051,
+      "e2e_time_s_n": 312,
+      "http_requests": null,
+      "http_requests_n": 0
+    },
+    "parallel-turbo-agent": {
+      "f1": 0.463197124600639,
+      "precision": 0.4620227412140575,
+      "recall": 0.5204088626198083,
+      "n": 313,
+      "successes": 311,
+      "failures": 2,
+      "ci": [
+        0.4304879377795527,
+        0.49519628290734824
+      ],
+      "api_calls": 6.456591639871383,
+      "api_calls_n": 311,
+      "downstream_tokens": 70510.5884244373,
+      "downstream_tokens_n": 311,
+      "e2e_time_s": 34.394720257234724,
+      "e2e_time_s_n": 311,
+      "http_requests": null,
+      "http_requests_n": 0
+    },
+    "tavily-ultrafast-agent": {
+      "f1": 0.49203221405750797,
+      "precision": 0.5038754057507987,
+      "recall": 0.5316197635782748,
+      "n": 313,
+      "successes": 313,
+      "failures": 0,
+      "ci": [
+        0.4597018949680511,
+        0.5253797146964856
+      ],
+      "api_calls": 6.722044728434505,
+      "api_calls_n": 313,
+      "downstream_tokens": 83551.51118210863,
+      "downstream_tokens_n": 313,
+      "e2e_time_s": 35.62755591054313,
+      "e2e_time_s_n": 313,
+      "http_requests": null,
+      "http_requests_n": 0
+    }
+  },
+  "strict_arms": {
+    "exa-instant-agent": {
+      "f1": 0.4542114249201278,
+      "precision": 0.4218237444089457,
+      "recall": 0.5506547763578274,
+      "n": 313,
+      "successes": 311,
+      "failures": 2,
+      "ci": [
+        0.4202986693290735,
+        0.4881339348242812
+      ],
+      "api_calls": 6.051446945337621,
+      "api_calls_n": 311,
+      "downstream_tokens": 88031.08360128617,
+      "downstream_tokens_n": 311,
+      "e2e_time_s": 32.46992926045016,
+      "e2e_time_s_n": 311,
+      "http_requests": null,
+      "http_requests_n": 0
+    },
+    "octen-broad-search": {
+      "f1": 0.5341680127795527,
+      "precision": 0.5351993482428115,
+      "recall": 0.6124278913738019,
+      "n": 313,
+      "successes": 312,
+      "failures": 1,
+      "ci": [
+        0.5051449932108627,
+        0.5629731290734824
+      ],
+      "api_calls": 1,
+      "api_calls_n": 312,
+      "downstream_tokens": 20910.69871794872,
+      "downstream_tokens_n": 312,
+      "e2e_time_s": 10.196407051282051,
+      "e2e_time_s_n": 312,
+      "http_requests": null,
+      "http_requests_n": 0
+    },
+    "parallel-turbo-agent": {
+      "f1": 0.43612641853035145,
+      "precision": 0.41296138658146964,
+      "recall": 0.524986980830671,
+      "n": 313,
+      "successes": 311,
+      "failures": 2,
+      "ci": [
+        0.4040576065495208,
+        0.468128494888179
+      ],
+      "api_calls": 6.456591639871383,
+      "api_calls_n": 311,
+      "downstream_tokens": 70510.5884244373,
+      "downstream_tokens_n": 311,
+      "e2e_time_s": 34.394720257234724,
+      "e2e_time_s_n": 311,
+      "http_requests": null,
+      "http_requests_n": 0
+    },
+    "tavily-ultrafast-agent": {
+      "f1": 0.4654778402555911,
+      "precision": 0.453706054313099,
+      "recall": 0.5335825207667731,
+      "n": 313,
+      "successes": 313,
+      "failures": 0,
+      "ci": [
+        0.43341150559105435,
+        0.49829074193290734
+      ],
+      "api_calls": 6.722044728434505,
+      "api_calls_n": 313,
+      "downstream_tokens": 83551.51118210863,
+      "downstream_tokens_n": 313,
+      "e2e_time_s": 35.62755591054313,
+      "e2e_time_s_n": 313,
+      "http_requests": null,
+      "http_requests_n": 0
+    }
+  },
+  "comparisons": [
+    {
+      "a": "exa-instant-agent",
+      "b": "octen-broad-search",
+      "n": 313,
+      "delta": -0.05923780830670927,
+      "lo": -0.08777460079872204,
+      "hi": -0.029961820527156548,
+      "p": 9.999000099990002e-05,
+      "p_holm": 0.0005999400059994001
+    },
+    {
+      "a": "exa-instant-agent",
+      "b": "parallel-turbo-agent",
+      "n": 313,
+      "delta": 0.02035135782747604,
+      "lo": -0.005525699281150157,
+      "hi": 0.04644547907348243,
+      "p": 0.126987301269873,
+      "p_holm": 0.253974602539746
+    },
+    {
+      "a": "exa-instant-agent",
+      "b": "tavily-ultrafast-agent",
+      "n": 313,
+      "delta": -0.008483731629392973,
+      "lo": -0.03302349488817891,
+      "hi": 0.015454977635782739,
+      "p": 0.48765123487651235,
+      "p_holm": 0.48765123487651235
+    },
+    {
+      "a": "octen-broad-search",
+      "b": "parallel-turbo-agent",
+      "n": 313,
+      "delta": 0.0795891661341853,
+      "lo": 0.05040342779552715,
+      "hi": 0.10956290151757188,
+      "p": 9.999000099990002e-05,
+      "p_holm": 0.0005999400059994001
+    },
+    {
+      "a": "octen-broad-search",
+      "b": "tavily-ultrafast-agent",
+      "n": 313,
+      "delta": 0.050754076677316295,
+      "lo": 0.0219689071086262,
+      "hi": 0.07974644145367413,
+      "p": 0.0007999200079992001,
+      "p_holm": 0.0031996800319968005
+    },
+    {
+      "a": "parallel-turbo-agent",
+      "b": "tavily-ultrafast-agent",
+      "n": 313,
+      "delta": -0.02883508945686901,
+      "lo": -0.05704197811501598,
+      "hi": -0.0007268645367412247,
+      "p": 0.0453954604539546,
+      "p_holm": 0.1361863813618638
+    }
+  ],
+  "strict_comparisons": [
+    {
+      "a": "exa-instant-agent",
+      "b": "octen-broad-search",
+      "n": 313,
+      "delta": -0.07995658785942492,
+      "lo": -0.10779945191693291,
+      "hi": -0.05131444872204474,
+      "p": 9.999000099990002e-05,
+      "p_holm": 0.0005999400059994001
+    },
+    {
+      "a": "exa-instant-agent",
+      "b": "parallel-turbo-agent",
+      "n": 313,
+      "delta": 0.018085006389776358,
+      "lo": -0.007473391373801918,
+      "hi": 0.04444511022364215,
+      "p": 0.17528247175282471,
+      "p_holm": 0.35056494350564943
+    },
+    {
+      "a": "exa-instant-agent",
+      "b": "tavily-ultrafast-agent",
+      "n": 313,
+      "delta": -0.011266415335463263,
+      "lo": -0.03557368466453674,
+      "hi": 0.012462180351437693,
+      "p": 0.35326467353264673,
+      "p_holm": 0.35326467353264673
+    },
+    {
+      "a": "octen-broad-search",
+      "b": "parallel-turbo-agent",
+      "n": 313,
+      "delta": 0.09804159424920128,
+      "lo": 0.06857258857827475,
+      "hi": 0.12720567523961662,
+      "p": 9.999000099990002e-05,
+      "p_holm": 0.0005999400059994001
+    },
+    {
+      "a": "octen-broad-search",
+      "b": "tavily-ultrafast-agent",
+      "n": 313,
+      "delta": 0.06869017252396167,
+      "lo": 0.03952029416932907,
+      "hi": 0.09681118857827473,
+      "p": 9.999000099990002e-05,
+      "p_holm": 0.0005999400059994001
+    },
+    {
+      "a": "parallel-turbo-agent",
+      "b": "tavily-ultrafast-agent",
+      "n": 313,
+      "delta": -0.029351421725239614,
+      "lo": -0.058229567891373804,
+      "hi": -0.0008654526357827514,
+      "p": 0.045495450454954504,
+      "p_holm": 0.1364863513648635
+    }
+  ],
+  "quality_policy": "all attempts; errors score zero",
+  "cost_policy": "successful attempts only; denominator stored for each metric",
+  "tasks": 313,
+  "pooled_entities": 1828,
+  "strict_entities": 1577,
+  "errors": 5,
+  "missing_http_attempt_counts": 1252,
+  "missing_query_traces": 939,
+  "recorded_tokens": 81982221
+}

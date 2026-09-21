@@ -1,0 +1,3403 @@
+{
+  "scope": "Entity identity corrections only. These decisions do not re-verify eligibility, dates or source evidence. Applied separately to pooled and strict inputs; no pooled-only members copied to strict.",
+  "decisions": [
+    {
+      "task_id": "ws-0002",
+      "action": "merge",
+      "canonical": "SpaceX (Space Exploration Technologies)",
+      "members": [
+        "SpaceX (Space Exploration Technologies)",
+        "SpaceX"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0004",
+      "action": "merge",
+      "canonical": "Seattle Kraken (NHL, began play 2021)",
+      "members": [
+        "Seattle Kraken",
+        "Seattle",
+        "Seattle Kraken (NHL, began play 2021)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0004",
+      "action": "merge",
+      "canonical": "San Diego FC (MLS) — began play 2025",
+      "members": [
+        "San Diego FC",
+        "San Diego FC (MLS) — began play 2025"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0010",
+      "action": "merge",
+      "canonical": "AliveCor KardiaBand (EKG-capable Apple Watch band)",
+      "members": [
+        "AliveCor KardiaBand",
+        "AliveCor KardiaBand (EKG-capable Apple Watch band)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0014",
+      "action": "merge",
+      "canonical": "Showtime (standalone streaming app) — shut down April 30, 2024",
+      "members": [
+        "Showtime (standalone app)",
+        "Showtime (standalone streaming app) — shut down April 30, 2024"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0024",
+      "action": "merge",
+      "canonical": "NVIDIA RTX A6000 / RTX A6000 48GB (48 GB GDDR6)",
+      "members": [
+        "NVIDIA RTX A6000",
+        "NVIDIA RTX A6000 / RTX A6000 48GB (48 GB GDDR6)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0025",
+      "action": "merge",
+      "canonical": "Apple (ECG app / irregular rhythm notification — DEN180044)",
+      "members": [
+        "Apple (Apple Watch)",
+        "Apple",
+        "Apple (ECG app / irregular rhythm notification — DEN180044)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0025",
+      "action": "merge",
+      "canonical": "Fitbit (Sense, Pixel Watch via Google)",
+      "members": [
+        "Fitbit (Sense, Pixel Watch via Google)",
+        "Fitbit (ECG-enabled models)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0025",
+      "action": "merge",
+      "canonical": "Withings (ScanWatch — FDA clearance)",
+      "members": [
+        "Withings",
+        "Withings (ScanWatch — FDA clearance)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0031",
+      "action": "merge",
+      "canonical": "SpaceX Falcon 9 (maiden flight 2010)",
+      "members": [
+        "Falcon 9",
+        "SpaceX Falcon 9 (maiden flight 2010)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0033",
+      "action": "merge",
+      "canonical": "Voyager 1 (flybys: Jupiter, Saturn, Titan)",
+      "members": [
+        "Voyager 1",
+        "Voyager 1 (flybys: Jupiter, Saturn, Titan)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0037",
+      "action": "merge",
+      "canonical": "Apollo 11 (Passive Seismic Experiment)",
+      "members": [
+        "Apollo 11",
+        "Apollo 11 (Passive Seismic Experiment)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0037",
+      "action": "merge",
+      "canonical": "Apollo 12 (Passive Seismic Experiment)",
+      "members": [
+        "Apollo 12",
+        "Apollo 12 (Passive Seismic Experiment)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0037",
+      "action": "merge",
+      "canonical": "Apollo 14 (lunar seismometer / ALSEP)",
+      "members": [
+        "Apollo 14",
+        "Apollo 14 (lunar seismometer / ALSEP)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0037",
+      "action": "merge",
+      "canonical": "Apollo 16 (Passive Seismic Experiment)",
+      "members": [
+        "Apollo 16",
+        "Apollo 16 (Passive Seismic Experiment)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0042",
+      "action": "merge",
+      "canonical": "Seattle Kraken (NHL) — inaugural regular season 2021–22",
+      "members": [
+        "Seattle Kraken",
+        "Seattle Kraken (NHL) — inaugural regular season 2021–22"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0042",
+      "action": "merge",
+      "canonical": "San Diego FC (MLS) — 2025 was the club's first MLS season (sources indicate 2025 inaugural season)",
+      "members": [
+        "San Diego FC",
+        "San Diego FC (MLS) — inaugural regular season 2025",
+        "San Diego FC (MLS) — 2025 was the club's first MLS season (sources indicate 2025 inaugural season)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0043",
+      "action": "merge",
+      "canonical": "ESO Very Large Telescope (VLT) — instruments cited: SPHERE, NACO",
+      "members": [
+        "Very Large Telescope (VLT, SPHERE)",
+        "Very Large Telescope (ESO VLT — NaCo, SPHERE)",
+        "ESO Very Large Telescope (VLT) — instruments cited: SPHERE, NACO",
+        "Very Large Telescope (VLT; e.g., NaCo)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0043",
+      "action": "merge",
+      "canonical": "Subaru Telescope (HiCIAO / SCExAO / CHARIS)",
+      "members": [
+        "Subaru Telescope (SCExAO)",
+        "Subaru Telescope (HiCIAO / SCExAO / CHARIS)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0052",
+      "action": "merge",
+      "canonical": "Orlando City SC — Inter&Co Stadium (formerly Orlando City/Exploria Stadium)",
+      "members": [
+        "Inter&Co Stadium",
+        "Orlando City SC — Inter&Co Stadium (formerly Orlando City/Exploria Stadium)",
+        "Orlando City — Inter&Co Stadium (Inter.co Stadium)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0054",
+      "action": "merge",
+      "canonical": "Valkey (Redis fork) — governed under the Linux Foundation",
+      "members": [
+        "Valkey",
+        "Valkey (Redis fork) — governed under the Linux Foundation"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0054",
+      "action": "merge",
+      "canonical": "OpenTofu (fork of HashiCorp Terraform) — governed under the Linux Foundation",
+      "members": [
+        "OpenTofu",
+        "OpenTofu (fork of HashiCorp Terraform) — governed under the Linux Foundation"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0061",
+      "action": "merge",
+      "canonical": "Utah Hockey Club (Utah Mammoth)",
+      "members": [
+        "Utah Hockey Club (Utah Mammoth)",
+        "Utah Mammoth"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0061",
+      "action": "merge",
+      "canonical": "San Diego FC (MLS, 2025 inaugural season)",
+      "members": [
+        "San Diego FC",
+        "San Diego FC (MLS, 2025 inaugural season)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0066",
+      "action": "merge",
+      "canonical": "Angel City FC (NWSL, inaugural season 2022)",
+      "members": [
+        "Angel City FC (NWSL, inaugural season 2022)",
+        "Angel City FC (NWSL, inaugural 2022)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0068",
+      "action": "merge",
+      "canonical": "OpenAI (Sora via ChatGPT)",
+      "members": [
+        "OpenAI (Sora 2)",
+        "OpenAI (Sora via ChatGPT)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0068",
+      "action": "merge",
+      "canonical": "Runway (Runway Research / RunwayML) - Gen-2 text-to-video",
+      "members": [
+        "Runway",
+        "Runway (RunwayML / Runway Research)",
+        "Runway (Runway ML Gen-2)",
+        "Runway (Runway Research / RunwayML) - Gen-2 text-to-video"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0068",
+      "action": "merge",
+      "canonical": "Synthesia (Synthesia text-to-video AI video platform)",
+      "members": [
+        "Synthesia (text-to-video / presenter/avatar videos)",
+        "Synthesia (Synthesia text-to-video AI video platform)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0080",
+      "action": "merge",
+      "canonical": "Las Vegas metropolitan area (Vegas Golden Knights — NHL expansion 2017; sources state they were the city's first major professional sports team)",
+      "members": [
+        "Las Vegas",
+        "Las Vegas metropolitan area (Vegas Golden Knights — NHL expansion 2017; sources state they were the city's first major professional sports team)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0085",
+      "action": "merge",
+      "canonical": "Marriage Story (Criterion Collection Blu-ray release)",
+      "members": [
+        "Marriage Story",
+        "Marriage Story (Criterion Collection Blu-ray release)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0087",
+      "action": "merge",
+      "canonical": "San Diego FC / San Diego (MLS, began play 2025)",
+      "members": [
+        "San Diego FC (MLS, 2025)",
+        "San Diego FC / San Diego (MLS, began play 2025)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0087",
+      "action": "merge",
+      "canonical": "Austin FC (MLS, began play 2021)",
+      "members": [
+        "Austin FC (MLS, began play 2021)",
+        "Austin FC"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0087",
+      "action": "merge",
+      "canonical": "St. Louis CITY SC (MLS, began play 2023)",
+      "members": [
+        "St. Louis City SC (MLS, 2023)",
+        "St. Louis CITY SC (MLS, began play 2023)",
+        "St. Louis City SC"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0087",
+      "action": "merge",
+      "canonical": "Charlotte FC (MLS, began play 2022)",
+      "members": [
+        "Charlotte FC (MLS, began play 2022)",
+        "Charlotte FC (MLS, 2022)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0093",
+      "action": "merge",
+      "canonical": "NVIDIA H100 (HBM3 on-package, incl. H100 NVL variants)",
+      "members": [
+        "NVIDIA H100 (HBM3 on-package, incl. H100 NVL variants)",
+        "NVIDIA H100 (SXM form‑factor with HBM3 on-package)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0097",
+      "action": "merge",
+      "canonical": "Seattle Kraken (NHL, inaugural 2021–22)",
+      "members": [
+        "Seattle Kraken",
+        "Seattle Kraken (NHL, inaugural 2021–22)",
+        "Seattle Kraken (NHL, debuted 2021-22)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0097",
+      "action": "merge",
+      "canonical": "Austin FC (MLS, inaugural 2021)",
+      "members": [
+        "Austin FC",
+        "Austin FC (MLS, inaugural 2021)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0097",
+      "action": "merge",
+      "canonical": "Charlotte FC (MLS, inaugural 2022)",
+      "members": [
+        "Charlotte FC",
+        "Charlotte FC (MLS, inaugural 2022)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0100",
+      "action": "merge",
+      "canonical": "Google (search case)",
+      "members": [
+        "Google",
+        "Google (search case)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0108",
+      "action": "merge",
+      "canonical": "Microsoft Azure China (operated by 21Vianet)",
+      "members": [
+        "Microsoft Azure China (operated by 21Vianet)",
+        "Microsoft Azure (operated by 21Vianet)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0108",
+      "action": "merge",
+      "canonical": "Amazon Web Services (AWS) — China (Beijing) and China (Ningxia) regions (operated locally, e.g., Sinnet/NWCD)",
+      "members": [
+        "Amazon Web Services (AWS) — China (Beijing) and China (Ningxia) regions (operated locally, e.g., Sinnet/NWCD)",
+        "Amazon Web Services (AWS) — China regions operated by Sinnet and NWCD",
+        "Amazon Web Services (AWS) — AWS China (Beijing) operated by Sinnet and AWS China (Ningxia) operated by NWCD"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0109",
+      "action": "merge",
+      "canonical": "Oxlumo (lumasiran)",
+      "members": [
+        "Oxlumo (lumasiran)",
+        "lumasiran (OXLUMO)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0109",
+      "action": "merge",
+      "canonical": "Amvuttra (vutrisiran)",
+      "members": [
+        "Amvuttra (vutrisiran)",
+        "vutrisiran (AMVUTTRA)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0111",
+      "action": "merge",
+      "canonical": "Jaeger (originally developed at Uber)",
+      "members": [
+        "Jaeger (created by Uber Engineering)",
+        "Jaeger (originally developed at Uber)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0118",
+      "action": "merge",
+      "canonical": "Los Angeles FC / LAFC (MLS, inaugural 2018)",
+      "members": [
+        "Los Angeles FC",
+        "Los Angeles FC / LAFC (MLS, inaugural 2018)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0118",
+      "action": "merge",
+      "canonical": "Austin FC (MLS, inaugural 2021)",
+      "members": [
+        "Austin FC",
+        "Austin FC (MLS, inaugural 2021)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0123",
+      "action": "merge",
+      "canonical": "Viking 2 (seismometer deployed and records obtained)",
+      "members": [
+        "Viking 2",
+        "Viking 2 (seismometer deployed and records obtained)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0127",
+      "action": "merge",
+      "canonical": "Meta (Meta AI)",
+      "members": [
+        "Meta (Meta AI)",
+        "Meta"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0130",
+      "action": "merge",
+      "canonical": "Porsche Taycan",
+      "members": [
+        "Porsche Taycan",
+        "Porsche Taycan Turbo GT (with Manthey Kit)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0131",
+      "action": "merge",
+      "canonical": "Node.js (Node.js Foundation -> OpenJS Foundation)",
+      "members": [
+        "Node.js",
+        "Node.js (Node.js Foundation -> OpenJS Foundation)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0137",
+      "action": "merge",
+      "canonical": "NVIDIA (BlueField DPUs / SmartNICs)",
+      "members": [
+        "NVIDIA",
+        "NVIDIA (BlueField DPUs / SmartNICs)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0143",
+      "action": "merge",
+      "canonical": "NVIDIA A40 (48 GB, PCIe)",
+      "members": [
+        "NVIDIA A40",
+        "NVIDIA A40 (48 GB, PCIe)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0147",
+      "action": "merge",
+      "canonical": "Boston Legacy (NWSL) — inaugural season 2026",
+      "members": [
+        "Boston Legacy FC",
+        "Boston Legacy (NWSL) — inaugural season 2026"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0147",
+      "action": "merge",
+      "canonical": "PWHL Vancouver (PWHL) — inaugural season 2025–26",
+      "members": [
+        "PWHL Vancouver (PWHL, inaugural 2025–26)",
+        "PWHL Vancouver — inaugural 2025–26",
+        "PWHL Vancouver (PWHL) — inaugural season 2025–26"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0148",
+      "action": "merge",
+      "canonical": "Technology Innovation Institute (UAE) — Falcon 40B (Apache 2.0)",
+      "members": [
+        "Technology Innovation Institute (UAE) — Falcon 40B (Apache 2.0)",
+        "Technology Innovation Institute (TII)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0154",
+      "action": "merge",
+      "canonical": "NVIDIA (data‑center GPUs)",
+      "members": [
+        "NVIDIA",
+        "NVIDIA (data‑center GPUs)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0158",
+      "action": "merge",
+      "canonical": "European Commission (Directorate‑General for Competition)",
+      "members": [
+        "European Commission",
+        "European Commission (Directorate‑General for Competition)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0159",
+      "action": "exclude",
+      "members": [
+        "Breakthrough Prize (USD $3 million per prize)"
+      ],
+      "reason": "The surface form does not identify the category, version or service requested by this question."
+    },
+    {
+      "task_id": "ws-0159",
+      "action": "exclude",
+      "members": [
+        "Shaw Prize (US$1.2 million per prize)"
+      ],
+      "reason": "The surface form does not identify the category, version or service requested by this question."
+    },
+    {
+      "task_id": "ws-0159",
+      "action": "merge",
+      "canonical": "Breakthrough Prize in Fundamental Physics",
+      "members": [
+        "Breakthrough Prize in Fundamental Physics",
+        "Breakthrough Prize — Fundamental Physics"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0159",
+      "action": "merge",
+      "canonical": "Breakthrough Prize in Mathematics",
+      "members": [
+        "Breakthrough Prize in Mathematics",
+        "Breakthrough Prize — Mathematics (each winner receives $3 million)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0159",
+      "action": "merge",
+      "canonical": "Shaw Prize in Astronomy",
+      "members": [
+        "Shaw Prize – Astronomy (≈ $1.2 million per prize)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0159",
+      "action": "merge",
+      "canonical": "Shaw Prize in Life Science & Medicine",
+      "members": [
+        "Shaw Prize – Life Science & Medicine (≈ $1.2 million per prize)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0159",
+      "action": "merge",
+      "canonical": "Shaw Prize in Mathematical Sciences",
+      "members": [
+        "Shaw Prize – Mathematical Sciences (≈ $1.2 million per prize)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "merge",
+      "canonical": "Apple A17 Pro",
+      "members": [
+        "Apple A17 Pro",
+        "Apple A17 Pro (A17 Pro Bionic)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0167",
+      "action": "merge",
+      "canonical": "reSET",
+      "members": [
+        "reSET",
+        "Pear Therapeutics reSET",
+        "FDA-cleared prescription digital therapeutic for substance use disorder (reSET)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0168",
+      "action": "merge",
+      "canonical": "Google Cloud — Jakarta region",
+      "members": [
+        "Google Cloud Platform (GCP)",
+        "Google Cloud — Jakarta region"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0169",
+      "action": "merge",
+      "canonical": "Paxos (Paxos National Trust)",
+      "members": [
+        "Paxos",
+        "Paxos (Paxos National Trust)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0169",
+      "action": "merge",
+      "canonical": "Anchorage / Anchorage Trust/Anchorage Digital (Anchorage)",
+      "members": [
+        "Anchorage (Anchorage Trust Company / Anchorage Digital)",
+        "Anchorage / Anchorage Trust/Anchorage Digital (Anchorage)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0169",
+      "action": "merge",
+      "canonical": "Bridge Ventures / Bridge (Stripe) – application for national trust bank",
+      "members": [
+        "Stripe (Bridge National Trust Bank)",
+        "Bridge Ventures / Bridge (Stripe) – application for national trust bank"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0170",
+      "action": "merge",
+      "canonical": "Lucifer (picked up by Netflix after Fox cancellation)",
+      "members": [
+        "Lucifer",
+        "Lucifer (picked up by Netflix after Fox cancellation)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0173",
+      "action": "merge",
+      "canonical": "Rosalind Franklin Young Investigator Award (Genetics Society of America, funded by The Gruber Foundation)",
+      "members": [
+        "Rosalind Franklin Young Investigator Award (Genetics Society of America, funded by The Gruber Foundation)",
+        "Rosalind Franklin Young Investigator Award (Gruber Foundation)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0183",
+      "action": "merge",
+      "canonical": "YouTube TV (NFL Sunday Ticket)",
+      "members": [
+        "YouTube TV (NFL Sunday Ticket)",
+        "YouTube TV"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0189",
+      "action": "merge",
+      "canonical": "Tubi (Fox streamed Super Bowl LIX via Tubi)",
+      "members": [
+        "Tubi (streamed Super Bowl LIX)",
+        "Tubi (Fox streamed Super Bowl LIX via Tubi)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0194",
+      "action": "merge",
+      "canonical": "Cassini (Cosmic Dust Analyzer, CDA)",
+      "members": [
+        "Cassini",
+        "Cassini (Cosmic Dust Analyzer, CDA)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0194",
+      "action": "merge",
+      "canonical": "New Horizons (Venetia Burney Student Dust Counter)",
+      "members": [
+        "New Horizons",
+        "New Horizons (Venetia Burney Student Dust Counter)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "merge",
+      "canonical": "Amazon Web Services (AWS) — Africa (Cape Town) region (af-south-1) generally available (Now Open – AWS Africa (Cape Town) Region)",
+      "members": [
+        "Amazon Web Services (AWS)",
+        "Amazon Web Services (AWS) — Africa (Cape Town) region (af-south-1) generally available (Now Open – AWS Africa (Cape Town) Region)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "merge",
+      "canonical": "Microsoft Azure — South Africa regions (Cape Town and Johannesburg) generally available (Microsoft announcement: general availability of Microsoft Azure from new cloud regions in Cape Town and Johannesburg)",
+      "members": [
+        "Microsoft Azure",
+        "Microsoft Azure — South Africa regions (Cape Town and Johannesburg) generally available (Microsoft announcement: general availability of Microsoft Azure from new cloud regions in Cape Town and Johannesburg)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "merge",
+      "canonical": "Google Cloud — South Africa (Johannesburg) region generally available (New Google Cloud region now open in Johannesburg)",
+      "members": [
+        "Google Cloud",
+        "Google Cloud — South Africa (Johannesburg) region generally available (New Google Cloud region now open in Johannesburg)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "merge",
+      "canonical": "Oracle Cloud — South Africa (Johannesburg) region generally available (Oracle Opens First Cloud Region in Africa — Johannesburg)",
+      "members": [
+        "Oracle Cloud Infrastructure (OCI)",
+        "Oracle Cloud — South Africa (Johannesburg) region generally available (Oracle Opens First Cloud Region in Africa — Johannesburg)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0205",
+      "action": "merge",
+      "canonical": "GitHub Actions (GitHub-hosted macOS runners)",
+      "members": [
+        "GitHub Actions (GitHub-hosted macOS runners)",
+        "GitHub Actions (GitHub-hosted runners)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0209",
+      "action": "merge",
+      "canonical": "U.S. Department of Energy (including the U.S. nuclear weapons agency)",
+      "members": [
+        "U.S. Department of Energy",
+        "U.S. Department of Energy (including the U.S. nuclear weapons agency)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0211",
+      "action": "merge",
+      "canonical": "VT Halter Marine (United States)",
+      "members": [
+        "Halter Marine Inc",
+        "VT Halter Marine (United States)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0215",
+      "action": "merge",
+      "canonical": "Meta (Llama 3.3 70B - open weights on Hugging Face)",
+      "members": [
+        "Meta AI (Meta)",
+        "Meta (Llama 3.3 70B - open weights on Hugging Face)",
+        "Meta (Llama 2 70B)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0215",
+      "action": "merge",
+      "canonical": "BigScience (BLOOM — 176B weights available on Hugging Face)",
+      "members": [
+        "BigScience (BLOOM — 176B weights available on Hugging Face)",
+        "BigScience (BigScience / BigScience workshop consortium)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0222",
+      "action": "merge",
+      "canonical": "Canada (ISED: decision and RSS-248 for RLANs operating in 5925–7125 MHz)",
+      "members": [
+        "Canada",
+        "Canada (ISED: decision and RSS-248 for RLANs operating in 5925–7125 MHz)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0223",
+      "action": "merge",
+      "canonical": "U.S. Department of Commerce (including the National Telecommunications and Information Administration)",
+      "members": [
+        "U.S. Department of Commerce (including the National Telecommunications and Information Administration)",
+        "U.S. Department of Commerce"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0224",
+      "action": "merge",
+      "canonical": "Anthropic (founded 2021) — closed an up-to-$4 billion private investment with Amazon (reported Sept 2023)",
+      "members": [
+        "Anthropic",
+        "Anthropic (founded 2021) — closed an up-to-$4 billion private investment with Amazon (reported Sept 2023)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0225",
+      "action": "merge",
+      "canonical": "Amazon Prime Video",
+      "members": [
+        "Amazon Prime Video",
+        "Amazon Prime Video with Ads"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0225",
+      "action": "merge",
+      "canonical": "Peacock",
+      "members": [
+        "Peacock Premium",
+        "Peacock Premium Plus"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0227",
+      "action": "merge",
+      "canonical": "CATL (Germany operations — European cell factory/mass production)",
+      "members": [
+        "CATL",
+        "CATL (Germany operations — European cell factory/mass production)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0227",
+      "action": "merge",
+      "canonical": "Automotive Cells Company (ACC) (Douvrin/Billy‑Berclau, France)",
+      "members": [
+        "ACC (Automotive Cells Company)",
+        "Automotive Cells Company (ACC) (Douvrin/Billy‑Berclau, France)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0234",
+      "action": "merge",
+      "canonical": "BlackSuit (aka Royal)",
+      "members": [
+        "BlackSuit",
+        "BlackSuit (aka Royal)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0235",
+      "action": "merge",
+      "canonical": "Hydroxyurea (trade names: Droxia, Siklos)",
+      "members": [
+        "Hydroxyurea (Siklos)",
+        "Hydroxyurea (trade names: Droxia, Siklos)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0235",
+      "action": "merge",
+      "canonical": "Oxbryta (voxelotor) — withdrawn 2024",
+      "members": [
+        "Oxbryta (voxelotor) — withdrawn 2024",
+        "voxelotor (Oxbryta)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0235",
+      "action": "merge",
+      "canonical": "Lyfgenia (lovotibeglogene autotemcel)",
+      "members": [
+        "Lyfgenia (lovotibeglogene autotemcel)",
+        "Lyfgenia (gene therapy)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0237",
+      "action": "merge",
+      "canonical": "OpenID Foundation — OpenID for Verifiable Presentations 1.0 (Final specification approved / published 10 July 2025)",
+      "members": [
+        "OpenID Foundation — OpenID for Verifiable Presentations 1.0 (Final Specification, Jul 2025)",
+        "OpenID Foundation — OpenID for Verifiable Presentations 1.0 (Final specification approved / published 10 July 2025)",
+        "OpenID Foundation — OpenID for Verifiable Presentations 1.0 (OpenID Final Specification / approved 1.0)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0237",
+      "action": "merge",
+      "canonical": "W3C — Verifiable Credentials Data Model 1.0 (W3C Recommendation, 19 Nov 2019)",
+      "members": [
+        "W3C — Verifiable Credentials Data Model 1.0 (W3C Recommendation, 2019)",
+        "W3C — Verifiable Credentials Data Model 1.0 (W3C Recommendation, 19 Nov 2019)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0242",
+      "action": "merge",
+      "canonical": "Seattle Kraken (NHL) — began play in the 2021–22 NHL season",
+      "members": [
+        "Seattle Kraken",
+        "Seattle Kraken (NHL) — began play 2021–22",
+        "Seattle Kraken (NHL) — began play in the 2021–22 NHL season"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0242",
+      "action": "merge",
+      "canonical": "Charlotte FC (MLS) — began MLS play in 2022",
+      "members": [
+        "Charlotte FC",
+        "Charlotte FC (MLS) — began MLS play in 2022"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0242",
+      "action": "merge",
+      "canonical": "San Diego FC (MLS) — began play 2025",
+      "members": [
+        "San Diego FC",
+        "San Diego FC (MLS) — began play 2025"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0243",
+      "action": "merge",
+      "canonical": "Galactic Energy (Ceres-1 first reached orbit Nov 7, 2020)",
+      "members": [
+        "Galactic Energy",
+        "Galactic Energy (Ceres-1 first reached orbit Nov 7, 2020)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0243",
+      "action": "merge",
+      "canonical": "Astra (Astra Space)",
+      "members": [
+        "Astra",
+        "Astra (Astra Space)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "SWAP (Solar Wind at Pluto)",
+      "members": [
+        "SWAP (Solar Wind at Pluto)",
+        "Solar Wind at Pluto (SWAP)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "Venetia Burney Student Dust Counter (SDC)",
+      "members": [
+        "Venetia Burney Student Dust Counter (SDC)",
+        "SDC (Student Dust Counter)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "JADE (Jovian Auroral Distributions Experiment)",
+      "members": [
+        "JADE (Jovian Auroral Distributions Experiment)",
+        "JADE"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "OTES (OSIRIS‑REx Thermal Emission Spectrometer)",
+      "members": [
+        "OTES (OSIRIS‑REx Thermal Emission Spectrometer)",
+        "OTES"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "JEDI (Jupiter Energetic Particle Detector Instrument)",
+      "members": [
+        "JEDI (Jupiter Energetic Particle Detector Instrument)",
+        "JEDI"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "OLA (OSIRIS‑REx Laser Altimeter)",
+      "members": [
+        "OLA (OSIRIS‑REx Laser Altimeter)",
+        "OLA"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "UVS / UVS (Ultraviolet Spectrograph)",
+      "members": [
+        "UVS / UVS (Ultraviolet Spectrograph)",
+        "UVS (Juno-UVS)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "REXIS (Regolith X‑ray Imaging Spectrometer)",
+      "members": [
+        "REXIS (Regolith X‑ray Imaging Spectrometer)",
+        "REXIS"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "OCAMS — MapCam",
+      "members": [
+        "OCAMS — MapCam",
+        "MapCam"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0244",
+      "action": "merge",
+      "canonical": "JIRAM (Jovian Infrared Auroral Mapper)",
+      "members": [
+        "JIRAM (Jovian Infrared Auroral Mapper)",
+        "JIRAM"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0245",
+      "action": "merge",
+      "canonical": "SpaceX (Falcon 1)",
+      "members": [
+        "SpaceX",
+        "SpaceX (Falcon 1)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0246",
+      "action": "merge",
+      "canonical": "Austin FC (MLS, targeted/entered inaugural season 2021)",
+      "members": [
+        "Austin FC (MLS, targeted/entered inaugural season 2021)",
+        "Austin FC"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0248",
+      "action": "merge",
+      "canonical": "ACE (Advanced Composition Explorer)",
+      "members": [
+        "ACE (Advanced Composition Explorer)",
+        "ACE"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0250",
+      "action": "merge",
+      "canonical": "Amazon (AWS)",
+      "members": [
+        "Amazon (AWS)",
+        "AWS"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0250",
+      "action": "merge",
+      "canonical": "Google (Gemini for Government / Google Cloud)",
+      "members": [
+        "Google",
+        "Google (Gemini for Government / Google Cloud)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0253",
+      "action": "merge",
+      "canonical": "Ada",
+      "members": [
+        "Ada",
+        "Ada (ISO/IEC 8652)",
+        "Ada (ISO/IEC 8652:2023)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0253",
+      "action": "merge",
+      "canonical": "C",
+      "members": [
+        "C",
+        "C (ISO/IEC 9899)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0253",
+      "action": "merge",
+      "canonical": "C++",
+      "members": [
+        "C++",
+        "C++ (ISO/IEC 14882)",
+        "C++ (ISO/IEC 14882:2024)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0258",
+      "action": "merge",
+      "canonical": "EndeavorRx",
+      "members": [
+        "EndeavorRx",
+        "EndeavorRx (AKL-T01) — Akili Interactive — FDA marketing authorization (De Novo, DEN200026) — Permitted for marketing June 15, 2020",
+        "EndeavorRx (Akili) — De Novo marketing authorization for a game-based digital therapeutic for ADHD"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0258",
+      "action": "merge",
+      "canonical": "reSET",
+      "members": [
+        "reSET",
+        "reSET (Pear Therapeutics) — De Novo marketing authorization for substance use disorder",
+        "reSET (Pear Therapeutics) - De Novo authorization (DEN160018)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0258",
+      "action": "merge",
+      "canonical": "Somryst",
+      "members": [
+        "Somryst",
+        "Somryst (Pear Therapeutics) - FDA authorization (press releases)",
+        "Somryst (Pear Therapeutics) — FDA authorization/clearance (510(k)) for chronic insomnia"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0258",
+      "action": "merge",
+      "canonical": "Luminopia One",
+      "members": [
+        "Luminopia One — De Novo DEN210005 (2021/2022)",
+        "Luminopia One — De Novo (DEN210005)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0259",
+      "action": "exclude",
+      "members": [
+        "Matter"
+      ],
+      "reason": "The surface form does not identify the category, version or service requested by this question."
+    },
+    {
+      "task_id": "ws-0259",
+      "action": "merge",
+      "canonical": "Matter 1.4",
+      "members": [
+        "Matter (Connectivity Standards Alliance) Core Specification version 1.4 (published 2024-11-04)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0262",
+      "action": "merge",
+      "canonical": "Austin FC (MLS) — inaugural season 2021",
+      "members": [
+        "Austin FC",
+        "Austin FC (MLS) — inaugural season 2021"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0262",
+      "action": "merge",
+      "canonical": "Charlotte FC (MLS, inaugural 2022)",
+      "members": [
+        "Charlotte FC",
+        "Charlotte FC (MLS, inaugural 2022)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0263",
+      "action": "merge",
+      "canonical": "SOHO (Solar and Heliospheric Observatory)",
+      "members": [
+        "SOHO",
+        "SOHO (Solar and Heliospheric Observatory)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0270",
+      "action": "merge",
+      "canonical": "Microsoft Azure — Brazil South (São Paulo)",
+      "members": [
+        "Microsoft Azure",
+        "Microsoft Azure — Brazil South (São Paulo)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0274",
+      "action": "merge",
+      "canonical": "Samsung Galaxy Watch family (ECG/Irregular Rhythm/ECG App — e.g., Galaxy Watch3, Watch Active2)",
+      "members": [
+        "Samsung Galaxy Watch",
+        "Samsung Galaxy Watch family (ECG/Irregular Rhythm/ECG App — e.g., Galaxy Watch3, Watch Active2)",
+        "Samsung Galaxy Watch (Samsung ECG Monitor Application with Irregular Heart Rhythm Notification)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0274",
+      "action": "merge",
+      "canonical": "Fitbit (Fitbit ECG App — e.g., Fitbit Sense family)",
+      "members": [
+        "Fitbit Sense",
+        "Fitbit (Fitbit ECG App — e.g., Fitbit Sense family)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0275",
+      "action": "merge",
+      "canonical": "SpaceX (private, United States)",
+      "members": [
+        "SpaceX",
+        "SpaceX (private, United States)",
+        "SpaceX (Crew Dragon)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0283",
+      "action": "merge",
+      "canonical": "Microsoft Azure — South Africa North (Johannesburg) and South Africa West (Cape Town)",
+      "members": [
+        "Microsoft Azure",
+        "Microsoft Azure — South Africa (Johannesburg and Cape Town) regions",
+        "Microsoft Azure — South Africa North (Johannesburg) and South Africa West (Cape Town)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0283",
+      "action": "merge",
+      "canonical": "Google Cloud — Johannesburg region (South Africa)",
+      "members": [
+        "Google Cloud",
+        "Google Cloud — Johannesburg region (South Africa)",
+        "Google Cloud — South Africa (Johannesburg) region"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0285",
+      "action": "merge",
+      "canonical": "Amazon Web Services (AWS) — Middle East (UAE) Region (me-central-1), launched Aug 29, 2022",
+      "members": [
+        "Amazon Web Services (AWS)",
+        "Amazon Web Services (AWS) — Middle East (UAE) Region (now open, Dubai)",
+        "Amazon Web Services (AWS) — Middle East (UAE) Region (me-central-1), launched Aug 29, 2022"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0285",
+      "action": "merge",
+      "canonical": "Oracle Cloud — Abu Dhabi region (Oracle Cloud Abu Dhabi Region, live)",
+      "members": [
+        "Oracle Cloud Infrastructure (OCI)",
+        "Oracle Cloud — Abu Dhabi region (Oracle Cloud Abu Dhabi Region, live)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0286",
+      "action": "merge",
+      "canonical": "Oman — Maal",
+      "members": [
+        "Oman — Maal",
+        "Maal (Oman)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0295",
+      "action": "merge",
+      "canonical": "TiKV (CNCF)",
+      "members": [
+        "TiKV",
+        "TiKV (CNCF)"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0298",
+      "action": "exclude",
+      "members": [
+        "YouTube (Sunday Ticket via YouTube Primetime Channels / YouTube TV)"
+      ],
+      "reason": "The surface form does not identify the category, version or service requested by this question."
+    },
+    {
+      "task_id": "ws-0298",
+      "action": "merge",
+      "canonical": "YouTube TV (NFL Sunday Ticket)",
+      "members": [
+        "YouTube TV (with NFL Sunday Ticket add-on)",
+        "YouTube TV"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0307",
+      "action": "merge",
+      "canonical": "Solar Orbiter",
+      "members": [
+        "Solar Orbiter / EUI",
+        "Solar Orbiter / SPICE"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0307",
+      "action": "merge",
+      "canonical": "SOHO",
+      "members": [
+        "SOHO / EIT",
+        "SOHO / SUMER"
+      ],
+      "reason": "Reviewed at the entity granularity requested by the question; descriptive surface forms refer to one answer entity."
+    },
+    {
+      "task_id": "ws-0037",
+      "action": "merge",
+      "canonical": "InSight",
+      "members": [
+        "InSight Mars lander",
+        "Mars InSight SEIS (Seismic Experiment for Interior Structure)",
+        "InSight (SEIS seismometer)",
+        "InSight (SEIS on Mars)"
+      ],
+      "reason": "The question counts a mission, therapy, payment scheme or phone model; these names explicitly identify that same entity."
+    },
+    {
+      "task_id": "ws-0167",
+      "action": "merge",
+      "canonical": "NightWare",
+      "members": [
+        "NightWare",
+        "NightWare (NightWare Therapeutics)"
+      ],
+      "reason": "The question counts a mission, therapy, payment scheme or phone model; these names explicitly identify that same entity."
+    },
+    {
+      "task_id": "ws-0167",
+      "action": "merge",
+      "canonical": "AspyreRx",
+      "members": [
+        "AspyreRx",
+        "Better Therapeutics AspyreRx for type 2 diabetes"
+      ],
+      "reason": "The question counts a mission, therapy, payment scheme or phone model; these names explicitly identify that same entity."
+    },
+    {
+      "task_id": "ws-0167",
+      "action": "merge",
+      "canonical": "Stanza",
+      "members": [
+        "Stanza",
+        "Swing Therapeutics Stanza for fibromyalgia"
+      ],
+      "reason": "The question counts a mission, therapy, payment scheme or phone model; these names explicitly identify that same entity."
+    },
+    {
+      "task_id": "ws-0235",
+      "action": "merge",
+      "canonical": "Endari (L-glutamine oral powder)",
+      "members": [
+        "Endari (L-glutamine oral powder)",
+        "L-glutamine"
+      ],
+      "reason": "The question counts a mission, therapy, payment scheme or phone model; these names explicitly identify that same entity."
+    },
+    {
+      "task_id": "ws-0286",
+      "action": "merge",
+      "canonical": "NAPS",
+      "members": [
+        "NAPS",
+        "Qatar — NAPS (National ATM & POS Switch)"
+      ],
+      "reason": "The question counts a mission, therapy, payment scheme or phone model; these names explicitly identify that same entity."
+    },
+    {
+      "task_id": "ws-0294",
+      "action": "merge",
+      "canonical": "iPhone 15 Pro Max",
+      "members": [
+        "iPhone 15 Pro Max",
+        "Apple iPhone 15 Pro Max (A17 Pro, TSMC 3nm)"
+      ],
+      "reason": "The question counts a mission, therapy, payment scheme or phone model; these names explicitly identify that same entity."
+    },
+    {
+      "task_id": "ws-0002",
+      "action": "aliases",
+      "canonical": "Boeing",
+      "members": [],
+      "aliases": [
+        "The Boeing Company"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0004",
+      "action": "aliases",
+      "canonical": "Boston Legacy FC",
+      "members": [],
+      "aliases": [
+        "Boston Legacy"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0004",
+      "action": "aliases",
+      "canonical": "Denver Summit FC",
+      "members": [],
+      "aliases": [
+        "Denver Summit"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0007",
+      "action": "aliases",
+      "canonical": "Amazon Prime Video",
+      "members": [],
+      "aliases": [
+        "Prime Video"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0008",
+      "action": "aliases",
+      "canonical": "Live Nation",
+      "members": [],
+      "aliases": [
+        "Live Nation Entertainment"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0009",
+      "action": "aliases",
+      "canonical": "Honda",
+      "members": [],
+      "aliases": [
+        "Honda Motor",
+        "Honda Motor Co., Ltd."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0013",
+      "action": "aliases",
+      "canonical": "Boston Legacy FC",
+      "members": [],
+      "aliases": [
+        "Boston Legacy"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0015",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0016",
+      "action": "aliases",
+      "canonical": "Astra",
+      "members": [],
+      "aliases": [
+        "Astra Space"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0017",
+      "action": "aliases",
+      "canonical": "Amazon Prime Video",
+      "members": [],
+      "aliases": [
+        "Prime Video"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0019",
+      "action": "aliases",
+      "canonical": "GEO Group",
+      "members": [],
+      "aliases": [
+        "The GEO Group"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0020",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0020",
+      "action": "aliases",
+      "canonical": "Oracle Cloud Infrastructure (OCI)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0022",
+      "action": "aliases",
+      "canonical": "Honda",
+      "members": [],
+      "aliases": [
+        "Honda Motor",
+        "Honda Motor Co., Ltd."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0023",
+      "action": "aliases",
+      "canonical": "Falcon 9",
+      "members": [],
+      "aliases": [
+        "SpaceX Falcon 9"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0023",
+      "action": "aliases",
+      "canonical": "Falcon Heavy",
+      "members": [],
+      "aliases": [
+        "SpaceX Falcon Heavy"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0024",
+      "action": "aliases",
+      "canonical": "NVIDIA RTX 6000 Ada",
+      "members": [],
+      "aliases": [
+        "NVIDIA RTX 6000 Ada Generation",
+        "RTX 6000 Ada",
+        "RTX 6000 Ada Generation"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0028",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0040",
+      "action": "aliases",
+      "canonical": "St. Louis City SC",
+      "members": [],
+      "aliases": [
+        "St. Louis City",
+        "St. Louis CITY SC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0051",
+      "action": "aliases",
+      "canonical": "Google DeepMind",
+      "members": [],
+      "aliases": [
+        "DeepMind"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0056",
+      "action": "aliases",
+      "canonical": "Boston Legacy FC",
+      "members": [],
+      "aliases": [
+        "Boston Legacy"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0056",
+      "action": "aliases",
+      "canonical": "St. Louis City SC",
+      "members": [],
+      "aliases": [
+        "St. Louis City",
+        "St. Louis CITY SC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0059",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0061",
+      "action": "aliases",
+      "canonical": "Boston Legacy FC",
+      "members": [],
+      "aliases": [
+        "Boston Legacy"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0061",
+      "action": "aliases",
+      "canonical": "Denver Summit FC",
+      "members": [],
+      "aliases": [
+        "Denver Summit"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0063",
+      "action": "aliases",
+      "canonical": "DeepSeek AI",
+      "members": [],
+      "aliases": [
+        "DeepSeek"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0066",
+      "action": "aliases",
+      "canonical": "St. Louis",
+      "members": [],
+      "aliases": [
+        "St. Louis City",
+        "St. Louis City SC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0071",
+      "action": "aliases",
+      "canonical": "Google DeepMind",
+      "members": [],
+      "aliases": [
+        "DeepMind"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0073",
+      "action": "aliases",
+      "canonical": "Astra Space",
+      "members": [],
+      "aliases": [
+        "Astra"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0075",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0081",
+      "action": "aliases",
+      "canonical": "Amazon",
+      "members": [],
+      "aliases": [
+        "Amazon.com",
+        "Amazon.com, Inc."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0086",
+      "action": "aliases",
+      "canonical": "Orlando City SC",
+      "members": [],
+      "aliases": [
+        "Orlando City"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0086",
+      "action": "aliases",
+      "canonical": "St. Louis City SC",
+      "members": [],
+      "aliases": [
+        "St. Louis City",
+        "St. Louis CITY SC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0087",
+      "action": "aliases",
+      "canonical": "Atlanta United",
+      "members": [],
+      "aliases": [
+        "Atlanta United FC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0087",
+      "action": "aliases",
+      "canonical": "Minnesota United",
+      "members": [],
+      "aliases": [
+        "Minnesota United FC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0087",
+      "action": "aliases",
+      "canonical": "Orlando City SC",
+      "members": [],
+      "aliases": [
+        "Orlando City"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0087",
+      "action": "aliases",
+      "canonical": "St. Louis CITY SC (MLS, began play 2023)",
+      "members": [],
+      "aliases": [
+        "St. Louis City",
+        "St. Louis CITY SC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0088",
+      "action": "aliases",
+      "canonical": "Minnesota United",
+      "members": [],
+      "aliases": [
+        "Minnesota United FC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0089",
+      "action": "aliases",
+      "canonical": "Google Cloud Build",
+      "members": [],
+      "aliases": [
+        "Cloud Build"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0093",
+      "action": "aliases",
+      "canonical": "NVIDIA A100 (HBM2/HBM2e on-package)",
+      "members": [],
+      "aliases": [
+        "NVIDIA A100 Tensor Core GPU",
+        "A100 Tensor Core GPU"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0093",
+      "action": "aliases",
+      "canonical": "NVIDIA H100 (HBM3 on-package, incl. H100 NVL variants)",
+      "members": [],
+      "aliases": [
+        "NVIDIA H100 Tensor Core GPU",
+        "H100 Tensor Core GPU"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0095",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0095",
+      "action": "aliases",
+      "canonical": "Oracle Cloud (OCI)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0097",
+      "action": "aliases",
+      "canonical": "Denver Summit FC",
+      "members": [],
+      "aliases": [
+        "Denver Summit"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0100",
+      "action": "aliases",
+      "canonical": "Live Nation",
+      "members": [],
+      "aliases": [
+        "Live Nation Entertainment"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0103",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0107",
+      "action": "aliases",
+      "canonical": "Micron Technology",
+      "members": [],
+      "aliases": [
+        "Micron"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0112",
+      "action": "aliases",
+      "canonical": "Apache Kvrocks",
+      "members": [],
+      "aliases": [
+        "Kvrocks"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0112",
+      "action": "aliases",
+      "canonical": "Apache SeaTunnel",
+      "members": [],
+      "aliases": [
+        "SeaTunnel"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0118",
+      "action": "aliases",
+      "canonical": "St. Louis City SC",
+      "members": [],
+      "aliases": [
+        "St. Louis City",
+        "St. Louis CITY SC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0125",
+      "action": "aliases",
+      "canonical": "Amazon",
+      "members": [],
+      "aliases": [
+        "Amazon.com",
+        "Amazon.com, Inc."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0126",
+      "action": "aliases",
+      "canonical": "Apple A18",
+      "members": [],
+      "aliases": [
+        "A18"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0126",
+      "action": "aliases",
+      "canonical": "Apple A18 Pro",
+      "members": [],
+      "aliases": [
+        "A18 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0126",
+      "action": "aliases",
+      "canonical": "Apple A19",
+      "members": [],
+      "aliases": [
+        "A19"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0126",
+      "action": "aliases",
+      "canonical": "Apple A19 Pro",
+      "members": [],
+      "aliases": [
+        "A19 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0127",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0134",
+      "action": "aliases",
+      "canonical": "Google Cloud Platform (GCP)",
+      "members": [],
+      "aliases": [
+        "Google Cloud",
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0136",
+      "action": "aliases",
+      "canonical": "Amazon",
+      "members": [],
+      "aliases": [
+        "Amazon.com",
+        "Amazon.com, Inc."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0139",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0141",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0141",
+      "action": "aliases",
+      "canonical": "Oracle Cloud",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0143",
+      "action": "aliases",
+      "canonical": "NVIDIA RTX 6000 Ada",
+      "members": [],
+      "aliases": [
+        "NVIDIA RTX 6000 Ada Generation",
+        "RTX 6000 Ada",
+        "RTX 6000 Ada Generation"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0147",
+      "action": "aliases",
+      "canonical": "Boston Legacy (NWSL) — inaugural season 2026",
+      "members": [],
+      "aliases": [
+        "Boston Legacy",
+        "Boston Legacy FC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0147",
+      "action": "aliases",
+      "canonical": "Denver Summit FC",
+      "members": [],
+      "aliases": [
+        "Denver Summit"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0148",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0151",
+      "action": "aliases",
+      "canonical": "Amazon Prime Video",
+      "members": [],
+      "aliases": [
+        "Prime Video"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0155",
+      "action": "aliases",
+      "canonical": "Boston Legacy FC",
+      "members": [],
+      "aliases": [
+        "Boston Legacy"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0155",
+      "action": "aliases",
+      "canonical": "Denver Summit FC",
+      "members": [],
+      "aliases": [
+        "Denver Summit"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0156",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0156",
+      "action": "aliases",
+      "canonical": "Oracle Cloud",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0160",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0164",
+      "action": "aliases",
+      "canonical": "Amazon Prime Video",
+      "members": [],
+      "aliases": [
+        "Prime Video"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0165",
+      "action": "aliases",
+      "canonical": "Astrobotic",
+      "members": [],
+      "aliases": [
+        "Astrobotic Technology"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple A17 Pro",
+      "members": [],
+      "aliases": [
+        "A17 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple A18",
+      "members": [],
+      "aliases": [
+        "A18"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple A18 Pro",
+      "members": [],
+      "aliases": [
+        "A18 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M3",
+      "members": [],
+      "aliases": [
+        "M3"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M3 Max",
+      "members": [],
+      "aliases": [
+        "M3 Max"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M3 Pro",
+      "members": [],
+      "aliases": [
+        "M3 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M4",
+      "members": [],
+      "aliases": [
+        "M4"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M4 Max",
+      "members": [],
+      "aliases": [
+        "M4 Max"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M4 Pro",
+      "members": [],
+      "aliases": [
+        "M4 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M5",
+      "members": [],
+      "aliases": [
+        "M5"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M5 Max",
+      "members": [],
+      "aliases": [
+        "M5 Max"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0166",
+      "action": "aliases",
+      "canonical": "Apple M5 Pro",
+      "members": [],
+      "aliases": [
+        "M5 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0168",
+      "action": "aliases",
+      "canonical": "Google Cloud — Jakarta region",
+      "members": [],
+      "aliases": [
+        "Google Cloud",
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0171",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0171",
+      "action": "aliases",
+      "canonical": "Oracle Cloud Infrastructure (OCI)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0178",
+      "action": "aliases",
+      "canonical": "Google DeepMind",
+      "members": [],
+      "aliases": [
+        "DeepMind"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0181",
+      "action": "aliases",
+      "canonical": "Apple A17 Pro",
+      "members": [],
+      "aliases": [
+        "A17 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0181",
+      "action": "aliases",
+      "canonical": "Apple A18",
+      "members": [],
+      "aliases": [
+        "A18"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0181",
+      "action": "aliases",
+      "canonical": "Apple A18 Pro",
+      "members": [],
+      "aliases": [
+        "A18 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0181",
+      "action": "aliases",
+      "canonical": "Apple A19",
+      "members": [],
+      "aliases": [
+        "A19"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0181",
+      "action": "aliases",
+      "canonical": "Apple A19 Pro",
+      "members": [],
+      "aliases": [
+        "A19 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0182",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0183",
+      "action": "aliases",
+      "canonical": "Amazon Prime Video",
+      "members": [],
+      "aliases": [
+        "Prime Video"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0185",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0185",
+      "action": "aliases",
+      "canonical": "Oracle Cloud Infrastructure（OCI）",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0190",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0190",
+      "action": "aliases",
+      "canonical": "Oracle Cloud Infrastructure (OCI)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0191",
+      "action": "aliases",
+      "canonical": "Micron Technology",
+      "members": [],
+      "aliases": [
+        "Micron"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0193",
+      "action": "aliases",
+      "canonical": "Amazon Prime Video",
+      "members": [],
+      "aliases": [
+        "Prime Video"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0197",
+      "action": "aliases",
+      "canonical": "Amazon",
+      "members": [],
+      "aliases": [
+        "Amazon.com",
+        "Amazon.com, Inc."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0201",
+      "action": "aliases",
+      "canonical": "Amazon",
+      "members": [],
+      "aliases": [
+        "Amazon.com",
+        "Amazon.com, Inc."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "aliases",
+      "canonical": "Google Cloud — South Africa (Johannesburg) region generally available (New Google Cloud region now open in Johannesburg)",
+      "members": [],
+      "aliases": [
+        "Google Cloud",
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "aliases",
+      "canonical": "Oracle Cloud — South Africa (Johannesburg) region generally available (Oracle Opens First Cloud Region in Africa — Johannesburg)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0204",
+      "action": "aliases",
+      "canonical": "Amazon Prime Video",
+      "members": [],
+      "aliases": [
+        "Prime Video"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0215",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0218",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0218",
+      "action": "aliases",
+      "canonical": "Oracle Cloud",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0220",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0225",
+      "action": "aliases",
+      "canonical": "Amazon Prime Video",
+      "members": [],
+      "aliases": [
+        "Prime Video"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0226",
+      "action": "aliases",
+      "canonical": "Google DeepMind",
+      "members": [],
+      "aliases": [
+        "DeepMind"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0228",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0232",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0242",
+      "action": "aliases",
+      "canonical": "St. Louis City SC",
+      "members": [],
+      "aliases": [
+        "St. Louis City",
+        "St. Louis CITY SC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0243",
+      "action": "aliases",
+      "canonical": "Astra (Astra Space)",
+      "members": [],
+      "aliases": [
+        "Astra Space"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0250",
+      "action": "aliases",
+      "canonical": "Amazon (AWS)",
+      "members": [],
+      "aliases": [
+        "Amazon.com",
+        "Amazon.com, Inc."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0257",
+      "action": "aliases",
+      "canonical": "Apple A19",
+      "members": [],
+      "aliases": [
+        "A19"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0257",
+      "action": "aliases",
+      "canonical": "Apple A19 Pro",
+      "members": [],
+      "aliases": [
+        "A19 Pro"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0262",
+      "action": "aliases",
+      "canonical": "Boston Legacy FC",
+      "members": [],
+      "aliases": [
+        "Boston Legacy"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0262",
+      "action": "aliases",
+      "canonical": "Denver Summit FC",
+      "members": [],
+      "aliases": [
+        "Denver Summit"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0262",
+      "action": "aliases",
+      "canonical": "St. Louis City SC",
+      "members": [],
+      "aliases": [
+        "St. Louis City",
+        "St. Louis CITY SC"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0270",
+      "action": "aliases",
+      "canonical": "Google Cloud Platform (GCP)",
+      "members": [],
+      "aliases": [
+        "Google Cloud",
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0271",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0271",
+      "action": "aliases",
+      "canonical": "Oracle Cloud Infrastructure (OCI)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0277",
+      "action": "aliases",
+      "canonical": "Amazon",
+      "members": [],
+      "aliases": [
+        "Amazon.com",
+        "Amazon.com, Inc."
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0283",
+      "action": "aliases",
+      "canonical": "Google Cloud — Johannesburg region (South Africa)",
+      "members": [],
+      "aliases": [
+        "Google Cloud",
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0283",
+      "action": "aliases",
+      "canonical": "Oracle Cloud Infrastructure (OCI)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0285",
+      "action": "aliases",
+      "canonical": "Oracle Cloud — Abu Dhabi region (Oracle Cloud Abu Dhabi Region, live)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud",
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0294",
+      "action": "aliases",
+      "canonical": "iPhone 15 Pro Max",
+      "members": [],
+      "aliases": [
+        "Apple iPhone 15 Pro Max"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0297",
+      "action": "aliases",
+      "canonical": "Micron Technology",
+      "members": [],
+      "aliases": [
+        "Micron"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0300",
+      "action": "aliases",
+      "canonical": "DeepSeek",
+      "members": [],
+      "aliases": [
+        "DeepSeek AI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0306",
+      "action": "aliases",
+      "canonical": "Google Cloud",
+      "members": [],
+      "aliases": [
+        "Google Cloud Platform",
+        "GCP"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0306",
+      "action": "aliases",
+      "canonical": "Oracle Cloud",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud Infrastructure",
+        "OCI"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0311",
+      "action": "aliases",
+      "canonical": "Micron Technology",
+      "members": [],
+      "aliases": [
+        "Micron"
+      ],
+      "reason": "Explicit organization, team or product naming variants; full model qualifiers retained. Shared by every evaluated configuration."
+    },
+    {
+      "task_id": "ws-0189",
+      "action": "merge",
+      "canonical": "Paramount+",
+      "members": [
+        "Paramount+ (CBS)"
+      ],
+      "remove_aliases": [
+        "Paramount+ (CBS)",
+        "CBS"
+      ],
+      "reason": "The CBS brand also identifies a different answer service in this task, so it cannot be an identity alias for Paramount+."
+    },
+    {
+      "task_id": "ws-0004",
+      "action": "aliases",
+      "canonical": "San Diego FC (MLS) — began play 2025",
+      "members": [],
+      "aliases": [
+        "San Diego FC"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0014",
+      "action": "aliases",
+      "canonical": "Showtime (standalone streaming app) — shut down April 30, 2024",
+      "members": [],
+      "aliases": [
+        "Showtime"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0014",
+      "action": "aliases",
+      "canonical": "Freevee (standalone app) — shut down August 2025, content moved into Prime Video",
+      "members": [],
+      "aliases": [
+        "Freevee"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0014",
+      "action": "aliases",
+      "canonical": "Boomerang (Warner Bros. Discovery shut down Boomerang app and folded content into Max — app/website sunset September 30, 2024)",
+      "members": [],
+      "aliases": [
+        "Boomerang"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0014",
+      "action": "aliases",
+      "canonical": "Gizmoplex (dedicated MST3K streaming service shutting down — reported May 1, 2026)",
+      "members": [],
+      "aliases": [
+        "Gizmoplex"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0042",
+      "action": "aliases",
+      "canonical": "Seattle Kraken (NHL) — inaugural regular season 2021–22",
+      "members": [],
+      "aliases": [
+        "Seattle Kraken"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0042",
+      "action": "aliases",
+      "canonical": "San Diego FC (MLS) — 2025 was the club's first MLS season (sources indicate 2025 inaugural season)",
+      "members": [],
+      "aliases": [
+        "San Diego FC"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0052",
+      "action": "aliases",
+      "canonical": "Orlando City SC — Inter&Co Stadium (formerly Orlando City/Exploria Stadium)",
+      "members": [],
+      "aliases": [
+        "Orlando City SC"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0052",
+      "action": "aliases",
+      "canonical": "St. Louis CITY SC — CITYPARK",
+      "members": [],
+      "aliases": [
+        "St. Louis CITY SC"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0052",
+      "action": "aliases",
+      "canonical": "Charlotte FC — Bank of America Stadium",
+      "members": [],
+      "aliases": [
+        "Charlotte FC"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0054",
+      "action": "aliases",
+      "canonical": "Valkey (Redis fork) — governed under the Linux Foundation",
+      "members": [],
+      "aliases": [
+        "Valkey"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0054",
+      "action": "aliases",
+      "canonical": "OpenTofu (fork of HashiCorp Terraform) — governed under the Linux Foundation",
+      "members": [],
+      "aliases": [
+        "OpenTofu"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0068",
+      "action": "aliases",
+      "canonical": "Runway (Runway Research / RunwayML) - Gen-2 text-to-video",
+      "members": [],
+      "aliases": [
+        "Runway"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0108",
+      "action": "aliases",
+      "canonical": "Amazon Web Services (AWS) — China (Beijing) and China (Ningxia) regions (operated locally, e.g., Sinnet/NWCD)",
+      "members": [],
+      "aliases": [
+        "Amazon Web Services"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0112",
+      "action": "aliases",
+      "canonical": "Istio (CNCF) — announced/project graduation Jul 12, 2023",
+      "members": [],
+      "aliases": [
+        "Istio"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0112",
+      "action": "aliases",
+      "canonical": "CRI-O (CNCF) — announced graduation Jul 19, 2023",
+      "members": [],
+      "aliases": [
+        "CRI-O"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0147",
+      "action": "aliases",
+      "canonical": "Boston Legacy (NWSL) — inaugural season 2026",
+      "members": [],
+      "aliases": [
+        "Boston Legacy"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0147",
+      "action": "aliases",
+      "canonical": "PWHL Vancouver (PWHL) — inaugural season 2025–26",
+      "members": [],
+      "aliases": [
+        "PWHL Vancouver"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0147",
+      "action": "aliases",
+      "canonical": "PWHL Seattle (PWHL) — inaugural season 2025–26",
+      "members": [],
+      "aliases": [
+        "PWHL Seattle"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0148",
+      "action": "aliases",
+      "canonical": "Baichuan / Baichuan Inc. (China) — Baichuan-7B (weights released; Apache-2.0)",
+      "members": [],
+      "aliases": [
+        "Baichuan / Baichuan Inc."
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0148",
+      "action": "aliases",
+      "canonical": "Technology Innovation Institute (UAE) — Falcon 40B (Apache 2.0)",
+      "members": [],
+      "aliases": [
+        "Technology Innovation Institute"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0167",
+      "action": "aliases",
+      "canonical": "reSET‑O (Pear Therapeutics) — FDA 510(k) prescription digital therapeutic for opioid use disorder (2018)",
+      "members": [],
+      "aliases": [
+        "reSET‑O"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0167",
+      "action": "aliases",
+      "canonical": "MamaLift Plus — 510(k) entry (K223515) for a prescription computerized behavioral therapy device (per FDA listing)",
+      "members": [],
+      "aliases": [
+        "MamaLift Plus"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0168",
+      "action": "aliases",
+      "canonical": "Google Cloud — Jakarta region",
+      "members": [],
+      "aliases": [
+        "Google Cloud"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "aliases",
+      "canonical": "Amazon Web Services (AWS) — Africa (Cape Town) region (af-south-1) generally available (Now Open – AWS Africa (Cape Town) Region)",
+      "members": [],
+      "aliases": [
+        "Amazon Web Services"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "aliases",
+      "canonical": "Microsoft Azure — South Africa regions (Cape Town and Johannesburg) generally available (Microsoft announcement: general availability of Microsoft Azure from new cloud regions in Cape Town and Johannesburg)",
+      "members": [],
+      "aliases": [
+        "Microsoft Azure"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "aliases",
+      "canonical": "Google Cloud — South Africa (Johannesburg) region generally available (New Google Cloud region now open in Johannesburg)",
+      "members": [],
+      "aliases": [
+        "Google Cloud"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0203",
+      "action": "aliases",
+      "canonical": "Oracle Cloud — South Africa (Johannesburg) region generally available (Oracle Opens First Cloud Region in Africa — Johannesburg)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0224",
+      "action": "aliases",
+      "canonical": "Anthropic (founded 2021) — closed an up-to-$4 billion private investment with Amazon (reported Sept 2023)",
+      "members": [],
+      "aliases": [
+        "Anthropic"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0235",
+      "action": "aliases",
+      "canonical": "Oxbryta (voxelotor) — withdrawn 2024",
+      "members": [],
+      "aliases": [
+        "Oxbryta"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0242",
+      "action": "aliases",
+      "canonical": "Seattle Kraken (NHL) — began play in the 2021–22 NHL season",
+      "members": [],
+      "aliases": [
+        "Seattle Kraken"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0242",
+      "action": "aliases",
+      "canonical": "Charlotte FC (MLS) — began MLS play in 2022",
+      "members": [],
+      "aliases": [
+        "Charlotte FC"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0242",
+      "action": "aliases",
+      "canonical": "San Diego FC (MLS) — began play 2025",
+      "members": [],
+      "aliases": [
+        "San Diego FC"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0243",
+      "action": "aliases",
+      "canonical": "LandSpace (Zhuque-2) — first orbital success: 11 July 2023",
+      "members": [],
+      "aliases": [
+        "LandSpace"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0258",
+      "action": "aliases",
+      "canonical": "reSET-O (Pear Therapeutics) - FDA authorization/clearance (news sources)",
+      "members": [],
+      "aliases": [
+        "reSET-O"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0262",
+      "action": "aliases",
+      "canonical": "Austin FC (MLS) — inaugural season 2021",
+      "members": [],
+      "aliases": [
+        "Austin FC"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0270",
+      "action": "aliases",
+      "canonical": "Microsoft Azure — Brazil South (São Paulo)",
+      "members": [],
+      "aliases": [
+        "Microsoft Azure"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0283",
+      "action": "aliases",
+      "canonical": "Microsoft Azure — South Africa North (Johannesburg) and South Africa West (Cape Town)",
+      "members": [],
+      "aliases": [
+        "Microsoft Azure"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0283",
+      "action": "aliases",
+      "canonical": "Google Cloud — Johannesburg region (South Africa)",
+      "members": [],
+      "aliases": [
+        "Google Cloud"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0283",
+      "action": "aliases",
+      "canonical": "IBM Cloud — Johannesburg data center / cloud region",
+      "members": [],
+      "aliases": [
+        "IBM Cloud"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0285",
+      "action": "aliases",
+      "canonical": "Amazon Web Services (AWS) — Middle East (UAE) Region (me-central-1), launched Aug 29, 2022",
+      "members": [],
+      "aliases": [
+        "Amazon Web Services"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0285",
+      "action": "aliases",
+      "canonical": "Oracle Cloud — Abu Dhabi region (Oracle Cloud Abu Dhabi Region, live)",
+      "members": [],
+      "aliases": [
+        "Oracle Cloud"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    },
+    {
+      "task_id": "ws-0300",
+      "action": "aliases",
+      "canonical": "Thinking Machines Lab — Inkling (975B total parameters, Mixture-of-Experts, open weights, released July 15, 2026)",
+      "members": [],
+      "aliases": [
+        "Thinking Machines Lab"
+      ],
+      "reason": "The question counts the named entity; the appended explanatory event, region or product does not change that identity."
+    }
+  ]
+}

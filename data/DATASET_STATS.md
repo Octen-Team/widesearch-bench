@@ -3,8 +3,8 @@
 - **Questions:** 313
 - **Language:** en 227 (72%), zh 86 (27%)
 - **Gold-set size:** mean 5.8 · median 5 · min 2 · max 23
-  - distribution: {'2-3': 63, '4-6': 155, '7-12': 89, '13+': 6}
-- **set_size labels:** {'L': 120, 'M': 192, 'S': 1}
+  - distribution: {'2-3': 62, '4-6': 153, '7-12': 92, '13+': 6}
+- **set_size labels:** {'S': 172, 'M': 139, 'L': 2}
 - **as_of (snapshot dates):** {'2026-09-18': 313}
 
 ## Domain distribution (approximate — keyword-bucketed, no schema field)

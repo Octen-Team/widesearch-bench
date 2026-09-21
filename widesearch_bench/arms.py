@@ -1,10 +1,12 @@
-"""Evaluation arms. The ONLY variable across arms is the retrieval layer;
-reader model, prompts, and token budgets are fixed by the runner.
+"""Retrieval configurations consumed by the runner.
 
-octen-search: single octen search (count=10)                      — baseline floor
-octen-broad-search: octen broad_search single call (max_queries=8)      — object under test
+octen-search: single octen search (count=10)
+octen-broad-search: octen broad_search single call (max_queries=8)
 octen-fanout: client-side fan-out: LLM writes 8 sub-queries ->
-    8 concurrent searches -> RRF fusion                 — width ceiling
+    8 concurrent searches -> RRF fusion
+
+Backend, excerpt length, time-filter support and agent answering protocol can
+vary. Equal maximum result counts do not imply equal evidence or actual work.
 
 Each arm returns (hits, api_calls, subqueries_used). Latency is measured by
 the runner around the whole retrieval phase.
@@ -72,11 +74,8 @@ async def arm_a2(octen: OctenClient, question: str,
                  max_queries: int = 8,
                  time_scope: Optional[str] = None) -> tuple[list[SearchHit], int, list[str]]:
     st, et = time_bounds(time_scope)
-    # Evidence per arm has to match, not just query count. The agent arms take 5
-    # results per search (agent.per_search) and render all 5 into the transcript,
-    # so this defaults to 5 as well: 8 sub-queries x 5 = the same 40 snippets
-    # the agent arms accumulate over 8 searches. At 3 it would be 24, a 1.7x
-    # evidence deficit that reads as a recall difference.
+    # Match the default maximum hits per search. Providers can return fewer
+    # hits, and agents can stop early, so observed evidence volumes vary.
     per = int(os.environ.get("OCTEN_BROAD_COUNT", "5"))
     hits = await octen.broad_search(question, max_queries=max_queries, count=per,
                                     start_time=st, end_time=et)
@@ -105,4 +104,3 @@ async def arm_a3(octen: OctenClient, llm: LLM, question: str,
 
 
 ARMS = {"octen-search": arm_a1, "octen-broad-search": arm_a2, "octen-fanout": arm_a3}
-

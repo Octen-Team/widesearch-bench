@@ -1,4 +1,4 @@
-"""A REAL multi-turn search agent (ReAct-style loop).
+"""Multi-turn search agent (ReAct-style loop).
 
 Unlike the fan-out arm (one-shot decompose then parallel search), here the model
 drives the search itself, round by round: it issues one query, reads the
@@ -19,6 +19,7 @@ from typing import Any, Awaitable, Callable
 
 from .octen_client import SearchHit
 from .reader import _COMMON_RULES
+from .telemetry import record_query, record_error
 
 # The agent arms restated the grounding rules in their own words, so fixing
 # reader.py silently left the two halves of the comparison on different
@@ -66,11 +67,13 @@ async def agent_loop(search_fn: Callable[[str, int], Awaitable[list[SearchHit]]]
     transcript = f"QUESTION: {question}\n"
     total_tokens = 0
     n_searches = 0
+    subqueries = []
     # A seeded loop starts from evidence gathered elsewhere, so the model
     # spends its rounds on gaps. The seed counts as one search: it cost an
     # API call, and hiding it would understate the retrieval budget.
     if seed:
         n_searches += 1
+        subqueries.append(seed_label)
         transcript += f"\nSEARCH: {seed_label}\nRESULTS:\n{_render(seed, k=len(seed))}\n"
     search_time = 0.0
     evidence_parts: list[str] = []
@@ -99,10 +102,13 @@ async def agent_loop(search_fn: Callable[[str, int], Awaitable[list[SearchHit]]]
             break
         if m_srch and n_searches < max_rounds:
             query = m_srch.group(1).strip().strip('"')
+            subqueries.append(query)
+            record_query(query)
             _s = time.time()
             try:
                 hits = await search_fn(query, per_search)
-            except Exception:  # noqa: BLE001
+            except Exception as exc:  # noqa: BLE001
+                record_error(exc)
                 hits = []
             wall = time.time() - _s
             # search time = provider-reported latency; fall back to wall-clock
@@ -110,6 +116,9 @@ async def agent_loop(search_fn: Callable[[str, int], Awaitable[list[SearchHit]]]
             rep = hits[0].reported_latency_ms if hits and hits[0].reported_latency_ms is not None else None
             search_time += (rep / 1000.0) if rep is not None else wall
             n_searches += 1
+            for hit in hits:
+                if hit.sub_query is None:
+                    hit.sub_query = query
             urls.extend(h.url for h in hits if h.url)
             all_hits.extend(hits)
             evidence_parts.append(_render(hits))
@@ -130,7 +139,7 @@ async def agent_loop(search_fn: Callable[[str, int], Awaitable[list[SearchHit]]]
                         pass
                 break
     return {"entities": entities, "agent_tokens": total_tokens,
-            "n_searches": n_searches, "search_time": round(search_time, 3),
+            "n_searches": n_searches, "subqueries": subqueries, "search_time": round(search_time, 3),
             "urls": urls, "evidence": "\n".join(evidence_parts),
             # the raw hits, so a caller can hand the pooled evidence to a reader
             # instead of using the agent's own answer

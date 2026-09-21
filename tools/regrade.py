@@ -16,15 +16,17 @@ import argparse
 import json
 import statistics as st
 from collections import defaultdict
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from widesearch_bench.normalize import match_sets
 from widesearch_bench.schema import load_tasks
 
 
 def score(preds, golds):
-    """Return (f1, precision, recall, missed, extra) exactly as grade_t1 would."""
-    if not preds and not golds:
-        return 1.0, 1.0, 1.0, [], []
+    """Return unrounded scores and diagnostics using the live match policy."""
     mg, mp = match_sets(preds, golds)
     precision = len(mp) / len(preds) if preds else 0.0
     recall = len(mg) / len(golds) if golds else 0.0
@@ -52,6 +54,8 @@ def main():
         if task is None:
             continue
         preds = [p for p in r["detail"].get("answer_entities", []) if p and p.strip()]
+        if r['detail'].get('error'):
+            preds = []
         f1, p, rc, missed, extra = score(preds, task.gold_entities)
         r = dict(r)
         r["f1"], r["precision"], r["recall"] = round(f1, 6), round(p, 6), round(rc, 6)

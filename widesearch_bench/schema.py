@@ -1,6 +1,6 @@
 """Dataset & result schema for WideSearch-Bench.
 
-Task JSONL format (one task per line) mirrors the v0.1 design doc:
+Task JSONL format (one task per line):
 type T1 (enumeration) / T2 (matrix) / T3 (survey) / T4 (single-fact control).
 """
 from __future__ import annotations
@@ -90,13 +90,14 @@ class ArmRun:
     answer_text: str = ""          # T3/T4 raw answer
     retrieved_urls: list[str] = field(default_factory=list)
     subqueries: list[str] = field(default_factory=list)
-    api_calls: int = 0           # billed API calls (broad_search = 1)
+    api_calls: int = 0           # logical retrieval invocations, not verified billing units
     http_requests: int = 0       # requests actually issued, retries included
-    n_queries: int = 0           # REAL searches performed (broad_search fans out to N sub-queries)
+    n_queries: int = 0           # observed subqueries or issued agent search actions
     latency_s: float = 0.0
     search_time_s: float = 0.0   # time spent in search calls (retrieval only)
     e2e_time_s: float = 0.0      # end-to-end: search + reader/agent reasoning
-    downstream_tokens: int = 0
+    retrieval_errors: list[str] = field(default_factory=list)
+    downstream_tokens: int | None = 0
     error: Optional[str] = None
 
 

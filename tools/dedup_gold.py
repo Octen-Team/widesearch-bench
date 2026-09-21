@@ -1,100 +1,80 @@
-"""Merge gold entities that the matcher already treats as the same entity.
+"""Apply reviewed identity decisions, never fuzzy scoring matches.
 
-Pooling can add a second surface form of an entity that is already in the gold
-("BlackSuit" and "BlackSuit (aka Royal)"). Entity-F1 then counts one answer
-twice: naming five distinct correct entities scores 0.9091 on a six-slot gold,
-while naming four of them plus a duplicate scores 1.0. That rewards restating
-an answer over finding another one.
-
-Each group of mutually-matching gold entities collapses to one entity. The
-LONGEST surface form becomes the canonical (it never promotes a truncation such
-as "Seattle" over "Seattle Kraken"); every other form is kept as an alias, so
-nothing a run could previously match becomes unmatchable.
-
-    python tools/dedup_gold.py data/tasks.jsonl --report results/GOLD_DEDUP.md
-
-Pass --check to fail without writing when duplicates remain (for CI).
+A scoring collision is not proof that two names refer to one entity. By default
+only identical Unicode/case/whitespace forms are merged. --decisions supplies
+explicit per-question decisions from data/identity_decisions.json. Existing
+aliases remain scoped to the input variant. --check never writes files.
 """
 import argparse
 import json
-
-from widesearch_bench.normalize import match_sets
-from widesearch_bench.schema import GoldEntity
+import unicodedata
 
 
-def group(golds: list[dict]) -> list[list[int]]:
-    """Indices of gold entities, grouped by mutual matcher equality."""
-    groups: list[list[int]] = []
-    for i, g in enumerate(golds):
-        for grp in groups:
-            rep = golds[grp[0]]
-            ge = GoldEntity(canonical=rep["canonical"], aliases=rep.get("aliases") or [])
-            if match_sets([g["canonical"]], [ge])[0]:
-                grp.append(i)
-                break
-        else:
-            groups.append([i])
+def identity_key(name):
+    return ' '.join(unicodedata.normalize('NFKC', name).casefold().split())
+
+
+def group(golds, approved_groups=()):
+    lookup = {identity_key(name): i for i, names in enumerate(approved_groups) for name in names}
+    groups, indices = [], {}
+    for i, gold in enumerate(golds):
+        name = identity_key(gold['canonical'])
+        key = ('approved', lookup[name]) if name in lookup else ('exact', name)
+        if key not in indices:
+            indices[key] = len(groups)
+            groups.append([])
+        groups[indices[key]].append(i)
     return groups
 
 
-def merge(golds: list[dict], grp: list[int]) -> dict:
-    members = [golds[i] for i in grp]
-    keep = max(members, key=lambda g: len(g["canonical"]))
-    aliases = list(keep.get("aliases") or [])
-    for m in members:
-        for form in [m["canonical"], *(m.get("aliases") or [])]:
-            if form != keep["canonical"] and form not in aliases:
+def merge(golds, indices, canonical=None):
+    members = [golds[i] for i in indices]
+    canonical = canonical or members[0]['canonical']
+    aliases = []
+    for member in members:
+        for form in [member['canonical'], *member.get('aliases', [])]:
+            if form != canonical and form not in aliases:
                 aliases.append(form)
-    return {**keep, "aliases": aliases}
+    return {'canonical': canonical, 'aliases': aliases}
 
 
-def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("tasks")
-    ap.add_argument("--report")
-    ap.add_argument("--check", action="store_true",
-                    help="exit 1 if duplicates exist; write nothing")
-    a = ap.parse_args()
-
-    rows = [json.loads(l) for l in open(a.tasks, encoding="utf-8") if l.strip()]
-    lines, removed, touched = [], 0, 0
-    for r in rows:
-        golds = r["gold_entities"]
-        groups = group(golds)
-        if len(groups) == len(golds):
-            continue
-        touched += 1
-        for grp in groups:
-            if len(grp) > 1:
-                removed += len(grp) - 1
-                kept = max((golds[i] for i in grp), key=lambda g: len(g["canonical"]))
-                folded = [golds[i]["canonical"] for i in grp
-                          if golds[i]["canonical"] != kept["canonical"]]
-                lines.append(f"| {r['id']} | {kept['canonical']} | {' · '.join(folded)} |")
-        r["gold_entities"] = [merge(golds, grp) for grp in groups]
-
-    if a.check:
-        print(f"{removed} duplicate gold entities across {touched} tasks")
-        raise SystemExit(1 if removed else 0)
-
-    with open(a.tasks, "w", encoding="utf-8") as f:
-        for r in rows:
-            f.write(json.dumps(r, ensure_ascii=False) + "\n")
-    total = sum(len(r["gold_entities"]) for r in rows)
-    print(f"{a.tasks}: merged {removed} duplicates across {touched} tasks "
-          f"-> {total} gold entities")
-
-    if a.report:
-        with open(a.report, "w", encoding="utf-8") as f:
-            f.write("# Gold de-duplication\n\n"
-                    "Gold entities the matcher treats as the same entity, merged to one.\n"
-                    "The kept form is the longest surface form; the folded forms are\n"
-                    "retained as aliases, so nothing becomes unmatchable.\n\n"
-                    f"**{removed} duplicates merged across {touched} tasks.**\n\n"
-                    "| Task | Kept as canonical | Folded in as aliases |\n|---|---|---|\n")
-            f.write("\n".join(lines) + "\n")
-        print(f"report -> {a.report}")
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('tasks')
+    parser.add_argument('--decisions')
+    parser.add_argument('--check', action='store_true')
+    args = parser.parse_args()
+    decisions = json.load(open(args.decisions))['decisions'] if args.decisions else []
+    rows = [json.loads(line) for line in open(args.tasks) if line.strip()]
+    changed = 0
+    for row in rows:
+        rules = [d for d in decisions if d['task_id'] == row['id']]
+        excluded = {n for d in rules if d['action'] == 'exclude' for n in d['members']}
+        golds = [g for g in row['gold_entities'] if g['canonical'] not in excluded]
+        merged = [d for d in rules if d['action'] == 'merge']
+        groups = group(golds, [[d['canonical'], *d['members']] for d in merged])
+        output = []
+        for indices in groups:
+            name = golds[indices[0]]['canonical']
+            rule = next((d for d in merged if name in [d['canonical'], *d['members']]), None)
+            entity = merge(golds, indices, rule['canonical'] if rule else None)
+            for change in rules:
+                if change.get('canonical') != entity['canonical']:
+                    continue
+                entity['aliases'] = list(dict.fromkeys([
+                    *entity['aliases'], *change.get('aliases', [])]))
+                entity['aliases'] = [a for a in entity['aliases']
+                    if a != entity['canonical'] and a not in change.get('remove_aliases', [])]
+            output.append(entity)
+        changed += output != row['gold_entities']
+        row['gold_entities'] = output
+    print(f'{changed} tasks require identity corrections')
+    if args.check:
+        raise SystemExit(bool(changed))
+    with open(args.tasks, 'w', encoding='utf-8') as out:
+        for row in rows:
+            out.write(json.dumps(row, ensure_ascii=False) + '\n')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

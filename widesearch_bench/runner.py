@@ -17,6 +17,7 @@ from .arms import ARMS, arm_a3, a3_decompose, rrf_fuse, time_bounds, arm_competi
 
 COMPETITOR_ARMS = {"exa", "tavily", "brave",
                    "exa-instant", "tavily-ultrafast", "parallel-turbo"}
+from .telemetry import observe_run
 from .grading import Grade, grade
 from .llm import LLM, _worker_llm
 from .octen_client import OctenClient
@@ -39,6 +40,7 @@ def _decompose_sync(model, question, n_sub):
     return subs, dict(getattr(llm, "last_usage", {}) or {})
 
 
+@observe_run
 async def run_one_concurrent(octen, model, task, arm, repeat,
                              time_pushdown=True, raw_dir=None):
     """Concurrency-safe run: sync LLM calls (reader, octen-fanout decompose) offloaded to
@@ -55,6 +57,7 @@ async def run_one_concurrent(octen, model, task, arm, repeat,
             st, et = time_bounds(ts)
             per = await octen.parallel_search(subs, count=3, start_time=st, end_time=et)
             hits, calls = rrf_fuse(list(per.values())), len(subs)
+            _s = subs
             run.n_queries = len(subs)
         elif arm.endswith("-agent"):
             # REAL multi-turn search agent (ReAct loop) on <engine>. The
@@ -86,13 +89,14 @@ async def run_one_concurrent(octen, model, task, arm, repeat,
             run.e2e_time_s = round(time.time() - t0, 3)
             run.latency_s = run.e2e_time_s
             run.retrieved_urls = res.get("urls", [])
+            run.subqueries = res["subqueries"]
             run.answer_entities = res["entities"]
+            if raw_dir is not None:
+                _dump_raw(raw_dir, task.id, arm, repeat, res["hits"])
             return run, res["evidence"]
         elif arm in COMPETITOR_ARMS:
-            _req0 = octen.n_requests
             hits, calls, _s = await arm_competitor(arm, task.question, time_scope=ts)
         else:
-            _req0 = octen.n_requests
             hits, calls, _s = await ARMS[arm](octen, task.question, time_scope=ts)
         # real searches: broad_search fans out to len(_s) sub-queries under 1 API call
         run.n_queries = len(_s) if isinstance(_s, list) else calls
@@ -107,7 +111,6 @@ async def run_one_concurrent(octen, model, task, arm, repeat,
         run.search_time_s = round(rep / 1000.0, 3) if rep is not None else wall_search
         run.latency_s = wall_search
         run.api_calls = calls
-        run.http_requests = octen.n_requests - _req0
         run.retrieved_urls = [h.url for h in hits]
         if raw_dir is not None:
             _dump_raw(raw_dir, task.id, arm, repeat, hits)
@@ -140,6 +143,7 @@ def _dump_raw(raw_dir: Path, task_id: str, arm: str, repeat: int, hits) -> None:
             }, ensure_ascii=False) + "\n")
 
 
+@observe_run
 async def run_one(octen: OctenClient, reader_llm: LLM, subq_llm: LLM,
                   task: Task, arm: str, repeat: int,
                   time_pushdown: bool = True,
@@ -167,6 +171,8 @@ async def run_one(octen: OctenClient, reader_llm: LLM, subq_llm: LLM,
                                                  time_scope=ts)
         run.latency_s = round(time.time() - t0, 3)
         run.api_calls = calls
+        run.n_queries = len(_subs)
+        run.subqueries = list(_subs)
         run.retrieved_urls = [h.url for h in hits]
         if raw_dir is not None:  # dumped pre-reader so a reader crash keeps the evidence
             _dump_raw(raw_dir, task.id, arm, repeat, hits)
@@ -259,11 +265,20 @@ async def run_bench(
 
 
 def build_report(tasks: list[Task], grades: list[Grade], arms: list[str]) -> dict:
+    cost_metrics = {"api_calls", "http_requests", "latency_s", "e2e_time_s", "downstream_tokens"}
+    def failed(g):
+        return bool(g.detail.get("error") or g.detail.get("retrieval_errors"))
+
     def per_task(arm: str, metric: str) -> dict[str, float]:
         acc: dict[str, list[float]] = {}
         for g in grades:
-            if g.arm == arm and "error" not in g.detail:
-                acc.setdefault(g.task_id, []).append(getattr(g, metric))
+            if g.arm != arm or (metric in cost_metrics and failed(g)):
+                continue
+            value = g.detail.get(metric) if metric == "e2e_time_s" else getattr(g, metric)
+            if metric == "f1" and g.detail.get("error"):
+                value = 0.0
+            if value is not None:
+                acc.setdefault(g.task_id, []).append(value)
         return {t: sum(v) / len(v) for t, v in acc.items() if v}
 
     quality_metric = "f1"  # T1/T2 both expose f1; T4 uses accuracy separately
@@ -283,21 +298,20 @@ def build_report(tasks: list[Task], grades: list[Grade], arms: list[str]) -> dic
             "hallucinated_rate_mean": _mean(per_task(arm, "hallucinated_rate")),
             "source_diversity_mean": _mean(per_task(arm, "source_diversity")),
             "n_tasks": len(q),
+            "n_attempts": sum(g.arm == arm for g in grades),
+            "n_failures": sum(g.arm == arm and failed(g) for g in grades),
+            "cost_n_tasks": {m: len(per_task(arm, m)) for m in sorted(cost_metrics)},
         }
         report["strata"][arm] = {
             "f1_by_set_size": stratify(q, size_labels),
             "f1_by_term_drift": stratify(q, drift_labels),
         }
-    for a, b in [("octen-search", "octen-broad-search"), ("octen-broad-search", "octen-fanout"), ("octen-search", "octen-fanout")]:
-        if a in arms and b in arms:
-            report["comparisons"].append(asdict(paired_compare(
-                per_task(a, quality_metric), per_task(b, quality_metric),
-                quality_metric, a, b)))
-    # headline efficiency: coverage-per-call / per-second
-    for arm in arms:
-        s = report["arms"][arm]
-        s["f1_per_call"] = round(s["f1_mean"] / s["api_calls_mean"], 4) if s["api_calls_mean"] else 0.0
-        s["f1_per_second"] = round(s["f1_mean"] / s["latency_s_mean"], 4) if s["latency_s_mean"] else 0.0
+    from itertools import combinations
+    for a, b in combinations(sorted(arms), 2):
+        report["comparisons"].append(asdict(paired_compare(
+            per_task(a, quality_metric), per_task(b, quality_metric),
+            quality_metric, a, b)))
+    report["policy"] = "Quality includes all attempts; terminal failures score zero. Cost means exclude terminal/retrieval failures and unknown values, averaged per task."
     return report
 
 

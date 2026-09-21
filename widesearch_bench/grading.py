@@ -28,8 +28,9 @@ class Grade:
     source_diversity: int = 0     # distinct domains among retrieved urls that contributed matches
     # cost passthrough
     api_calls: int = 0
+    http_requests: int | None = None
     latency_s: float = 0.0
-    downstream_tokens: int = 0
+    downstream_tokens: int | None = 0
     detail: dict = field(default_factory=dict)
 
 
@@ -167,6 +168,9 @@ def grade(task: Task, run: ArmRun, evidence_text: str = "") -> Grade:
     # observability passthrough (scores untouched): the reader's raw entity
     # output makes T1 attribution one-step — empty vs grounded-but-wrong vs
     # matcher miss can be read straight off grades.jsonl.
+    g.http_requests = run.http_requests
+    g.downstream_tokens = run.downstream_tokens
+    g.detail["retrieval_errors"] = list(run.retrieval_errors)
     g.detail["answer_entities"] = list(run.answer_entities)
     g.detail["search_time_s"] = run.search_time_s
     g.detail["e2e_time_s"] = run.e2e_time_s
