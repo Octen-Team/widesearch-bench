@@ -16,6 +16,7 @@ import os
 from typing import Any, Optional
 
 import httpx
+from .telemetry import record_request
 from dataclasses import dataclass, field
 
 
@@ -35,6 +36,8 @@ DEFAULT_BASE = os.environ.get("OCTEN_BASE_URL", "https://api.octen.ai")
 PATH_SEARCH = os.environ.get("OCTEN_PATH_SEARCH", "/search")
 PATH_BROAD = os.environ.get("OCTEN_PATH_BROAD", "/broad-search")
 PATH_EXTRACT = os.environ.get("OCTEN_PATH_EXTRACT", "/extract")
+
+
 
 RETRYABLE = {429, 500, 502, 503, 504}
 
@@ -74,6 +77,7 @@ class OctenClient:
         last: Optional[Exception] = None
         for attempt in range(self.max_retries + 1):
             async with self._sem:
+                record_request()
                 try:
                     resp = await self._client.post(url, json=payload)
                 except httpx.TransportError as e:  # network flake -> retry
@@ -226,21 +230,11 @@ class OctenClient:
             "max_queries": max(1, min(max_queries, 30)),
             "search_options": opts,
         }
-        # Anti-degenerate guard: under batch concurrency the API occasionally
-        # returns HTTP 200 with an empty/partial body (0 hits, or hits with no
-        # per-sub-query grouping), which silently collapses a wide fan-out to a
-        # single "query" downstream and disproportionately handicaps octen-broad-search. Retry
-        # a few times until we get a genuine multi-sub-query response; only then
-        # accept a <2 result (some narrow queries legitimately fan out to 1).
+        # Accept successful responses, including empty/single-group results.
+        # Retrying until a wider answer appears would select evidence by its
+        # contents and grant this configuration an extra retrieval budget.
         data = await self._post(PATH_BROAD, payload)
         hits = self._parse_hits(data)
-        if max_queries >= 2:
-            for _ in range(3):
-                if hits and len({h.sub_query for h in hits if h.sub_query}) >= 2:
-                    break
-                await asyncio.sleep(1.0)
-                data = await self._post(PATH_BROAD, payload)
-                hits = self._parse_hits(data)
         # Belt-and-braces: the server once ignored the count contract entirely
         # (see search_options note above); never hand more than `count` hits
         # per sub-query downstream even if it drifts again.

@@ -62,4 +62,4 @@ if __name__ == "__main__":
     for n, f in sorted(globals().items()):
         if n.startswith("test_"):
             f(); print(f"PASS {n}")
-    print("p1 runner tests passed")
+    print("runner tests passed")

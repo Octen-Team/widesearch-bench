@@ -1,5 +1,391 @@
+{"task_id": "ws-0001", "canonical": "Python", "aliases": []}
+{"task_id": "ws-0001", "canonical": "Rust", "aliases": []}
+{"task_id": "ws-0001", "canonical": "Scratch", "aliases": []}
+{"task_id": "ws-0002", "canonical": "Orbital ATK", "aliases": []}
+{"task_id": "ws-0002", "canonical": "SpaceX (Space Exploration Technologies)", "aliases": ["SpaceX"]}
+{"task_id": "ws-0002", "canonical": "Boeing", "aliases": ["The Boeing Company"]}
+{"task_id": "ws-0002", "canonical": "Axiom Space", "aliases": []}
+{"task_id": "ws-0002", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0003", "canonical": "Rolls-Royce SMR", "aliases": []}
+{"task_id": "ws-0003", "canonical": "Candu Energy (AtkinsRéalis)", "aliases": []}
+{"task_id": "ws-0003", "canonical": "Rosatom", "aliases": []}
+{"task_id": "ws-0003", "canonical": "Oklo Inc", "aliases": []}
+{"task_id": "ws-0004", "canonical": "Seattle Kraken (NHL, began play 2021)", "aliases": ["Seattle Kraken", "Seattle"]}
+{"task_id": "ws-0004", "canonical": "Utah Mammoth", "aliases": []}
+{"task_id": "ws-0004", "canonical": "San Diego FC (MLS) — began play 2025", "aliases": ["San Diego FC"]}
+{"task_id": "ws-0004", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0004", "canonical": "Portland Fire", "aliases": []}
+{"task_id": "ws-0004", "canonical": "Toronto Tempo", "aliases": []}
+{"task_id": "ws-0004", "canonical": "Boston Legacy FC", "aliases": ["Boston Legacy"]}
+{"task_id": "ws-0004", "canonical": "Denver Summit FC", "aliases": ["Denver Summit"]}
+{"task_id": "ws-0005", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0005", "canonical": "Samsung", "aliases": []}
+{"task_id": "ws-0005", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0005", "canonical": "Huawei", "aliases": []}
+{"task_id": "ws-0006", "canonical": "Apollo 11", "aliases": []}
+{"task_id": "ws-0006", "canonical": "Apollo 12", "aliases": []}
+{"task_id": "ws-0006", "canonical": "Apollo 14", "aliases": []}
+{"task_id": "ws-0006", "canonical": "Apollo 16", "aliases": []}
+{"task_id": "ws-0006", "canonical": "Viking 1", "aliases": []}
+{"task_id": "ws-0006", "canonical": "Viking 2", "aliases": []}
+{"task_id": "ws-0007", "canonical": "Amazon Prime Video", "aliases": ["Prime Video"]}
+{"task_id": "ws-0007", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0007", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0008", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0008", "canonical": "Visa", "aliases": []}
+{"task_id": "ws-0008", "canonical": "Live Nation", "aliases": ["Live Nation Entertainment"]}
+{"task_id": "ws-0009", "canonical": "General Motors", "aliases": []}
+{"task_id": "ws-0009", "canonical": "Stellantis", "aliases": []}
+{"task_id": "ws-0009", "canonical": "Honda", "aliases": ["Honda Motor", "Honda Motor Co., Ltd."]}
+{"task_id": "ws-0009", "canonical": "Ford Motor Company", "aliases": []}
+{"task_id": "ws-0009", "canonical": "Tesla", "aliases": []}
+{"task_id": "ws-0009", "canonical": "Mercedes-Benz", "aliases": []}
+{"task_id": "ws-0009", "canonical": "Hyundai Motor", "aliases": []}
+{"task_id": "ws-0009", "canonical": "BMW", "aliases": []}
+{"task_id": "ws-0010", "canonical": "Apple Watch (Series 4 and later, incl. Series 6, Series 11)", "aliases": []}
+{"task_id": "ws-0010", "canonical": "Samsung Galaxy Watch 3", "aliases": []}
+{"task_id": "ws-0010", "canonical": "Samsung Galaxy Watch Active 2", "aliases": []}
+{"task_id": "ws-0010", "canonical": "Fitbit Sense", "aliases": []}
+{"task_id": "ws-0010", "canonical": "Garmin smartwatches with ECG App (Venu 2 Plus, Venu 3, epix Pro, fēnix 7 Pro, tactix 7 – AMOLED)", "aliases": []}
+{"task_id": "ws-0010", "canonical": "AliveCor KardiaBand (EKG-capable Apple Watch band)", "aliases": ["AliveCor KardiaBand"]}
+{"task_id": "ws-0011", "canonical": "Anysphere (Cursor)", "aliases": []}
+{"task_id": "ws-0011", "canonical": "Vercel", "aliases": []}
+{"task_id": "ws-0011", "canonical": "Harness", "aliases": []}
+{"task_id": "ws-0012", "canonical": "Kay Ryan", "aliases": []}
+{"task_id": "ws-0012", "canonical": "Viet Thanh Nguyen", "aliases": []}
+{"task_id": "ws-0012", "canonical": "Annie Baker", "aliases": []}
+{"task_id": "ws-0012", "canonical": "Nikole Hannah-Jones", "aliases": []}
+{"task_id": "ws-0012", "canonical": "Annette Gordon-Reed", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Vegas Golden Knights", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Seattle Kraken", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Utah Mammoth", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Orlando Pride", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Racing Louisville FC", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Angel City FC", "aliases": []}
+{"task_id": "ws-0013", "canonical": "San Diego Wave FC", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Utah Royals FC", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Bay FC", "aliases": []}
+{"task_id": "ws-0013", "canonical": "Boston Legacy FC", "aliases": ["Boston Legacy"]}
+{"task_id": "ws-0014", "canonical": "Crackle", "aliases": []}
+{"task_id": "ws-0014", "canonical": "Popcornflix", "aliases": []}
+{"task_id": "ws-0014", "canonical": "Funimation", "aliases": []}
+{"task_id": "ws-0014", "canonical": "Showtime (standalone streaming app) — shut down April 30, 2024", "aliases": ["Showtime (standalone app)", "Showtime"]}
+{"task_id": "ws-0014", "canonical": "BET+", "aliases": []}
+{"task_id": "ws-0014", "canonical": "WOW! TV+", "aliases": []}
+{"task_id": "ws-0014", "canonical": "Freevee (standalone app) — shut down August 2025, content moved into Prime Video", "aliases": ["Freevee"]}
+{"task_id": "ws-0014", "canonical": "Boomerang (Warner Bros. Discovery shut down Boomerang app and folded content into Max — app/website sunset September 30, 2024)", "aliases": ["Boomerang"]}
+{"task_id": "ws-0014", "canonical": "Gizmoplex (dedicated MST3K streaming service shutting down — reported May 1, 2026)", "aliases": ["Gizmoplex"]}
+{"task_id": "ws-0015", "canonical": "Cerebras", "aliases": []}
+{"task_id": "ws-0015", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0016", "canonical": "Astra", "aliases": ["Astra Space"]}
+{"task_id": "ws-0016", "canonical": "Virgin Orbit", "aliases": []}
+{"task_id": "ws-0016", "canonical": "Orbital Sciences Corporation", "aliases": []}
+{"task_id": "ws-0017", "canonical": "HBO", "aliases": []}
+{"task_id": "ws-0017", "canonical": "Max (HBO Max)", "aliases": []}
+{"task_id": "ws-0017", "canonical": "Cinemax", "aliases": []}
+{"task_id": "ws-0017", "canonical": "Showtime", "aliases": []}
+{"task_id": "ws-0017", "canonical": "Amazon Prime Video", "aliases": ["Prime Video"]}
+{"task_id": "ws-0018", "canonical": "Kubernetes", "aliases": []}
+{"task_id": "ws-0018", "canonical": "Istio", "aliases": []}
+{"task_id": "ws-0018", "canonical": "gRPC", "aliases": []}
+{"task_id": "ws-0018", "canonical": "Knative", "aliases": []}
+{"task_id": "ws-0019", "canonical": "CoreCivic", "aliases": []}
+{"task_id": "ws-0019", "canonical": "GEO Group", "aliases": ["The GEO Group"]}
+{"task_id": "ws-0019", "canonical": "Management Training Corporation", "aliases": []}
+{"task_id": "ws-0019", "canonical": "Mitie (Mitie Care & Custody / Mitie plc)", "aliases": []}
+{"task_id": "ws-0020", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0020", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0020", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0020", "canonical": "Oracle Cloud Infrastructure (OCI)", "aliases": ["Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0021", "canonical": "Samsung Galaxy Note 7", "aliases": []}
+{"task_id": "ws-0021", "canonical": "Samsung Galaxy Note7 smartphones", "aliases": []}
+{"task_id": "ws-0021", "canonical": "Galaxy Note 7 phones", "aliases": []}
+{"task_id": "ws-0021", "canonical": "Samsung Note 7", "aliases": []}
+{"task_id": "ws-0022", "canonical": "General Motors (GM)", "aliases": []}
+{"task_id": "ws-0022", "canonical": "Honda", "aliases": ["Honda Motor", "Honda Motor Co., Ltd."]}
+{"task_id": "ws-0022", "canonical": "Hyundai Motor Group", "aliases": []}
+{"task_id": "ws-0023", "canonical": "Falcon 9", "aliases": ["SpaceX Falcon 9"]}
+{"task_id": "ws-0023", "canonical": "Falcon Heavy", "aliases": ["SpaceX Falcon Heavy"]}
+{"task_id": "ws-0023", "canonical": "Long March 10B (长征十号B)", "aliases": []}
+{"task_id": "ws-0023", "canonical": "New Glenn (Blue Origin)", "aliases": []}
+{"task_id": "ws-0024", "canonical": "NVIDIA RTX A6000 / RTX A6000 48GB (48 GB GDDR6)", "aliases": ["NVIDIA RTX A6000"]}
+{"task_id": "ws-0024", "canonical": "NVIDIA RTX 6000 Ada", "aliases": ["NVIDIA RTX 6000 Ada Generation", "RTX 6000 Ada", "RTX 6000 Ada Generation"]}
+{"task_id": "ws-0024", "canonical": "AMD Radeon Pro W7900", "aliases": []}
+{"task_id": "ws-0025", "canonical": "Apple (ECG app / irregular rhythm notification — DEN180044)", "aliases": ["Apple (Apple Watch)", "Apple"]}
+{"task_id": "ws-0025", "canonical": "Samsung (Galaxy Watch)", "aliases": []}
+{"task_id": "ws-0025", "canonical": "Fitbit (Sense, Pixel Watch via Google)", "aliases": ["Fitbit (ECG-enabled models)"]}
+{"task_id": "ws-0025", "canonical": "Google (Pixel Watch)", "aliases": []}
+{"task_id": "ws-0025", "canonical": "Withings (ScanWatch — FDA clearance)", "aliases": ["Withings"]}
+{"task_id": "ws-0025", "canonical": "Garmin", "aliases": []}
+{"task_id": "ws-0025", "canonical": "Whoop", "aliases": []}
+{"task_id": "ws-0026", "canonical": "Rose Bowl", "aliases": []}
+{"task_id": "ws-0026", "canonical": "Levi's Stadium", "aliases": []}
+{"task_id": "ws-0026", "canonical": "MetLife Stadium", "aliases": []}
+{"task_id": "ws-0026", "canonical": "SoFi Stadium", "aliases": []}
+{"task_id": "ws-0026", "canonical": "Hard Rock Stadium (Miami)", "aliases": []}
+{"task_id": "ws-0027", "canonical": "Arizona", "aliases": []}
+{"task_id": "ws-0027", "canonical": "New York", "aliases": []}
+{"task_id": "ws-0027", "canonical": "Idaho", "aliases": []}
 {"task_id": "ws-0028", "canonical": "北京月之暗面科技有限公司（Moonshot AI）", "aliases": ["Moonshot AI"]}
-{"task_id": "ws-0050", "canonical": "万事达卡 — 万事网联信息技术（北京）有限公司 (Mastercard, via 万事网联信息技术（北京）有限公司)", "aliases": ["Mastercard"]}
+{"task_id": "ws-0028", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0028", "canonical": "Knowledge Atlas Technology（Z.ai）", "aliases": []}
+{"task_id": "ws-0028", "canonical": "Tencent", "aliases": []}
+{"task_id": "ws-0028", "canonical": "Baidu (ERNIE — announced models up to ~2.4 trillion / ERNIE 4.5 reported open‑sourced up to 424B)", "aliases": []}
+{"task_id": "ws-0029", "canonical": "Mastcam", "aliases": []}
+{"task_id": "ws-0029", "canonical": "Mars Hand Lens Imager (MAHLI)", "aliases": []}
+{"task_id": "ws-0029", "canonical": "Mars Descent Imager (MARDI)", "aliases": []}
+{"task_id": "ws-0029", "canonical": "Chemistry & Camera (ChemCam)", "aliases": []}
+{"task_id": "ws-0029", "canonical": "Chemistry & Mineralogy X-Ray Diffraction (CheMin)", "aliases": []}
+{"task_id": "ws-0029", "canonical": "Dynamic Albedo of Neutrons (DAN)", "aliases": []}
+{"task_id": "ws-0029", "canonical": "Rover Environmental Monitoring Station (REMS)", "aliases": []}
+{"task_id": "ws-0030", "canonical": "Chandra X-ray Observatory", "aliases": []}
+{"task_id": "ws-0030", "canonical": "XMM-Newton", "aliases": []}
+{"task_id": "ws-0030", "canonical": "XRISM (X-Ray Imaging and Spectroscopy Mission)", "aliases": []}
+{"task_id": "ws-0030", "canonical": "IXPE (Imaging X-ray Polarimetry Explorer)", "aliases": []}
+{"task_id": "ws-0030", "canonical": "Einstein Probe", "aliases": []}
+{"task_id": "ws-0031", "canonical": "SpaceX Falcon 9 (maiden flight 2010)", "aliases": ["Falcon 9"]}
+{"task_id": "ws-0031", "canonical": "New Glenn", "aliases": []}
+{"task_id": "ws-0031", "canonical": "Vikram-1", "aliases": []}
+{"task_id": "ws-0032", "canonical": "Interlock", "aliases": []}
+{"task_id": "ws-0032", "canonical": "Medusa", "aliases": []}
+{"task_id": "ws-0032", "canonical": "Ghost (Cring)", "aliases": []}
+{"task_id": "ws-0032", "canonical": "BianLian", "aliases": []}
+{"task_id": "ws-0032", "canonical": "Play", "aliases": []}
+{"task_id": "ws-0032", "canonical": "RansomHub", "aliases": []}
+{"task_id": "ws-0032", "canonical": "Phobos", "aliases": []}
+{"task_id": "ws-0032", "canonical": "Akira", "aliases": []}
+{"task_id": "ws-0032", "canonical": "HermeticWiper", "aliases": []}
+{"task_id": "ws-0033", "canonical": "Voyager 1 (flybys: Jupiter, Saturn, Titan)", "aliases": ["Voyager 1"]}
+{"task_id": "ws-0033", "canonical": "Voyager 2", "aliases": []}
+{"task_id": "ws-0033", "canonical": "Pioneer 11", "aliases": []}
+{"task_id": "ws-0033", "canonical": "Galileo", "aliases": []}
+{"task_id": "ws-0033", "canonical": "New Horizons", "aliases": []}
+{"task_id": "ws-0033", "canonical": "MESSENGER", "aliases": []}
+{"task_id": "ws-0033", "canonical": "Cassini (Venus, Earth, Jupiter, Saturn)", "aliases": []}
+{"task_id": "ws-0033", "canonical": "Rosetta (Earth, Mars, Earth — multiple Earth flybys and a Mars flyby)", "aliases": []}
+{"task_id": "ws-0033", "canonical": "BepiColombo (Earth/Venus/Mercury gravity-assist flybys)", "aliases": []}
+{"task_id": "ws-0034", "canonical": "Chandra X-ray Observatory", "aliases": []}
+{"task_id": "ws-0034", "canonical": "XRISM (X-Ray Imaging and Spectroscopy Mission)", "aliases": []}
+{"task_id": "ws-0034", "canonical": "IXPE (Imaging X-ray Polarimetry Explorer)", "aliases": []}
+{"task_id": "ws-0034", "canonical": "Einstein Probe", "aliases": []}
+{"task_id": "ws-0035", "canonical": "James Webb Space Telescope", "aliases": []}
+{"task_id": "ws-0035", "canonical": "OSIRIS-REx / OSIRIS-APEX", "aliases": []}
+{"task_id": "ws-0035", "canonical": "Mars Reconnaissance Orbiter", "aliases": []}
+{"task_id": "ws-0036", "canonical": "Neuralink", "aliases": []}
+{"task_id": "ws-0036", "canonical": "Synchron", "aliases": []}
+{"task_id": "ws-0036", "canonical": "Blackrock Neurotech", "aliases": []}
+{"task_id": "ws-0036", "canonical": "CorTec GmbH", "aliases": []}
+{"task_id": "ws-0036", "canonical": "Paradromics", "aliases": []}
+{"task_id": "ws-0036", "canonical": "Motif Neurotech", "aliases": []}
+{"task_id": "ws-0036", "canonical": "Precision Neuroscience", "aliases": []}
+{"task_id": "ws-0037", "canonical": "Apollo 11 (Passive Seismic Experiment)", "aliases": ["Apollo 11"]}
+{"task_id": "ws-0037", "canonical": "Apollo 12 (Passive Seismic Experiment)", "aliases": ["Apollo 12"]}
+{"task_id": "ws-0037", "canonical": "Apollo 14 (lunar seismometer / ALSEP)", "aliases": ["Apollo 14"]}
+{"task_id": "ws-0037", "canonical": "Apollo 16 (Passive Seismic Experiment)", "aliases": ["Apollo 16"]}
+{"task_id": "ws-0037", "canonical": "InSight", "aliases": ["InSight Mars lander", "Mars InSight SEIS (Seismic Experiment for Interior Structure)", "InSight (SEIS seismometer)", "InSight (SEIS on Mars)"]}
+{"task_id": "ws-0037", "canonical": "Viking landers (Viking seismometer — Viking 2 documented to have operated >500 sols)", "aliases": []}
+{"task_id": "ws-0037", "canonical": "Apollo 17", "aliases": []}
+{"task_id": "ws-0037", "canonical": "Philae (SESAME/CASSE on comet 67P)", "aliases": []}
+{"task_id": "ws-0038", "canonical": "TanStack", "aliases": []}
+{"task_id": "ws-0038", "canonical": "PyTorch Lightning (lightning)", "aliases": []}
+{"task_id": "ws-0038", "canonical": "elementary-data", "aliases": []}
+{"task_id": "ws-0038", "canonical": "Telnyx", "aliases": []}
+{"task_id": "ws-0038", "canonical": "Ultralytics", "aliases": []}
+{"task_id": "ws-0038", "canonical": "@emilgroup packages (CanisterWorm)", "aliases": []}
+{"task_id": "ws-0038", "canonical": "eslint-scope (malicious versions published July 12, 2018 via compromised ESLint maintainer account; removed)", "aliases": []}
+{"task_id": "ws-0038", "canonical": "event-stream (npm)", "aliases": []}
+{"task_id": "ws-0039", "canonical": "HP (Hewlett-Packard)", "aliases": []}
+{"task_id": "ws-0039", "canonical": "Toshiba", "aliases": []}
+{"task_id": "ws-0039", "canonical": "Fujitsu", "aliases": []}
+{"task_id": "ws-0040", "canonical": "Seattle Kraken", "aliases": []}
+{"task_id": "ws-0040", "canonical": "Utah Mammoth", "aliases": []}
+{"task_id": "ws-0040", "canonical": "Austin FC", "aliases": []}
+{"task_id": "ws-0040", "canonical": "Charlotte FC", "aliases": []}
+{"task_id": "ws-0040", "canonical": "St. Louis City SC", "aliases": ["St. Louis City", "St. Louis CITY SC"]}
+{"task_id": "ws-0040", "canonical": "San Diego FC", "aliases": []}
+{"task_id": "ws-0040", "canonical": "Angel City FC", "aliases": []}
+{"task_id": "ws-0040", "canonical": "San Diego Wave FC", "aliases": []}
+{"task_id": "ws-0040", "canonical": "Bay FC", "aliases": []}
+{"task_id": "ws-0041", "canonical": "United States (Center for AI Standards and Innovation, CAISI, formerly the U.S. AI Safety Institute)", "aliases": []}
+{"task_id": "ws-0041", "canonical": "European Union (EU AI Office / AI Safety Unit)", "aliases": []}
+{"task_id": "ws-0041", "canonical": "Japan", "aliases": []}
+{"task_id": "ws-0041", "canonical": "South Korea", "aliases": []}
+{"task_id": "ws-0041", "canonical": "France", "aliases": []}
+{"task_id": "ws-0041", "canonical": "Australia", "aliases": []}
+{"task_id": "ws-0042", "canonical": "Seattle Kraken (NHL) — inaugural regular season 2021–22", "aliases": ["Seattle Kraken"]}
+{"task_id": "ws-0042", "canonical": "San Diego FC (MLS) — 2025 was the club's first MLS season (sources indicate 2025 inaugural season)", "aliases": ["San Diego FC", "San Diego FC (MLS) — inaugural regular season 2025"]}
+{"task_id": "ws-0042", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0042", "canonical": "Toronto Tempo", "aliases": []}
+{"task_id": "ws-0042", "canonical": "Portland Fire", "aliases": []}
+{"task_id": "ws-0043", "canonical": "W.M. Keck Observatory", "aliases": []}
+{"task_id": "ws-0043", "canonical": "ESO Very Large Telescope (VLT) — instruments cited: SPHERE, NACO", "aliases": ["Very Large Telescope (VLT, SPHERE)", "Very Large Telescope (ESO VLT — NaCo, SPHERE)", "Very Large Telescope (VLT; e.g., NaCo)"]}
+{"task_id": "ws-0043", "canonical": "Gemini Observatory (Gemini Planet Imager, GPI)", "aliases": []}
+{"task_id": "ws-0043", "canonical": "James Webb Space Telescope (JWST)", "aliases": []}
+{"task_id": "ws-0043", "canonical": "Subaru Telescope (HiCIAO / SCExAO / CHARIS)", "aliases": ["Subaru Telescope (SCExAO)"]}
+{"task_id": "ws-0044", "canonical": "Luis A. Caffarelli", "aliases": []}
+{"task_id": "ws-0044", "canonical": "Shing-Tung Yau", "aliases": []}
+{"task_id": "ws-0044", "canonical": "Vladimir Drinfeld", "aliases": []}
+{"task_id": "ws-0044", "canonical": "Ryuzo Yanagimachi", "aliases": []}
+{"task_id": "ws-0045", "canonical": "Luxturna", "aliases": []}
+{"task_id": "ws-0045", "canonical": "Zolgensma", "aliases": []}
+{"task_id": "ws-0045", "canonical": "Libmeldy (Lenmeldy)", "aliases": []}
+{"task_id": "ws-0046", "canonical": "ITVX", "aliases": []}
+{"task_id": "ws-0046", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0046", "canonical": "Fox One (FOX One)", "aliases": []}
+{"task_id": "ws-0047", "canonical": "ONPATTRO (patisiran)", "aliases": []}
+{"task_id": "ws-0047", "canonical": "LEQVIO (inclisiran)", "aliases": []}
+{"task_id": "ws-0047", "canonical": "Redemplo (plozasiran)", "aliases": []}
+{"task_id": "ws-0047", "canonical": "Qfitlia — fitusiran", "aliases": []}
+{"task_id": "ws-0047", "canonical": "Amvuttra — vutrisiran", "aliases": []}
+{"task_id": "ws-0048", "canonical": "Solar Orbiter (Metis coronagraph)", "aliases": []}
+{"task_id": "ws-0048", "canonical": "Parker Solar Probe (WISPR)", "aliases": []}
+{"task_id": "ws-0048", "canonical": "GOES (CCOR-1 Compact Coronagraph)", "aliases": []}
+{"task_id": "ws-0048", "canonical": "Proba-3", "aliases": []}
+{"task_id": "ws-0048", "canonical": "International Space Station (CODEX coronagraph)", "aliases": []}
+{"task_id": "ws-0049", "canonical": "Node.js", "aliases": []}
+{"task_id": "ws-0049", "canonical": "jQuery UI", "aliases": []}
+{"task_id": "ws-0049", "canonical": "Appium", "aliases": []}
+{"task_id": "ws-0049", "canonical": "Dojo (Dojo Toolkit)", "aliases": []}
+{"task_id": "ws-0049", "canonical": "Node-RED", "aliases": []}
+{"task_id": "ws-0049", "canonical": "webpack", "aliases": []}
+{"task_id": "ws-0050", "canonical": "American Express", "aliases": []}
+{"task_id": "ws-0050", "canonical": "Mastercard", "aliases": []}
+{"task_id": "ws-0050", "canonical": "Mastercard NUCC Information Technology (Beijing) Co., Ltd.", "aliases": []}
+{"task_id": "ws-0050", "canonical": "中国银联 (China UnionPay)", "aliases": []}
+{"task_id": "ws-0050", "canonical": "连通（杭州）技术服务有限公司（American Express 在华合资清算机构）", "aliases": []}
+{"task_id": "ws-0051", "canonical": "Google DeepMind", "aliases": ["DeepMind"]}
+{"task_id": "ws-0051", "canonical": "OpenFold Consortium / Alquraishi Laboratory", "aliases": []}
+{"task_id": "ws-0051", "canonical": "Boltz team (MIT)", "aliases": []}
+{"task_id": "ws-0051", "canonical": "ByteDance (Protenix)", "aliases": []}
+{"task_id": "ws-0051", "canonical": "genbio-ai (AIDO.StructurePrediction)", "aliases": []}
+{"task_id": "ws-0052", "canonical": "Yankee Stadium", "aliases": []}
+{"task_id": "ws-0052", "canonical": "Orlando City SC — Inter&Co Stadium (formerly Orlando City/Exploria Stadium)", "aliases": ["Inter&Co Stadium", "Orlando City — Inter&Co Stadium (Inter.co Stadium)", "Orlando City SC"]}
+{"task_id": "ws-0052", "canonical": "Allianz Field", "aliases": []}
+{"task_id": "ws-0052", "canonical": "BMO Stadium", "aliases": []}
+{"task_id": "ws-0052", "canonical": "St. Louis CITY SC — CITYPARK", "aliases": ["St. Louis CITY SC"]}
+{"task_id": "ws-0052", "canonical": "Charlotte FC — Bank of America Stadium", "aliases": ["Charlotte FC"]}
+{"task_id": "ws-0053", "canonical": "Moderna", "aliases": []}
+{"task_id": "ws-0053", "canonical": "Pfizer", "aliases": []}
+{"task_id": "ws-0053", "canonical": "Novavax", "aliases": []}
+{"task_id": "ws-0053", "canonical": "AstraZeneca", "aliases": []}
+{"task_id": "ws-0053", "canonical": "Sanofi", "aliases": []}
+{"task_id": "ws-0053", "canonical": "Johnson & Johnson", "aliases": []}
+{"task_id": "ws-0054", "canonical": "OpenSearch", "aliases": []}
+{"task_id": "ws-0054", "canonical": "Valkey (Redis fork) — governed under the Linux Foundation", "aliases": ["Valkey"]}
+{"task_id": "ws-0054", "canonical": "OpenTofu (fork of HashiCorp Terraform) — governed under the Linux Foundation", "aliases": ["OpenTofu"]}
+{"task_id": "ws-0055", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0055", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0055", "canonical": "Skyroot Aerospace", "aliases": []}
+{"task_id": "ws-0055", "canonical": "United Launch Alliance", "aliases": []}
+{"task_id": "ws-0055", "canonical": "Firefly Aerospace", "aliases": []}
+{"task_id": "ws-0055", "canonical": "Orbital ATK", "aliases": []}
+{"task_id": "ws-0055", "canonical": "Galactic Energy", "aliases": []}
+{"task_id": "ws-0055", "canonical": "i-Space (iSpace)", "aliases": []}
+{"task_id": "ws-0055", "canonical": "Isar Aerospace", "aliases": []}
+{"task_id": "ws-0056", "canonical": "Los Angeles FC (LAFC)", "aliases": []}
+{"task_id": "ws-0056", "canonical": "Inter Miami CF", "aliases": []}
+{"task_id": "ws-0056", "canonical": "Charlotte FC", "aliases": []}
+{"task_id": "ws-0056", "canonical": "St. Louis City SC", "aliases": ["St. Louis City", "St. Louis CITY SC"]}
+{"task_id": "ws-0056", "canonical": "Orlando Pride", "aliases": []}
+{"task_id": "ws-0056", "canonical": "Racing Louisville FC", "aliases": []}
+{"task_id": "ws-0056", "canonical": "Angel City FC", "aliases": []}
+{"task_id": "ws-0056", "canonical": "San Diego Wave FC", "aliases": []}
+{"task_id": "ws-0056", "canonical": "Bay FC", "aliases": []}
+{"task_id": "ws-0056", "canonical": "Boston Legacy FC", "aliases": ["Boston Legacy"]}
+{"task_id": "ws-0057", "canonical": "deflazacort (Emflaza)", "aliases": []}
+{"task_id": "ws-0057", "canonical": "eteplirsen (Exondys 51)", "aliases": []}
+{"task_id": "ws-0057", "canonical": "golodirsen (Vyondys 53)", "aliases": []}
+{"task_id": "ws-0057", "canonical": "viltolarsen (Viltepso)", "aliases": []}
+{"task_id": "ws-0057", "canonical": "casimersen (Amondys 45)", "aliases": []}
+{"task_id": "ws-0057", "canonical": "delandistrogene moxeparvovec-rokl (Elevidys)", "aliases": []}
+{"task_id": "ws-0058", "canonical": "Parker Solar Probe", "aliases": []}
+{"task_id": "ws-0058", "canonical": "Solar Orbiter", "aliases": []}
+{"task_id": "ws-0058", "canonical": "Solar Dynamics Observatory (SDO)", "aliases": []}
+{"task_id": "ws-0058", "canonical": "STEREO-A", "aliases": []}
+{"task_id": "ws-0058", "canonical": "Proba-3", "aliases": []}
+{"task_id": "ws-0058", "canonical": "PUNCH", "aliases": []}
+{"task_id": "ws-0058", "canonical": "IMAP (Interstellar Mapping and Acceleration Probe)", "aliases": []}
+{"task_id": "ws-0058", "canonical": "ACE", "aliases": []}
+{"task_id": "ws-0059", "canonical": "Alibaba (Qwen)", "aliases": []}
+{"task_id": "ws-0059", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0059", "canonical": "Moonshot AI (Kimi)", "aliases": []}
+{"task_id": "ws-0059", "canonical": "Zhipu AI (GLM)", "aliases": []}
+{"task_id": "ws-0059", "canonical": "MiniMax", "aliases": []}
+{"task_id": "ws-0059", "canonical": "NVIDIA", "aliases": []}
+{"task_id": "ws-0059", "canonical": "Yandex", "aliases": []}
+{"task_id": "ws-0060", "canonical": "AMD Instinct MI350X", "aliases": []}
+{"task_id": "ws-0060", "canonical": "AMD Instinct MI300X", "aliases": []}
+{"task_id": "ws-0060", "canonical": "Intel Gaudi 2", "aliases": []}
+{"task_id": "ws-0060", "canonical": "Google Cloud TPU v5e", "aliases": []}
+{"task_id": "ws-0060", "canonical": "Google Cloud TPU v4", "aliases": []}
+{"task_id": "ws-0060", "canonical": "Intel Habana (Gaudi) accelerators", "aliases": []}
+{"task_id": "ws-0060", "canonical": "Graphcore IPU systems", "aliases": []}
+{"task_id": "ws-0061", "canonical": "Utah Hockey Club (Utah Mammoth)", "aliases": ["Utah Mammoth"]}
+{"task_id": "ws-0061", "canonical": "San Diego FC (MLS, 2025 inaugural season)", "aliases": ["San Diego FC"]}
+{"task_id": "ws-0061", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0061", "canonical": "Portland Fire", "aliases": []}
+{"task_id": "ws-0061", "canonical": "Toronto Tempo", "aliases": []}
+{"task_id": "ws-0061", "canonical": "Boston Legacy FC", "aliases": ["Boston Legacy"]}
+{"task_id": "ws-0061", "canonical": "Denver Summit FC", "aliases": ["Denver Summit"]}
+{"task_id": "ws-0061", "canonical": "Vancouver Goldeneyes", "aliases": []}
+{"task_id": "ws-0061", "canonical": "Seattle Torrent", "aliases": []}
+{"task_id": "ws-0061", "canonical": "PWHL Detroit", "aliases": []}
+{"task_id": "ws-0062", "canonical": "D-Link Corporation", "aliases": []}
+{"task_id": "ws-0062", "canonical": "DigiCert", "aliases": []}
+{"task_id": "ws-0062", "canonical": "Adobe", "aliases": []}
+{"task_id": "ws-0062", "canonical": "Blackbaud", "aliases": []}
+{"task_id": "ws-0062", "canonical": "NVIDIA", "aliases": []}
+{"task_id": "ws-0062", "canonical": "Opera Software", "aliases": []}
+{"task_id": "ws-0063", "canonical": "DeepSeek AI", "aliases": ["DeepSeek"]}
+{"task_id": "ws-0063", "canonical": "Meta", "aliases": []}
+{"task_id": "ws-0063", "canonical": "Moonshot AI", "aliases": []}
+{"task_id": "ws-0063", "canonical": "Thinking Machines Labs", "aliases": []}
+{"task_id": "ws-0063", "canonical": "Snowflake", "aliases": []}
+{"task_id": "ws-0063", "canonical": "Mistral AI", "aliases": []}
+{"task_id": "ws-0064", "canonical": "Cape Verde", "aliases": []}
+{"task_id": "ws-0064", "canonical": "Curaçao", "aliases": []}
+{"task_id": "ws-0064", "canonical": "Jordan", "aliases": []}
+{"task_id": "ws-0064", "canonical": "Uzbekistan", "aliases": []}
+{"task_id": "ws-0065", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0065", "canonical": "Meta", "aliases": []}
+{"task_id": "ws-0065", "canonical": "Visa", "aliases": []}
+{"task_id": "ws-0066", "canonical": "Charlotte FC", "aliases": []}
+{"task_id": "ws-0066", "canonical": "St. Louis", "aliases": ["St. Louis City", "St. Louis City SC"]}
+{"task_id": "ws-0066", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0066", "canonical": "Bay FC (NWSL, inaugural season 2024)", "aliases": []}
+{"task_id": "ws-0066", "canonical": "Angel City FC (NWSL, inaugural season 2022)", "aliases": ["Angel City FC (NWSL, inaugural 2022)"]}
+{"task_id": "ws-0066", "canonical": "San Diego FC (MLS, inaugural 2025)", "aliases": []}
+{"task_id": "ws-0067", "canonical": "OpenAI", "aliases": []}
+{"task_id": "ws-0067", "canonical": "Anthropic", "aliases": []}
+{"task_id": "ws-0067", "canonical": "LMSYS (Vicuna)", "aliases": []}
+{"task_id": "ws-0068", "canonical": "OpenAI (Sora via ChatGPT)", "aliases": ["OpenAI (Sora 2)"]}
+{"task_id": "ws-0068", "canonical": "Google (Veo 3.1, Imagen Video, Lumiere, VideoPoet)", "aliases": []}
+{"task_id": "ws-0068", "canonical": "Kling AI", "aliases": []}
+{"task_id": "ws-0068", "canonical": "ByteDance (Seedance)", "aliases": []}
+{"task_id": "ws-0068", "canonical": "Runway (Runway Research / RunwayML) - Gen-2 text-to-video", "aliases": ["Runway", "Runway (RunwayML / Runway Research)", "Runway (Runway ML Gen-2)"]}
+{"task_id": "ws-0068", "canonical": "PixVerse", "aliases": []}
+{"task_id": "ws-0068", "canonical": "LTX Video (Lightricks)", "aliases": []}
+{"task_id": "ws-0068", "canonical": "Meta (Make-A-Video)", "aliases": []}
+{"task_id": "ws-0068", "canonical": "MiniMax (Hailuo)", "aliases": []}
+{"task_id": "ws-0068", "canonical": "Kaiber (Kaiber.ai text-to-video product)", "aliases": []}
+{"task_id": "ws-0068", "canonical": "Synthesia (Synthesia text-to-video AI video platform)", "aliases": ["Synthesia (text-to-video / presenter/avatar videos)"]}
+{"task_id": "ws-0068", "canonical": "Elai", "aliases": []}
+{"task_id": "ws-0069", "canonical": "United States", "aliases": []}
+{"task_id": "ws-0069", "canonical": "Italy", "aliases": []}
+{"task_id": "ws-0069", "canonical": "United Kingdom", "aliases": []}
+{"task_id": "ws-0069", "canonical": "South Korea", "aliases": []}
+{"task_id": "ws-0070", "canonical": "Alphabet (Google)", "aliases": []}
+{"task_id": "ws-0070", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0070", "canonical": "Meta", "aliases": []}
+{"task_id": "ws-0071", "canonical": "Anthropic", "aliases": []}
+{"task_id": "ws-0071", "canonical": "Google DeepMind", "aliases": ["DeepMind"]}
+{"task_id": "ws-0071", "canonical": "G42", "aliases": []}
+{"task_id": "ws-0072", "canonical": "Zynteglo", "aliases": []}
+{"task_id": "ws-0072", "canonical": "Skysona", "aliases": []}
+{"task_id": "ws-0072", "canonical": "Hemgenix", "aliases": []}
+{"task_id": "ws-0072", "canonical": "Elevidys", "aliases": []}
+{"task_id": "ws-0072", "canonical": "Casgevy", "aliases": []}
+{"task_id": "ws-0072", "canonical": "Zolgensma", "aliases": []}
 {"task_id": "ws-0073", "canonical": "苏联/俄罗斯", "aliases": ["Russia", "Soviet Union", "USSR"]}
 {"task_id": "ws-0073", "canonical": "美国", "aliases": ["US", "USA", "United States", "United States of America"]}
 {"task_id": "ws-0073", "canonical": "法国", "aliases": ["France"]}
@@ -9,28 +395,1313 @@
 {"task_id": "ws-0073", "canonical": "印度", "aliases": ["India"]}
 {"task_id": "ws-0073", "canonical": "以色列", "aliases": ["Israel"]}
 {"task_id": "ws-0073", "canonical": "伊朗", "aliases": ["Iran"]}
+{"task_id": "ws-0073", "canonical": "Astra Space", "aliases": ["Astra"]}
+{"task_id": "ws-0073", "canonical": "Isar Aerospace", "aliases": []}
+{"task_id": "ws-0073", "canonical": "LandSpace", "aliases": []}
+{"task_id": "ws-0074", "canonical": "Anker A1642", "aliases": []}
+{"task_id": "ws-0074", "canonical": "Anker A1647", "aliases": []}
+{"task_id": "ws-0074", "canonical": "Anker A1652", "aliases": []}
+{"task_id": "ws-0074", "canonical": "INIU BI-B41", "aliases": []}
+{"task_id": "ws-0074", "canonical": "Belkin Boost Charge USB-C PD Power Bank 20K (BPB002)", "aliases": []}
+{"task_id": "ws-0074", "canonical": "Casely MagSafe Power Pod E33A", "aliases": []}
+{"task_id": "ws-0074", "canonical": "Anker PowerCore 10000 A1263", "aliases": []}
+{"task_id": "ws-0074", "canonical": "myCharge POWER HUB All-In-One 10,000mAh", "aliases": []}
+{"task_id": "ws-0074", "canonical": "Belkin BoostCharge Pro Fast Wireless Charger for Apple Watch + Power Bank 10K", "aliases": []}
+{"task_id": "ws-0074", "canonical": "Quad Lock — MAG Battery Pack (CPSC recall notice)", "aliases": []}
+{"task_id": "ws-0074", "canonical": "myCharge — POWER HUB all-in-one portable charger (CPSC recall notice)", "aliases": []}
+{"task_id": "ws-0075", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0075", "canonical": "Moonshot AI", "aliases": []}
+{"task_id": "ws-0075", "canonical": "Mistral AI", "aliases": []}
+{"task_id": "ws-0075", "canonical": "StepFunAI", "aliases": []}
+{"task_id": "ws-0076", "canonical": "Quibi", "aliases": []}
+{"task_id": "ws-0076", "canonical": "Seeso", "aliases": []}
+{"task_id": "ws-0076", "canonical": "Fullscreen (Fullscreen Media SVOD)", "aliases": []}
+{"task_id": "ws-0076", "canonical": "YouTube Originals", "aliases": []}
+{"task_id": "ws-0076", "canonical": "Shomi", "aliases": []}
+{"task_id": "ws-0076", "canonical": "Comic-Con HQ", "aliases": []}
+{"task_id": "ws-0076", "canonical": "Showtime (streaming service, merged into Paramount+)", "aliases": []}
+{"task_id": "ws-0077", "canonical": "TSMC", "aliases": []}
+{"task_id": "ws-0077", "canonical": "GlobalFoundries", "aliases": []}
+{"task_id": "ws-0077", "canonical": "Intel", "aliases": []}
+{"task_id": "ws-0077", "canonical": "Polar Semiconductor", "aliases": []}
+{"task_id": "ws-0077", "canonical": "Corning", "aliases": []}
+{"task_id": "ws-0077", "canonical": "Edwards Vacuum", "aliases": []}
+{"task_id": "ws-0077", "canonical": "Infinera", "aliases": []}
+{"task_id": "ws-0077", "canonical": "Robert Bosch Semiconductor LLC (Bosch)", "aliases": []}
+{"task_id": "ws-0078", "canonical": "Imlygic", "aliases": []}
+{"task_id": "ws-0078", "canonical": "Luxturna", "aliases": []}
+{"task_id": "ws-0078", "canonical": "Zolgensma", "aliases": []}
+{"task_id": "ws-0078", "canonical": "Itvisma", "aliases": []}
+{"task_id": "ws-0078", "canonical": "Upstaza", "aliases": []}
+{"task_id": "ws-0078", "canonical": "Roctavian", "aliases": []}
+{"task_id": "ws-0079", "canonical": "Intuit Dome", "aliases": []}
+{"task_id": "ws-0079", "canonical": "CPKC Stadium", "aliases": []}
+{"task_id": "ws-0079", "canonical": "Sutter Health Park", "aliases": []}
+{"task_id": "ws-0079", "canonical": "George M. Steinbrenner Field", "aliases": []}
+{"task_id": "ws-0079", "canonical": "Hill Dickinson Stadium (Everton's new waterfront stadium)", "aliases": []}
+{"task_id": "ws-0079", "canonical": "Nu Stadium (Miami Freedom Park)", "aliases": []}
+{"task_id": "ws-0079", "canonical": "Denver Summit FC temporary stadium", "aliases": []}
+{"task_id": "ws-0079", "canonical": "Highmark Stadium (inaugurated as the Buffalo Bills' new home for their 2026 inaugural season)", "aliases": []}
+{"task_id": "ws-0080", "canonical": "San Jose", "aliases": []}
+{"task_id": "ws-0080", "canonical": "Las Vegas metropolitan area (Vegas Golden Knights — NHL expansion 2017; sources state they were the city's first major professional sports team)", "aliases": ["Las Vegas"]}
+{"task_id": "ws-0080", "canonical": "Nashville", "aliases": []}
+{"task_id": "ws-0080", "canonical": "Austin FC (Austin) — MLS expansion 2021", "aliases": []}
+{"task_id": "ws-0080", "canonical": "Columbus Blue Jackets (Columbus) — NHL expansion 2000", "aliases": []}
+{"task_id": "ws-0080", "canonical": "Jacksonville Jaguars (Jacksonville) — NFL expansion 1995", "aliases": []}
+{"task_id": "ws-0081", "canonical": "Google (Alphabet)", "aliases": []}
+{"task_id": "ws-0081", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0081", "canonical": "Amazon", "aliases": ["Amazon.com", "Amazon.com, Inc."]}
+{"task_id": "ws-0081", "canonical": "Visa", "aliases": []}
+{"task_id": "ws-0082", "canonical": "Glybera", "aliases": []}
+{"task_id": "ws-0082", "canonical": "Skysona", "aliases": []}
+{"task_id": "ws-0082", "canonical": "Roctavian", "aliases": []}
+{"task_id": "ws-0082", "canonical": "Beqvez", "aliases": []}
+{"task_id": "ws-0082", "canonical": "Zynteglo", "aliases": []}
+{"task_id": "ws-0083", "canonical": "Seattle Kraken", "aliases": []}
+{"task_id": "ws-0083", "canonical": "Nashville SC", "aliases": []}
+{"task_id": "ws-0083", "canonical": "Austin FC", "aliases": []}
+{"task_id": "ws-0083", "canonical": "Charlotte FC", "aliases": []}
+{"task_id": "ws-0084", "canonical": "European Commission", "aliases": []}
+{"task_id": "ws-0084", "canonical": "UK Competition and Markets Authority (CMA)", "aliases": []}
+{"task_id": "ws-0084", "canonical": "Japan Fair Trade Commission (Japanese regulators under the Mobile Software Competition Act)", "aliases": []}
+{"task_id": "ws-0084", "canonical": "Competition Commission of India (CCI)", "aliases": []}
+{"task_id": "ws-0084", "canonical": "Colombia - Superintendencia de Industria y Comercio / Colombia’s competition authority", "aliases": []}
+{"task_id": "ws-0085", "canonical": "Beasts of No Nation", "aliases": []}
+{"task_id": "ws-0085", "canonical": "Roma", "aliases": []}
+{"task_id": "ws-0085", "canonical": "The Irishman", "aliases": []}
+{"task_id": "ws-0085", "canonical": "Marriage Story (Criterion Collection Blu-ray release)", "aliases": ["Marriage Story"]}
+{"task_id": "ws-0086", "canonical": "Seattle Kraken", "aliases": []}
+{"task_id": "ws-0086", "canonical": "Utah Mammoth", "aliases": []}
+{"task_id": "ws-0086", "canonical": "Minnesota United FC", "aliases": []}
+{"task_id": "ws-0086", "canonical": "FC Cincinnati", "aliases": []}
+{"task_id": "ws-0086", "canonical": "Inter Miami CF", "aliases": []}
+{"task_id": "ws-0086", "canonical": "Nashville SC", "aliases": []}
+{"task_id": "ws-0086", "canonical": "Austin FC", "aliases": []}
+{"task_id": "ws-0086", "canonical": "Orlando City SC", "aliases": ["Orlando City"]}
+{"task_id": "ws-0086", "canonical": "St. Louis City SC", "aliases": ["St. Louis City", "St. Louis CITY SC"]}
+{"task_id": "ws-0087", "canonical": "Vegas Golden Knights", "aliases": []}
+{"task_id": "ws-0087", "canonical": "Seattle Kraken", "aliases": []}
+{"task_id": "ws-0087", "canonical": "Utah Mammoth", "aliases": []}
+{"task_id": "ws-0087", "canonical": "New York City FC", "aliases": []}
+{"task_id": "ws-0087", "canonical": "Orlando City SC", "aliases": ["Orlando City"]}
+{"task_id": "ws-0087", "canonical": "Atlanta United", "aliases": ["Atlanta United FC"]}
+{"task_id": "ws-0087", "canonical": "Minnesota United", "aliases": ["Minnesota United FC"]}
+{"task_id": "ws-0087", "canonical": "Los Angeles FC", "aliases": []}
+{"task_id": "ws-0087", "canonical": "FC Cincinnati", "aliases": []}
+{"task_id": "ws-0087", "canonical": "Inter Miami CF", "aliases": []}
+{"task_id": "ws-0087", "canonical": "San Diego FC / San Diego (MLS, began play 2025)", "aliases": ["San Diego FC (MLS, 2025)"]}
+{"task_id": "ws-0087", "canonical": "Austin FC (MLS, began play 2021)", "aliases": ["Austin FC"]}
+{"task_id": "ws-0087", "canonical": "St. Louis CITY SC (MLS, began play 2023)", "aliases": ["St. Louis City SC (MLS, 2023)", "St. Louis City SC", "St. Louis City", "St. Louis CITY SC"]}
+{"task_id": "ws-0087", "canonical": "Charlotte FC (MLS, began play 2022)", "aliases": ["Charlotte FC (MLS, 2022)"]}
+{"task_id": "ws-0087", "canonical": "Nashville SC", "aliases": []}
+{"task_id": "ws-0088", "canonical": "Vegas Golden Knights", "aliases": []}
+{"task_id": "ws-0088", "canonical": "Seattle Kraken", "aliases": []}
+{"task_id": "ws-0088", "canonical": "Utah Hockey Club (Utah Mammoth)", "aliases": []}
+{"task_id": "ws-0088", "canonical": "San Diego FC", "aliases": []}
+{"task_id": "ws-0088", "canonical": "Minnesota United", "aliases": ["Minnesota United FC"]}
+{"task_id": "ws-0088", "canonical": "Los Angeles FC", "aliases": []}
+{"task_id": "ws-0088", "canonical": "Inter Miami CF", "aliases": []}
+{"task_id": "ws-0088", "canonical": "Charlotte FC", "aliases": []}
+{"task_id": "ws-0089", "canonical": "GitHub Actions", "aliases": []}
+{"task_id": "ws-0089", "canonical": "GitLab CI/CD", "aliases": []}
+{"task_id": "ws-0089", "canonical": "Bitbucket Pipelines", "aliases": []}
+{"task_id": "ws-0089", "canonical": "Azure Pipelines", "aliases": []}
+{"task_id": "ws-0089", "canonical": "AWS CodePipeline", "aliases": []}
+{"task_id": "ws-0089", "canonical": "AWS CodeBuild", "aliases": []}
+{"task_id": "ws-0089", "canonical": "Google Cloud Build", "aliases": ["Cloud Build"]}
+{"task_id": "ws-0090", "canonical": "Unisys Corp.", "aliases": []}
+{"task_id": "ws-0090", "canonical": "Intercontinental Exchange, Inc. (ICE)", "aliases": []}
+{"task_id": "ws-0090", "canonical": "SolarWinds Corporation", "aliases": []}
+{"task_id": "ws-0091", "canonical": "Python", "aliases": []}
+{"task_id": "ws-0091", "canonical": "Perl", "aliases": []}
+{"task_id": "ws-0091", "canonical": "Scratch", "aliases": []}
+{"task_id": "ws-0091", "canonical": "The Rust Foundation", "aliases": []}
+{"task_id": "ws-0092", "canonical": "VIDAA", "aliases": []}
+{"task_id": "ws-0092", "canonical": "Titan OS", "aliases": []}
+{"task_id": "ws-0092", "canonical": "Fire TV OS", "aliases": []}
+{"task_id": "ws-0093", "canonical": "AMD Fiji GPUs", "aliases": []}
+{"task_id": "ws-0093", "canonical": "Fujitsu A64FX", "aliases": []}
+{"task_id": "ws-0093", "canonical": "AMD Instinct MI300X", "aliases": []}
+{"task_id": "ws-0093", "canonical": "AMD Instinct MI300A", "aliases": []}
+{"task_id": "ws-0093", "canonical": "AMD Instinct MI300C", "aliases": []}
+{"task_id": "ws-0093", "canonical": "AMD Instinct MI350X", "aliases": []}
+{"task_id": "ws-0093", "canonical": "NVIDIA A100 (HBM2/HBM2e on-package)", "aliases": ["NVIDIA A100 Tensor Core GPU", "A100 Tensor Core GPU"]}
+{"task_id": "ws-0093", "canonical": "NVIDIA H100 (HBM3 on-package, incl. H100 NVL variants)", "aliases": ["NVIDIA H100 (SXM form‑factor with HBM3 on-package)", "NVIDIA H100 Tensor Core GPU", "H100 Tensor Core GPU"]}
+{"task_id": "ws-0093", "canonical": "Intel Ponte Vecchio / Intel Max-series accelerators (HBM2e on-package)", "aliases": []}
+{"task_id": "ws-0093", "canonical": "AMD Instinct MI250 / MI250X (HBM2e stacks in-package, OAM modules)", "aliases": []}
+{"task_id": "ws-0094", "canonical": "Moderna", "aliases": []}
+{"task_id": "ws-0094", "canonical": "Novavax", "aliases": []}
+{"task_id": "ws-0094", "canonical": "AstraZeneca", "aliases": []}
+{"task_id": "ws-0095", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0095", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0095", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0095", "canonical": "Oracle Cloud (OCI)", "aliases": ["Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0096", "canonical": "Bellefield Solar and Energy Storage Farm", "aliases": []}
+{"task_id": "ws-0096", "canonical": "Moss Landing Energy Storage Facility", "aliases": []}
+{"task_id": "ws-0096", "canonical": "Green River Energy Center", "aliases": []}
+{"task_id": "ws-0096", "canonical": "SMT Ironman Battery Storage Plant", "aliases": []}
+{"task_id": "ws-0097", "canonical": "Seattle Kraken (NHL, inaugural 2021–22)", "aliases": ["Seattle Kraken", "Seattle Kraken (NHL, debuted 2021-22)"]}
+{"task_id": "ws-0097", "canonical": "Austin FC (MLS, inaugural 2021)", "aliases": ["Austin FC"]}
+{"task_id": "ws-0097", "canonical": "Charlotte FC (MLS, inaugural 2022)", "aliases": ["Charlotte FC"]}
+{"task_id": "ws-0097", "canonical": "Angel City FC", "aliases": []}
+{"task_id": "ws-0097", "canonical": "San Diego FC", "aliases": []}
+{"task_id": "ws-0097", "canonical": "Bay FC", "aliases": []}
+{"task_id": "ws-0097", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0097", "canonical": "Portland Fire", "aliases": []}
+{"task_id": "ws-0097", "canonical": "Denver Summit FC", "aliases": ["Denver Summit"]}
+{"task_id": "ws-0098", "canonical": "India", "aliases": []}
+{"task_id": "ws-0098", "canonical": "Vietnam", "aliases": []}
+{"task_id": "ws-0098", "canonical": "Malaysia", "aliases": []}
+{"task_id": "ws-0099", "canonical": "Open Infrastructure Foundation (OpenInfra Foundation)", "aliases": []}
+{"task_id": "ws-0099", "canonical": "OpenStack Foundation", "aliases": []}
+{"task_id": "ws-0099", "canonical": "Open Source Development Labs (OSDL)", "aliases": []}
+{"task_id": "ws-0099", "canonical": "Dojo Foundation", "aliases": []}
+{"task_id": "ws-0099", "canonical": "Node.js Foundation", "aliases": []}
+{"task_id": "ws-0099", "canonical": "JS Foundation", "aliases": []}
+{"task_id": "ws-0100", "canonical": "Google (search case)", "aliases": ["Google"]}
+{"task_id": "ws-0100", "canonical": "Meta Platforms (Facebook)", "aliases": []}
+{"task_id": "ws-0100", "canonical": "Visa", "aliases": []}
+{"task_id": "ws-0100", "canonical": "Live Nation", "aliases": ["Live Nation Entertainment"]}
+{"task_id": "ws-0100", "canonical": "Hewlett Packard Enterprise (HPE)", "aliases": []}
+{"task_id": "ws-0100", "canonical": "Juniper Networks", "aliases": []}
+{"task_id": "ws-0100", "canonical": "Vyera Pharmaceuticals", "aliases": []}
+{"task_id": "ws-0100", "canonical": "Koch Foods Incorporated", "aliases": []}
+{"task_id": "ws-0100", "canonical": "Surescripts", "aliases": []}
+{"task_id": "ws-0101", "canonical": "Luxturna (voretigene neparvovec)", "aliases": []}
+{"task_id": "ws-0101", "canonical": "Zolgensma (onasemnogene abeparvovec)", "aliases": []}
+{"task_id": "ws-0101", "canonical": "Roctavian (valoctocogene roxaparvovec)", "aliases": []}
+{"task_id": "ws-0101", "canonical": "DURVEQTIX (fidanacogene elaparvovec)", "aliases": []}
+{"task_id": "ws-0102", "canonical": "OpenAI", "aliases": []}
+{"task_id": "ws-0102", "canonical": "Meta", "aliases": []}
+{"task_id": "ws-0102", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0103", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0103", "canonical": "NVIDIA (Nemotron)", "aliases": []}
+{"task_id": "ws-0103", "canonical": "Mistral AI", "aliases": []}
+{"task_id": "ws-0104", "canonical": "BlackCAT", "aliases": []}
+{"task_id": "ws-0104", "canonical": "Chandra X-ray Observatory", "aliases": []}
+{"task_id": "ws-0104", "canonical": "XMM-Newton", "aliases": []}
+{"task_id": "ws-0104", "canonical": "IXPE", "aliases": []}
+{"task_id": "ws-0104", "canonical": "XRISM", "aliases": []}
+{"task_id": "ws-0105", "canonical": "Cloud Native Computing Foundation (CNCF)", "aliases": []}
+{"task_id": "ws-0105", "canonical": "OpenJS Foundation", "aliases": []}
+{"task_id": "ws-0105", "canonical": "Open Source Security Foundation (OpenSSF)", "aliases": []}
+{"task_id": "ws-0106", "canonical": "Brazil", "aliases": []}
+{"task_id": "ws-0106", "canonical": "Republic of Korea (South Korea)", "aliases": []}
+{"task_id": "ws-0106", "canonical": "United States", "aliases": []}
+{"task_id": "ws-0106", "canonical": "Saudi Arabia", "aliases": []}
+{"task_id": "ws-0106", "canonical": "Canada (ISED - Decision on the Technical and Policy Framework for Licence-Exempt Use in the 6 GHz Band)", "aliases": []}
+{"task_id": "ws-0107", "canonical": "Samsung Electronics", "aliases": []}
+{"task_id": "ws-0107", "canonical": "SK Hynix", "aliases": []}
+{"task_id": "ws-0107", "canonical": "Micron Technology", "aliases": ["Micron"]}
+{"task_id": "ws-0108", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0108", "canonical": "Tencent Cloud", "aliases": []}
+{"task_id": "ws-0108", "canonical": "Huawei Cloud", "aliases": []}
+{"task_id": "ws-0108", "canonical": "AWS China (Amazon Web Services China, operated by Sinnet and NWCD)", "aliases": []}
+{"task_id": "ws-0108", "canonical": "Microsoft Azure China (operated by 21Vianet)", "aliases": ["Microsoft Azure (operated by 21Vianet)"]}
+{"task_id": "ws-0108", "canonical": "Amazon Web Services (AWS) — China (Beijing) and China (Ningxia) regions (operated locally, e.g., Sinnet/NWCD)", "aliases": ["Amazon Web Services (AWS) — China regions operated by Sinnet and NWCD", "Amazon Web Services (AWS) — AWS China (Beijing) operated by Sinnet and AWS China (Ningxia) operated by NWCD", "Amazon Web Services"]}
+{"task_id": "ws-0109", "canonical": "Onpattro (patisiran)", "aliases": []}
+{"task_id": "ws-0109", "canonical": "Givlaari (givosiran)", "aliases": []}
+{"task_id": "ws-0109", "canonical": "Leqvio (inclisiran)", "aliases": []}
+{"task_id": "ws-0109", "canonical": "Oxlumo (lumasiran)", "aliases": ["lumasiran (OXLUMO)"]}
+{"task_id": "ws-0109", "canonical": "Amvuttra (vutrisiran)", "aliases": ["vutrisiran (AMVUTTRA)"]}
+{"task_id": "ws-0109", "canonical": "nedosiran (RIVFLOZA)", "aliases": []}
+{"task_id": "ws-0110", "canonical": "Cologuard", "aliases": []}
+{"task_id": "ws-0110", "canonical": "Cologuard Plus", "aliases": []}
+{"task_id": "ws-0110", "canonical": "ColoAlert", "aliases": []}
+{"task_id": "ws-0111", "canonical": "Kubernetes", "aliases": []}
+{"task_id": "ws-0111", "canonical": "containerd", "aliases": []}
+{"task_id": "ws-0111", "canonical": "Prometheus", "aliases": []}
+{"task_id": "ws-0111", "canonical": "Argo", "aliases": []}
+{"task_id": "ws-0111", "canonical": "Flux", "aliases": []}
+{"task_id": "ws-0111", "canonical": "Envoy (originally developed at Lyft)", "aliases": []}
+{"task_id": "ws-0111", "canonical": "Jaeger (originally developed at Uber)", "aliases": ["Jaeger (created by Uber Engineering)"]}
+{"task_id": "ws-0112", "canonical": "Cilium", "aliases": []}
+{"task_id": "ws-0112", "canonical": "Apache SeaTunnel", "aliases": ["SeaTunnel"]}
+{"task_id": "ws-0112", "canonical": "Apache Kvrocks", "aliases": ["Kvrocks"]}
+{"task_id": "ws-0112", "canonical": "Istio (CNCF) — announced/project graduation Jul 12, 2023", "aliases": ["Istio"]}
+{"task_id": "ws-0112", "canonical": "CRI-O (CNCF) — announced graduation Jul 19, 2023", "aliases": ["CRI-O"]}
+{"task_id": "ws-0113", "canonical": "Pfizer–BioNTech", "aliases": []}
+{"task_id": "ws-0113", "canonical": "Oxford–AstraZeneca (AstraZeneca / University of Oxford)", "aliases": []}
+{"task_id": "ws-0113", "canonical": "Moderna", "aliases": []}
+{"task_id": "ws-0113", "canonical": "Johnson & Johnson / Janssen", "aliases": []}
+{"task_id": "ws-0113", "canonical": "Sanofi–GlaxoSmithKline (Sanofi–GSK)", "aliases": []}
+{"task_id": "ws-0113", "canonical": "Novavax", "aliases": []}
+{"task_id": "ws-0113", "canonical": "Sinovac (CoronaVac)", "aliases": []}
+{"task_id": "ws-0113", "canonical": "Bharat Biotech (Covaxin)", "aliases": []}
+{"task_id": "ws-0113", "canonical": "Serum Institute of India (Covishield / Covovax)", "aliases": []}
+{"task_id": "ws-0114", "canonical": "Aditya-L1", "aliases": []}
+{"task_id": "ws-0114", "canonical": "SOLAR1", "aliases": []}
+{"task_id": "ws-0114", "canonical": "Interstellar Mapping and Acceleration Probe (IMAP)", "aliases": []}
+{"task_id": "ws-0115", "canonical": "Qualcomm", "aliases": []}
+{"task_id": "ws-0115", "canonical": "MediaTek", "aliases": []}
+{"task_id": "ws-0115", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0115", "canonical": "Google (Tensor)", "aliases": []}
+{"task_id": "ws-0116", "canonical": "Marty Supreme", "aliases": []}
+{"task_id": "ws-0116", "canonical": "The Moment", "aliases": []}
+{"task_id": "ws-0116", "canonical": "Pillion", "aliases": []}
+{"task_id": "ws-0116", "canonical": "Eddington", "aliases": []}
+{"task_id": "ws-0116", "canonical": "Warfare", "aliases": []}
+{"task_id": "ws-0116", "canonical": "Priscilla", "aliases": []}
+{"task_id": "ws-0116", "canonical": "Dream Scenario", "aliases": []}
+{"task_id": "ws-0116", "canonical": "The Iron Claw", "aliases": []}
+{"task_id": "ws-0116", "canonical": "The Zone of Interest", "aliases": []}
+{"task_id": "ws-0116", "canonical": "Dicks: The Musical", "aliases": []}
+{"task_id": "ws-0117", "canonical": "SOLAR-1 (SWFO-L1)", "aliases": []}
+{"task_id": "ws-0117", "canonical": "Aditya-L1", "aliases": []}
+{"task_id": "ws-0117", "canonical": "Solar Orbiter", "aliases": []}
+{"task_id": "ws-0117", "canonical": "Parker Solar Probe", "aliases": []}
+{"task_id": "ws-0117", "canonical": "STEREO-A", "aliases": []}
+{"task_id": "ws-0117", "canonical": "ACE (Advanced Composition Explorer)", "aliases": []}
+{"task_id": "ws-0118", "canonical": "Minnesota United FC", "aliases": []}
+{"task_id": "ws-0118", "canonical": "Atlanta United FC", "aliases": []}
+{"task_id": "ws-0118", "canonical": "Los Angeles FC / LAFC (MLS, inaugural 2018)", "aliases": ["Los Angeles FC"]}
+{"task_id": "ws-0118", "canonical": "FC Cincinnati", "aliases": []}
+{"task_id": "ws-0118", "canonical": "Inter Miami CF", "aliases": []}
+{"task_id": "ws-0118", "canonical": "Austin FC (MLS, inaugural 2021)", "aliases": ["Austin FC"]}
+{"task_id": "ws-0118", "canonical": "Charlotte FC", "aliases": []}
+{"task_id": "ws-0118", "canonical": "St. Louis City SC", "aliases": ["St. Louis City", "St. Louis CITY SC"]}
+{"task_id": "ws-0118", "canonical": "San Diego FC", "aliases": []}
+{"task_id": "ws-0118", "canonical": "Racing Louisville FC (NWSL debut 2021)", "aliases": []}
+{"task_id": "ws-0118", "canonical": "Angel City FC (NWSL debut 2022)", "aliases": []}
+{"task_id": "ws-0119", "canonical": "ProxyLogon", "aliases": []}
+{"task_id": "ws-0119", "canonical": "ProxyShell", "aliases": []}
+{"task_id": "ws-0119", "canonical": "ProxyNotShell", "aliases": []}
+{"task_id": "ws-0120", "canonical": "SOHO (Solar and Heliospheric Observatory) – LASCO", "aliases": []}
+{"task_id": "ws-0120", "canonical": "STEREO", "aliases": []}
+{"task_id": "ws-0120", "canonical": "Solar Orbiter", "aliases": []}
+{"task_id": "ws-0120", "canonical": "GOES (CCOR-1)", "aliases": []}
+{"task_id": "ws-0120", "canonical": "CODEX (International Space Station)", "aliases": []}
+{"task_id": "ws-0120", "canonical": "Parker Solar Probe (WISPR)", "aliases": []}
+{"task_id": "ws-0121", "canonical": "Pioneer 11", "aliases": []}
+{"task_id": "ws-0121", "canonical": "Voyager 1", "aliases": []}
+{"task_id": "ws-0121", "canonical": "Voyager 2", "aliases": []}
+{"task_id": "ws-0121", "canonical": "Cassini–Huygens (Cassini)", "aliases": []}
+{"task_id": "ws-0122", "canonical": "CVE-2023-46805", "aliases": []}
+{"task_id": "ws-0122", "canonical": "CVE-2024-21893", "aliases": []}
+{"task_id": "ws-0122", "canonical": "CVE-2025-22457", "aliases": []}
+{"task_id": "ws-0122", "canonical": "CVE-2026-0300", "aliases": []}
+{"task_id": "ws-0123", "canonical": "Apollo 11", "aliases": []}
+{"task_id": "ws-0123", "canonical": "Apollo 14", "aliases": []}
+{"task_id": "ws-0123", "canonical": "Apollo 16", "aliases": []}
+{"task_id": "ws-0123", "canonical": "Apollo 17", "aliases": []}
+{"task_id": "ws-0123", "canonical": "Viking 2 (seismometer deployed and records obtained)", "aliases": ["Viking 2"]}
+{"task_id": "ws-0123", "canonical": "Apollo 15 Passive Seismic Experiment", "aliases": []}
+{"task_id": "ws-0124", "canonical": "Exagamglogene autotemcel (Casgevy)", "aliases": []}
+{"task_id": "ws-0124", "canonical": "Voretigene neparvovec (Luxturna)", "aliases": []}
+{"task_id": "ws-0124", "canonical": "Etranacogene dezaparvovec (Hemgenix)", "aliases": []}
+{"task_id": "ws-0125", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0125", "canonical": "Microsoft", "aliases": []}
+{"task_id": "ws-0125", "canonical": "Amazon", "aliases": ["Amazon.com", "Amazon.com, Inc."]}
+{"task_id": "ws-0126", "canonical": "Apple A19 Pro", "aliases": ["A19 Pro"]}
+{"task_id": "ws-0126", "canonical": "Apple A19", "aliases": ["a19", "A19"]}
+{"task_id": "ws-0126", "canonical": "Apple A18 Pro", "aliases": ["A18 Pro"]}
+{"task_id": "ws-0126", "canonical": "Apple A18", "aliases": ["a18", "A18"]}
+{"task_id": "ws-0126", "canonical": "Google Tensor G5", "aliases": []}
+{"task_id": "ws-0126", "canonical": "HiSilicon / Kirin 9000s", "aliases": []}
+{"task_id": "ws-0127", "canonical": "Meta (Meta AI)", "aliases": ["Meta"]}
+{"task_id": "ws-0127", "canonical": "Alibaba Cloud (Qwen team)", "aliases": []}
+{"task_id": "ws-0127", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0127", "canonical": "Z.ai (Zhipu AI)", "aliases": []}
+{"task_id": "ws-0127", "canonical": "Thinking Machines Lab", "aliases": []}
+{"task_id": "ws-0127", "canonical": "Upstage (Solar)", "aliases": []}
+{"task_id": "ws-0127", "canonical": "OpenAI (GPT OSS)", "aliases": []}
+{"task_id": "ws-0127", "canonical": "Mistral AI", "aliases": []}
+{"task_id": "ws-0127", "canonical": "Moonshot AI (Kimi K3)", "aliases": []}
+{"task_id": "ws-0127", "canonical": "Technology Innovation Institute (TII) (Falcon‑180B)", "aliases": []}
+{"task_id": "ws-0128", "canonical": "HashiCorp", "aliases": []}
+{"task_id": "ws-0128", "canonical": "Confluent", "aliases": []}
+{"task_id": "ws-0128", "canonical": "DataStax", "aliases": []}
+{"task_id": "ws-0128", "canonical": "Kubecost", "aliases": []}
+{"task_id": "ws-0129", "canonical": "LaunchDarkly", "aliases": []}
+{"task_id": "ws-0129", "canonical": "Optimizely", "aliases": []}
+{"task_id": "ws-0130", "canonical": "Porsche Taycan", "aliases": ["Porsche Taycan Turbo GT (with Manthey Kit)"]}
+{"task_id": "ws-0130", "canonical": "Tesla Model S", "aliases": []}
+{"task_id": "ws-0130", "canonical": "Xiaomi SU7 Ultra", "aliases": []}
+{"task_id": "ws-0130", "canonical": "Yangwang U9 Xtreme", "aliases": []}
+{"task_id": "ws-0130", "canonical": "NIO EP9", "aliases": []}
+{"task_id": "ws-0130", "canonical": "BYD YangWang U9X (U9 Xtreme)", "aliases": []}
+{"task_id": "ws-0131", "canonical": "Node.js (Node.js Foundation -> OpenJS Foundation)", "aliases": ["Node.js"]}
+{"task_id": "ws-0131", "canonical": "webpack", "aliases": []}
+{"task_id": "ws-0131", "canonical": "Node-RED", "aliases": []}
+{"task_id": "ws-0131", "canonical": "jQuery UI", "aliases": []}
+{"task_id": "ws-0132", "canonical": "Alphabet (Google)", "aliases": []}
+{"task_id": "ws-0132", "canonical": "Alibaba", "aliases": []}
+{"task_id": "ws-0132", "canonical": "Intel", "aliases": []}
+{"task_id": "ws-0132", "canonical": "Microsoft", "aliases": []}
+{"task_id": "ws-0133", "canonical": "Fermi Gamma-ray Space Telescope", "aliases": []}
+{"task_id": "ws-0133", "canonical": "Neil Gehrels Swift Observatory", "aliases": []}
+{"task_id": "ws-0133", "canonical": "INTEGRAL", "aliases": []}
+{"task_id": "ws-0134", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0134", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0134", "canonical": "Google Cloud Platform (GCP)", "aliases": ["Google Cloud", "Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0134", "canonical": "IBM Cloud", "aliases": []}
+{"task_id": "ws-0135", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0135", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0135", "canonical": "United Launch Alliance", "aliases": []}
+{"task_id": "ws-0135", "canonical": "Orbital Sciences Corporation", "aliases": []}
+{"task_id": "ws-0135", "canonical": "Orbital ATK", "aliases": []}
+{"task_id": "ws-0135", "canonical": "Arianespace", "aliases": []}
+{"task_id": "ws-0135", "canonical": "Eurockot (Rockot)", "aliases": []}
+{"task_id": "ws-0135", "canonical": "International Launch Services (ILS) / Proton", "aliases": []}
+{"task_id": "ws-0136", "canonical": "Google (Alphabet)", "aliases": []}
+{"task_id": "ws-0136", "canonical": "Meta Platforms (Facebook)", "aliases": []}
+{"task_id": "ws-0136", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0136", "canonical": "Amazon", "aliases": ["Amazon.com", "Amazon.com, Inc."]}
+{"task_id": "ws-0136", "canonical": "Microsoft", "aliases": []}
+{"task_id": "ws-0137", "canonical": "NVIDIA (BlueField DPUs / SmartNICs)", "aliases": ["NVIDIA"]}
+{"task_id": "ws-0137", "canonical": "AMD (Pensando)", "aliases": []}
+{"task_id": "ws-0137", "canonical": "Napatech", "aliases": []}
+{"task_id": "ws-0137", "canonical": "Broadcom (Stingray / NetXtreme)", "aliases": []}
+{"task_id": "ws-0138", "canonical": "Anker", "aliases": []}
+{"task_id": "ws-0138", "canonical": "Belkin", "aliases": []}
+{"task_id": "ws-0138", "canonical": "Super Off-Road (Spector & Co.)", "aliases": []}
+{"task_id": "ws-0139", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0139", "canonical": "Oracle (Oracle Cloud Infrastructure)", "aliases": []}
+{"task_id": "ws-0139", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0139", "canonical": "Huawei Cloud", "aliases": []}
+{"task_id": "ws-0140", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0140", "canonical": "United Launch Alliance (ULA)", "aliases": []}
+{"task_id": "ws-0140", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0140", "canonical": "Rocket Lab USA", "aliases": []}
+{"task_id": "ws-0141", "canonical": "Amazon Web Services", "aliases": []}
+{"task_id": "ws-0141", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0141", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0141", "canonical": "Oracle Cloud", "aliases": ["Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0141", "canonical": "OVHcloud", "aliases": []}
 {"task_id": "ws-0142", "canonical": "苏联（俄罗斯国家航天集团/俄罗斯）", "aliases": ["Roscosmos", "Russia", "Soviet Union", "USSR"]}
 {"task_id": "ws-0142", "canonical": "中国（中国载人航天工程办公室）", "aliases": ["CMSA", "China", "China Manned Space Agency"]}
+{"task_id": "ws-0142", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0142", "canonical": "中华人民共和国（中国载人航天机构）（首次：2003年10月15日，神舟五号）", "aliases": []}
+{"task_id": "ws-0143", "canonical": "NVIDIA RTX A6000", "aliases": []}
+{"task_id": "ws-0143", "canonical": "NVIDIA RTX 6000 Ada", "aliases": ["NVIDIA RTX 6000 Ada Generation", "RTX 6000 Ada", "RTX 6000 Ada Generation"]}
+{"task_id": "ws-0143", "canonical": "NVIDIA Tesla A40", "aliases": []}
+{"task_id": "ws-0143", "canonical": "NVIDIA A40 (48 GB, PCIe)", "aliases": ["NVIDIA A40", "a40"]}
+{"task_id": "ws-0143", "canonical": "NVIDIA Quadro RTX 8000", "aliases": []}
+{"task_id": "ws-0143", "canonical": "NVIDIA L40S", "aliases": ["l40s"]}
+{"task_id": "ws-0143", "canonical": "NVIDIA RTX 5880 Ada", "aliases": []}
+{"task_id": "ws-0143", "canonical": "NVIDIA RTX PRO 5000 Blackwell", "aliases": []}
+{"task_id": "ws-0143", "canonical": "NVIDIA RTX PRO 6000 Blackwell", "aliases": []}
+{"task_id": "ws-0143", "canonical": "AMD Radeon PRO W7900", "aliases": []}
+{"task_id": "ws-0143", "canonical": "NVIDIA A100 80GB (PCIe)", "aliases": []}
+{"task_id": "ws-0144", "canonical": "Michel Talagrand", "aliases": []}
+{"task_id": "ws-0144", "canonical": "Noga Alon", "aliases": []}
+{"task_id": "ws-0144", "canonical": "Adi Shamir", "aliases": []}
+{"task_id": "ws-0144", "canonical": "Peter Sarnak", "aliases": []}
+{"task_id": "ws-0144", "canonical": "Simon Brendle", "aliases": []}
+{"task_id": "ws-0145", "canonical": "CVE-2023-3079", "aliases": []}
+{"task_id": "ws-0145", "canonical": "CVE-2023-5217", "aliases": []}
+{"task_id": "ws-0145", "canonical": "CVE-2023-37450", "aliases": []}
+{"task_id": "ws-0145", "canonical": "CVE-2023-23529", "aliases": []}
+{"task_id": "ws-0145", "canonical": "CVE-2023-32373", "aliases": []}
+{"task_id": "ws-0146", "canonical": "Hywind Scotland", "aliases": []}
+{"task_id": "ws-0146", "canonical": "Hywind Tampen", "aliases": []}
+{"task_id": "ws-0146", "canonical": "WindFloat Atlantic", "aliases": []}
+{"task_id": "ws-0146", "canonical": "Kincardine Offshore Wind Farm (50 MW)", "aliases": []}
+{"task_id": "ws-0147", "canonical": "San Diego FC", "aliases": []}
+{"task_id": "ws-0147", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0147", "canonical": "Seattle Torrent", "aliases": []}
+{"task_id": "ws-0147", "canonical": "Vancouver Goldeneyes", "aliases": []}
+{"task_id": "ws-0147", "canonical": "Portland Fire", "aliases": []}
+{"task_id": "ws-0147", "canonical": "Toronto Tempo", "aliases": []}
+{"task_id": "ws-0147", "canonical": "Boston Legacy (NWSL) — inaugural season 2026", "aliases": ["Boston Legacy FC", "Boston Legacy"]}
+{"task_id": "ws-0147", "canonical": "Denver Summit FC", "aliases": ["Denver Summit"]}
+{"task_id": "ws-0147", "canonical": "PWHL Vancouver (PWHL) — inaugural season 2025–26", "aliases": ["PWHL Vancouver (PWHL, inaugural 2025–26)", "PWHL Vancouver — inaugural 2025–26", "PWHL Vancouver"]}
+{"task_id": "ws-0147", "canonical": "PWHL Seattle (PWHL) — inaugural season 2025–26", "aliases": ["PWHL Seattle"]}
+{"task_id": "ws-0148", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0148", "canonical": "Alibaba (Qwen)", "aliases": []}
+{"task_id": "ws-0148", "canonical": "Moonshot AI (Kimi)", "aliases": []}
+{"task_id": "ws-0148", "canonical": "Zhipu AI (GLM)", "aliases": []}
+{"task_id": "ws-0148", "canonical": "Baidu (ERNIE)", "aliases": []}
+{"task_id": "ws-0148", "canonical": "Mistral AI", "aliases": []}
+{"task_id": "ws-0148", "canonical": "Baichuan / Baichuan Inc. (China) — Baichuan-7B (weights released; Apache-2.0)", "aliases": ["Baichuan / Baichuan Inc."]}
+{"task_id": "ws-0148", "canonical": "Technology Innovation Institute (UAE) — Falcon 40B (Apache 2.0)", "aliases": ["Technology Innovation Institute (TII)", "Technology Innovation Institute"]}
+{"task_id": "ws-0149", "canonical": "Lanteris Space Systems", "aliases": []}
+{"task_id": "ws-0149", "canonical": "Thales Alenia Space", "aliases": []}
+{"task_id": "ws-0149", "canonical": "MDA Space", "aliases": []}
+{"task_id": "ws-0150", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0150", "canonical": "Paramount+", "aliases": []}
+{"task_id": "ws-0150", "canonical": "ESPN+ (ESPN Unlimited)", "aliases": []}
+{"task_id": "ws-0150", "canonical": "Prime Video (Amazon Prime Video)", "aliases": []}
+{"task_id": "ws-0150", "canonical": "NFL+", "aliases": []}
+{"task_id": "ws-0150", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0150", "canonical": "YouTube TV", "aliases": []}
+{"task_id": "ws-0150", "canonical": "NFL Sunday Ticket", "aliases": []}
+{"task_id": "ws-0150", "canonical": "Fubo (FuboTV)", "aliases": []}
+{"task_id": "ws-0151", "canonical": "Paramount+", "aliases": []}
+{"task_id": "ws-0151", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0151", "canonical": "Amazon Prime Video", "aliases": ["Prime Video"]}
+{"task_id": "ws-0151", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0151", "canonical": "NFL+", "aliases": []}
+{"task_id": "ws-0151", "canonical": "ESPN+", "aliases": []}
+{"task_id": "ws-0151", "canonical": "ESPN Unlimited", "aliases": []}
+{"task_id": "ws-0151", "canonical": "YouTube TV (NFL Sunday Ticket)", "aliases": []}
+{"task_id": "ws-0152", "canonical": "Solar Orbiter", "aliases": []}
+{"task_id": "ws-0152", "canonical": "Solar Dynamics Observatory (SDO)", "aliases": []}
+{"task_id": "ws-0152", "canonical": "SOHO (Solar and Heliospheric Observatory)", "aliases": []}
+{"task_id": "ws-0152", "canonical": "STEREO-A", "aliases": []}
+{"task_id": "ws-0152", "canonical": "Hinode (Solar-B)", "aliases": []}
+{"task_id": "ws-0152", "canonical": "Aditya-L1", "aliases": []}
+{"task_id": "ws-0153", "canonical": "Hacks", "aliases": []}
+{"task_id": "ws-0153", "canonical": "The Studio", "aliases": []}
+{"task_id": "ws-0153", "canonical": "Adolescence", "aliases": []}
+{"task_id": "ws-0153", "canonical": "Ted Lasso (Apple TV+)", "aliases": []}
+{"task_id": "ws-0154", "canonical": "NVIDIA (data‑center GPUs)", "aliases": ["NVIDIA"]}
+{"task_id": "ws-0154", "canonical": "Amazon Web Services (AWS Trainium/Inferentia)", "aliases": []}
+{"task_id": "ws-0154", "canonical": "AMD", "aliases": []}
+{"task_id": "ws-0155", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0155", "canonical": "Portland Fire", "aliases": []}
+{"task_id": "ws-0155", "canonical": "Toronto Tempo", "aliases": []}
+{"task_id": "ws-0155", "canonical": "Boston Legacy FC", "aliases": ["Boston Legacy"]}
+{"task_id": "ws-0155", "canonical": "Denver Summit FC", "aliases": ["Denver Summit"]}
+{"task_id": "ws-0155", "canonical": "Seattle Torrent", "aliases": []}
+{"task_id": "ws-0155", "canonical": "Vancouver Goldeneyes", "aliases": []}
+{"task_id": "ws-0156", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0156", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0156", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0156", "canonical": "IBM Cloud", "aliases": []}
+{"task_id": "ws-0156", "canonical": "Oracle Cloud", "aliases": ["Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0157", "canonical": "Zolgensma", "aliases": []}
+{"task_id": "ws-0157", "canonical": "Hemgenix", "aliases": []}
+{"task_id": "ws-0157", "canonical": "Roctavian", "aliases": []}
+{"task_id": "ws-0158", "canonical": "European Commission (Directorate‑General for Competition)", "aliases": ["European Commission"]}
+{"task_id": "ws-0158", "canonical": "France's competition watchdog", "aliases": []}
+{"task_id": "ws-0158", "canonical": "Indonesia Competition Commission (KPPU)", "aliases": []}
+{"task_id": "ws-0159", "canonical": "Breakthrough Prize in Life Sciences", "aliases": []}
+{"task_id": "ws-0159", "canonical": "Breakthrough Prize in Fundamental Physics", "aliases": ["Breakthrough Prize — Fundamental Physics"]}
+{"task_id": "ws-0159", "canonical": "Breakthrough Prize in Mathematics", "aliases": ["Breakthrough Prize — Mathematics (each winner receives $3 million)"]}
+{"task_id": "ws-0159", "canonical": "Nobel Prize in Chemistry", "aliases": []}
+{"task_id": "ws-0159", "canonical": "Nobel Prize — Physiology or Medicine (personal cash ≥ ~$1M per full prize)", "aliases": []}
+{"task_id": "ws-0159", "canonical": "Shaw Prize in Astronomy", "aliases": ["Shaw Prize – Astronomy (≈ $1.2 million per prize)"]}
+{"task_id": "ws-0159", "canonical": "Shaw Prize in Life Science & Medicine", "aliases": ["Shaw Prize – Life Science & Medicine (≈ $1.2 million per prize)"]}
+{"task_id": "ws-0159", "canonical": "Shaw Prize in Mathematical Sciences", "aliases": ["Shaw Prize – Mathematical Sciences (≈ $1.2 million per prize)"]}
+{"task_id": "ws-0160", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0160", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0160", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0160", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0160", "canonical": "IBM Cloud", "aliases": []}
+{"task_id": "ws-0161", "canonical": "XCL Resources Holdings, LLC", "aliases": []}
+{"task_id": "ws-0161", "canonical": "Verdun Oil Company II LLC", "aliases": []}
+{"task_id": "ws-0161", "canonical": "Legends Hospitality Parent Holdings LLC", "aliases": []}
+{"task_id": "ws-0161", "canonical": "Illumina", "aliases": []}
+{"task_id": "ws-0161", "canonical": "Grail", "aliases": []}
+{"task_id": "ws-0161", "canonical": "Strauss Group", "aliases": []}
+{"task_id": "ws-0162", "canonical": "JPEG", "aliases": []}
+{"task_id": "ws-0162", "canonical": "JPEG 2000", "aliases": []}
+{"task_id": "ws-0162", "canonical": "JPEG-LS", "aliases": []}
+{"task_id": "ws-0162", "canonical": "JBIG", "aliases": []}
+{"task_id": "ws-0162", "canonical": "H.262 (MPEG-2 Video)", "aliases": []}
+{"task_id": "ws-0162", "canonical": "H.264/AVC (MPEG-4 Part 10)", "aliases": []}
+{"task_id": "ws-0163", "canonical": "Chandra X-ray Observatory", "aliases": []}
+{"task_id": "ws-0163", "canonical": "XMM-Newton", "aliases": []}
+{"task_id": "ws-0163", "canonical": "IXPE (Imaging X-ray Polarimetry Explorer)", "aliases": []}
+{"task_id": "ws-0163", "canonical": "XRISM (X-Ray Imaging and Spectroscopy Mission)", "aliases": []}
+{"task_id": "ws-0163", "canonical": "Einstein Probe (Lobster-Eye X-ray mission)", "aliases": []}
+{"task_id": "ws-0164", "canonical": "ESPN App / ESPN Unlimited（Disney 旗下，含 ABC 赛事直播）", "aliases": []}
+{"task_id": "ws-0164", "canonical": "Peacock（NBCUniversal）", "aliases": []}
+{"task_id": "ws-0164", "canonical": "Amazon Prime Video", "aliases": ["Prime Video"]}
+{"task_id": "ws-0165", "canonical": "Astrobotic", "aliases": ["Astrobotic Technology"]}
+{"task_id": "ws-0165", "canonical": "Intuitive Machines", "aliases": []}
+{"task_id": "ws-0165", "canonical": "Firefly Aerospace", "aliases": []}
+{"task_id": "ws-0165", "canonical": "Masten Space Systems", "aliases": []}
+{"task_id": "ws-0165", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0166", "canonical": "Apple A17 Pro", "aliases": ["Apple A17 Pro (A17 Pro Bionic)", "A17 Pro"]}
+{"task_id": "ws-0166", "canonical": "Apple M3", "aliases": ["m3", "M3"]}
+{"task_id": "ws-0166", "canonical": "Apple A18", "aliases": ["a18", "A18"]}
+{"task_id": "ws-0166", "canonical": "Apple A18 Pro", "aliases": ["A18 Pro"]}
+{"task_id": "ws-0166", "canonical": "Apple M4", "aliases": ["m4", "M4"]}
+{"task_id": "ws-0166", "canonical": "Apple M4 Pro", "aliases": ["M4 Pro"]}
+{"task_id": "ws-0166", "canonical": "Apple M4 Max", "aliases": ["M4 Max"]}
+{"task_id": "ws-0166", "canonical": "Apple M5", "aliases": ["m5", "M5"]}
+{"task_id": "ws-0166", "canonical": "Apple M5 Pro", "aliases": ["M5 Pro"]}
+{"task_id": "ws-0166", "canonical": "Apple M5 Max", "aliases": ["M5 Max"]}
+{"task_id": "ws-0166", "canonical": "Apple M3 Pro", "aliases": ["M3 Pro"]}
+{"task_id": "ws-0166", "canonical": "Apple M3 Max", "aliases": ["M3 Max"]}
+{"task_id": "ws-0167", "canonical": "reSET", "aliases": ["Pear Therapeutics reSET", "FDA-cleared prescription digital therapeutic for substance use disorder (reSET)"]}
+{"task_id": "ws-0167", "canonical": "Pear Therapeutics insomnia digital therapeutic authorized through the Software Pre-Cert Program", "aliases": []}
+{"task_id": "ws-0167", "canonical": "Akili EndeavorRx / OTC EndeavorRx for ADHD", "aliases": []}
+{"task_id": "ws-0167", "canonical": "AspyreRx", "aliases": ["Better Therapeutics AspyreRx for type 2 diabetes"]}
+{"task_id": "ws-0167", "canonical": "Stanza", "aliases": ["Swing Therapeutics Stanza for fibromyalgia"]}
+{"task_id": "ws-0167", "canonical": "reSET‑O (Pear Therapeutics) — FDA 510(k) prescription digital therapeutic for opioid use disorder (2018)", "aliases": ["reSET‑O"]}
+{"task_id": "ws-0167", "canonical": "NightWare", "aliases": ["NightWare (NightWare Therapeutics)"]}
+{"task_id": "ws-0167", "canonical": "MamaLift Plus — 510(k) entry (K223515) for a prescription computerized behavioral therapy device (per FDA listing)", "aliases": ["MamaLift Plus"]}
+{"task_id": "ws-0167", "canonical": "Rejoyn (Click Therapeutics / Otsuka)", "aliases": []}
+{"task_id": "ws-0167", "canonical": "BlueStar", "aliases": []}
+{"task_id": "ws-0167", "canonical": "Somryst", "aliases": []}
+{"task_id": "ws-0168", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0168", "canonical": "Google Cloud — Jakarta region", "aliases": ["Google Cloud Platform (GCP)", "Google Cloud", "Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0168", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0168", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0168", "canonical": "Tencent Cloud", "aliases": []}
+{"task_id": "ws-0168", "canonical": "Huawei Cloud", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Anchorage Digital Bank", "aliases": []}
+{"task_id": "ws-0169", "canonical": "First National Digital Currency Bank (Circle National Trust)", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Circle", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Ripple National Trust Bank", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Ripple", "aliases": []}
+{"task_id": "ws-0169", "canonical": "BitGo Bank & Trust, National Association", "aliases": []}
+{"task_id": "ws-0169", "canonical": "BitGo", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Fidelity Digital Assets, National Association", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Paxos Trust Company, National Association", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Paxos (Paxos National Trust)", "aliases": ["Paxos"]}
+{"task_id": "ws-0169", "canonical": "Anchorage / Anchorage Trust/Anchorage Digital (Anchorage)", "aliases": ["Anchorage (Anchorage Trust Company / Anchorage Digital)"]}
+{"task_id": "ws-0169", "canonical": "Coinbase National Trust Company (Coinbase)", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Fidelity", "aliases": []}
+{"task_id": "ws-0169", "canonical": "Bridge Ventures / Bridge (Stripe) – application for national trust bank", "aliases": ["Stripe (Bridge National Trust Bank)"]}
+{"task_id": "ws-0169", "canonical": "Foris DAX (Foris DAX National Trust Bank)", "aliases": []}
+{"task_id": "ws-0170", "canonical": "Lucifer (picked up by Netflix after Fox cancellation)", "aliases": ["Lucifer"]}
+{"task_id": "ws-0170", "canonical": "Designated Survivor", "aliases": []}
+{"task_id": "ws-0170", "canonical": "American Idol", "aliases": []}
+{"task_id": "ws-0170", "canonical": "Zoey's Extraordinary Playlist", "aliases": []}
+{"task_id": "ws-0171", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0171", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0171", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0171", "canonical": "Oracle Cloud Infrastructure (OCI)", "aliases": ["Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0171", "canonical": "IBM Cloud", "aliases": []}
+{"task_id": "ws-0171", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0171", "canonical": "Huawei Cloud", "aliases": []}
+{"task_id": "ws-0172", "canonical": "IDx-DR (LumineticsCore)", "aliases": []}
+{"task_id": "ws-0172", "canonical": "EyeArt", "aliases": []}
+{"task_id": "ws-0172", "canonical": "Remidio Medios AI", "aliases": []}
+{"task_id": "ws-0172", "canonical": "EyeArt Autonomous AI System", "aliases": []}
+{"task_id": "ws-0173", "canonical": "Royal Society Rosalind Franklin Award and Lecture", "aliases": []}
+{"task_id": "ws-0173", "canonical": "Rosalind-Franklin-Award for Research Integrity (Freie Universität Berlin)", "aliases": []}
+{"task_id": "ws-0173", "canonical": "Rosalind Franklin Prize for Good Scientific Practice / Rosalind Franklin Prize for Scientific Integrity (Freie Universität Berlin)", "aliases": []}
+{"task_id": "ws-0173", "canonical": "Rosalind Franklin Young Investigator Award (Genetics Society of America, funded by The Gruber Foundation)", "aliases": ["Rosalind Franklin Young Investigator Award (Gruber Foundation)"]}
+{"task_id": "ws-0174", "canonical": "Luxturna", "aliases": []}
+{"task_id": "ws-0174", "canonical": "Zolgensma", "aliases": []}
+{"task_id": "ws-0174", "canonical": "Hemgenix", "aliases": []}
+{"task_id": "ws-0174", "canonical": "Elevidys", "aliases": []}
+{"task_id": "ws-0174", "canonical": "Roctavian", "aliases": []}
+{"task_id": "ws-0174", "canonical": "Glybera", "aliases": []}
+{"task_id": "ws-0174", "canonical": "Itvisma", "aliases": []}
+{"task_id": "ws-0174", "canonical": "Upstaza", "aliases": []}
+{"task_id": "ws-0174", "canonical": "Otarmeni", "aliases": []}
+{"task_id": "ws-0175", "canonical": "Kubernetes", "aliases": []}
+{"task_id": "ws-0175", "canonical": "Kyverno", "aliases": []}
+{"task_id": "ws-0175", "canonical": "Dapr", "aliases": []}
+{"task_id": "ws-0176", "canonical": "Alibaba Cloud (阿里云)", "aliases": []}
+{"task_id": "ws-0176", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0176", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0176", "canonical": "Tencent Cloud (腾讯云)", "aliases": []}
+{"task_id": "ws-0177", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0177", "canonical": "United Launch Alliance (ULA)", "aliases": []}
+{"task_id": "ws-0177", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0177", "canonical": "Northrop Grumman", "aliases": []}
+{"task_id": "ws-0178", "canonical": "Meta Platforms", "aliases": []}
+{"task_id": "ws-0178", "canonical": "Google DeepMind", "aliases": ["DeepMind"]}
+{"task_id": "ws-0178", "canonical": "Alibaba Group", "aliases": []}
+{"task_id": "ws-0179", "canonical": "High Resolution Imaging Experiment (HiRISE)", "aliases": []}
+{"task_id": "ws-0179", "canonical": "Context Camera (CTX)", "aliases": []}
+{"task_id": "ws-0179", "canonical": "Shallow Subsurface Radar (SHARAD)", "aliases": []}
+{"task_id": "ws-0179", "canonical": "Mars Climate Sounder (MCS)", "aliases": []}
+{"task_id": "ws-0180", "canonical": "Replit", "aliases": []}
+{"task_id": "ws-0180", "canonical": "Anysphere (Cursor)", "aliases": []}
+{"task_id": "ws-0180", "canonical": "Cognition", "aliases": []}
+{"task_id": "ws-0180", "canonical": "Factory", "aliases": []}
+{"task_id": "ws-0180", "canonical": "Codeium", "aliases": []}
+{"task_id": "ws-0181", "canonical": "Apple A17 Pro", "aliases": ["A17 Pro"]}
+{"task_id": "ws-0181", "canonical": "Apple A18", "aliases": ["a18", "A18"]}
+{"task_id": "ws-0181", "canonical": "Apple A18 Pro", "aliases": ["A18 Pro"]}
+{"task_id": "ws-0181", "canonical": "Apple A19", "aliases": ["a19", "A19"]}
+{"task_id": "ws-0181", "canonical": "Apple A19 Pro", "aliases": ["A19 Pro"]}
+{"task_id": "ws-0181", "canonical": "Qualcomm Snapdragon 8 Elite", "aliases": []}
+{"task_id": "ws-0181", "canonical": "Qualcomm Snapdragon 8 Elite Gen 5", "aliases": []}
+{"task_id": "ws-0181", "canonical": "MediaTek Dimensity 9400", "aliases": []}
+{"task_id": "ws-0181", "canonical": "MediaTek Dimensity 9400+", "aliases": []}
+{"task_id": "ws-0182", "canonical": "Meta AI", "aliases": []}
+{"task_id": "ws-0182", "canonical": "Mistral AI", "aliases": []}
+{"task_id": "ws-0182", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0183", "canonical": "NFL+", "aliases": []}
+{"task_id": "ws-0183", "canonical": "Amazon Prime Video", "aliases": ["Prime Video"]}
+{"task_id": "ws-0183", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0183", "canonical": "Paramount+", "aliases": []}
+{"task_id": "ws-0183", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0183", "canonical": "YouTube TV (NFL Sunday Ticket)", "aliases": ["YouTube TV"]}
+{"task_id": "ws-0183", "canonical": "YouTube (NFL Sunday Ticket via Primetime Channels)", "aliases": []}
+{"task_id": "ws-0183", "canonical": "ESPN+", "aliases": []}
+{"task_id": "ws-0183", "canonical": "FOX One", "aliases": []}
+{"task_id": "ws-0183", "canonical": "Hulu + Live TV", "aliases": []}
+{"task_id": "ws-0183", "canonical": "fubo", "aliases": []}
+{"task_id": "ws-0184", "canonical": "Australia", "aliases": []}
+{"task_id": "ws-0184", "canonical": "Germany", "aliases": []}
+{"task_id": "ws-0184", "canonical": "Singapore", "aliases": []}
+{"task_id": "ws-0184", "canonical": "Brazil", "aliases": []}
+{"task_id": "ws-0185", "canonical": "Amazon Web Services（AWS）", "aliases": []}
+{"task_id": "ws-0185", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0185", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0185", "canonical": "Oracle Cloud Infrastructure（OCI）", "aliases": ["Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0186", "canonical": "Helios", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Galileo", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Cassini", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Ulysses", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Stardust", "aliases": []}
+{"task_id": "ws-0186", "canonical": "New Horizons", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Giotto", "aliases": []}
+{"task_id": "ws-0186", "canonical": "VeGa (Vega)", "aliases": []}
+{"task_id": "ws-0186", "canonical": "HEOS 2", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Pioneer 9", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Nozomi", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Vega 1", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Pioneer 11", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Vega 2", "aliases": []}
+{"task_id": "ws-0186", "canonical": "Rosetta (GIADA)", "aliases": []}
+{"task_id": "ws-0187", "canonical": "Dexcom G7", "aliases": ["g7"]}
+{"task_id": "ws-0187", "canonical": "Dexcom G7 15 Day", "aliases": []}
+{"task_id": "ws-0187", "canonical": "Dexcom Stelo Glucose Biosensor System", "aliases": []}
+{"task_id": "ws-0187", "canonical": "Abbott Lingo", "aliases": []}
+{"task_id": "ws-0187", "canonical": "FreeStyle Libre", "aliases": []}
+{"task_id": "ws-0187", "canonical": "FreeStyle Libre 2", "aliases": []}
+{"task_id": "ws-0187", "canonical": "FreeStyle Libre 3", "aliases": []}
+{"task_id": "ws-0187", "canonical": "Stelo by Dexcom (Dexcom Stelo) — OTC glucose biosensor", "aliases": []}
+{"task_id": "ws-0188", "canonical": "Cloud Native Computing Foundation (CNCF)", "aliases": []}
+{"task_id": "ws-0188", "canonical": "OSGeo (Open Source Geospatial Foundation)", "aliases": []}
+{"task_id": "ws-0188", "canonical": "OWASP Foundation", "aliases": []}
+{"task_id": "ws-0189", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0189", "canonical": "NFL+", "aliases": []}
 {"task_id": "ws-0189", "canonical": "NFL Mobile (Verizon/NFL官方应用)", "aliases": ["NFL Mobile"]}
+{"task_id": "ws-0189", "canonical": "Paramount+", "aliases": []}
 {"task_id": "ws-0189", "canonical": "CBS官方应用/网站", "aliases": ["CBS"]}
 {"task_id": "ws-0189", "canonical": "Fox官方应用/网站", "aliases": ["FOX", "Fox"]}
 {"task_id": "ws-0189", "canonical": "Yahoo Sports应用", "aliases": ["Yahoo Sports"]}
+{"task_id": "ws-0189", "canonical": "YouTube TV", "aliases": []}
+{"task_id": "ws-0189", "canonical": "Tubi (Fox streamed Super Bowl LIX via Tubi)", "aliases": ["Tubi (streamed Super Bowl LIX)"]}
+{"task_id": "ws-0189", "canonical": "CBS All Access (now Paramount+) (streamed Super Bowl LIII)", "aliases": []}
+{"task_id": "ws-0189", "canonical": "NBC / NBC Sports (NBCreported millions streaming the Super Bowl via its digital platforms)", "aliases": []}
+{"task_id": "ws-0190", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0190", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0190", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0190", "canonical": "Oracle Cloud Infrastructure (OCI)", "aliases": ["Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0190", "canonical": "Huawei Cloud", "aliases": []}
+{"task_id": "ws-0190", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0190", "canonical": "IBM Cloud", "aliases": []}
+{"task_id": "ws-0190", "canonical": "OVHcloud", "aliases": []}
+{"task_id": "ws-0191", "canonical": "Robert Bosch Semiconductor LLC (Bosch)", "aliases": []}
+{"task_id": "ws-0191", "canonical": "Intel Corp.", "aliases": []}
+{"task_id": "ws-0191", "canonical": "BAE Systems Electronic Systems", "aliases": []}
+{"task_id": "ws-0191", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0191", "canonical": "Micron Technology", "aliases": ["Micron"]}
+{"task_id": "ws-0191", "canonical": "SK hynix", "aliases": []}
+{"task_id": "ws-0192", "canonical": "Baseus", "aliases": []}
+{"task_id": "ws-0192", "canonical": "Casely", "aliases": []}
+{"task_id": "ws-0192", "canonical": "Anker", "aliases": []}
+{"task_id": "ws-0192", "canonical": "INIU", "aliases": []}
+{"task_id": "ws-0192", "canonical": "XO Poppy", "aliases": []}
+{"task_id": "ws-0192", "canonical": "LOGiiX", "aliases": []}
+{"task_id": "ws-0192", "canonical": "Ubio Labs", "aliases": []}
+{"task_id": "ws-0192", "canonical": "VRURC", "aliases": []}
+{"task_id": "ws-0192", "canonical": "AmazonBasics", "aliases": []}
+{"task_id": "ws-0192", "canonical": "Quad Lock", "aliases": []}
+{"task_id": "ws-0193", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0193", "canonical": "Hulu", "aliases": []}
+{"task_id": "ws-0193", "canonical": "Disney+", "aliases": []}
+{"task_id": "ws-0193", "canonical": "HBO Max (Max)", "aliases": []}
+{"task_id": "ws-0193", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0193", "canonical": "Amazon Prime Video", "aliases": ["Prime Video"]}
+{"task_id": "ws-0193", "canonical": "Paramount+", "aliases": []}
+{"task_id": "ws-0193", "canonical": "Discovery+", "aliases": []}
+{"task_id": "ws-0194", "canonical": "Pioneer 10", "aliases": []}
+{"task_id": "ws-0194", "canonical": "Pioneer 11", "aliases": []}
+{"task_id": "ws-0194", "canonical": "Cassini (Cosmic Dust Analyzer, CDA)", "aliases": ["Cassini"]}
+{"task_id": "ws-0194", "canonical": "New Horizons (Venetia Burney Student Dust Counter)", "aliases": ["New Horizons"]}
+{"task_id": "ws-0195", "canonical": "Qualcomm Snapdragon X Elite", "aliases": []}
+{"task_id": "ws-0195", "canonical": "Qualcomm Snapdragon X Plus", "aliases": []}
+{"task_id": "ws-0195", "canonical": "Qualcomm Snapdragon X2 Elite", "aliases": []}
+{"task_id": "ws-0195", "canonical": "Qualcomm Snapdragon X2 Elite Extreme", "aliases": []}
+{"task_id": "ws-0195", "canonical": "Intel Core Ultra Series 2 (Lunar Lake)", "aliases": []}
+{"task_id": "ws-0196", "canonical": "European Commission", "aliases": []}
+{"task_id": "ws-0196", "canonical": "Italy's Competition Authority (AGCM)", "aliases": []}
+{"task_id": "ws-0196", "canonical": "Netherlands' Authority for Consumers and Markets (ACM)", "aliases": []}
+{"task_id": "ws-0196", "canonical": "South Korea — Fair Trade Commission (KFTC / Fair Trade Commission of South Korea)", "aliases": []}
+{"task_id": "ws-0196", "canonical": "India — Competition Commission of India (CCI)", "aliases": []}
+{"task_id": "ws-0196", "canonical": "Indonesia — Competition Commission (Indonesia)", "aliases": []}
+{"task_id": "ws-0197", "canonical": "Google (Alphabet)", "aliases": []}
+{"task_id": "ws-0197", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0197", "canonical": "Amazon", "aliases": ["Amazon.com", "Amazon.com, Inc."]}
+{"task_id": "ws-0197", "canonical": "Meta", "aliases": []}
+{"task_id": "ws-0198", "canonical": "CVE-2024-50623", "aliases": []}
+{"task_id": "ws-0198", "canonical": "CVE-2023-0669", "aliases": []}
+{"task_id": "ws-0198", "canonical": "CVE-2023-34362", "aliases": []}
+{"task_id": "ws-0198", "canonical": "CVE-2021-27103", "aliases": []}
+{"task_id": "ws-0198", "canonical": "CVE-2021-27101", "aliases": []}
+{"task_id": "ws-0198", "canonical": "CVE-2021-27102", "aliases": []}
+{"task_id": "ws-0199", "canonical": "LG Energy Solution (LG Chem)", "aliases": []}
+{"task_id": "ws-0199", "canonical": "CATL", "aliases": []}
+{"task_id": "ws-0199", "canonical": "BYD (FinDreams)", "aliases": []}
+{"task_id": "ws-0199", "canonical": "Panasonic", "aliases": []}
+{"task_id": "ws-0199", "canonical": "Tesla (in-house cell manufacturing / 4680 program)", "aliases": []}
+{"task_id": "ws-0199", "canonical": "Sunwoda (Xinwangda)", "aliases": []}
+{"task_id": "ws-0200", "canonical": "HDMI 2.1", "aliases": []}
+{"task_id": "ws-0200", "canonical": "DisplayPort 1.4", "aliases": []}
+{"task_id": "ws-0200", "canonical": "DisplayPort 2.0", "aliases": []}
+{"task_id": "ws-0200", "canonical": "USB4", "aliases": []}
+{"task_id": "ws-0200", "canonical": "Thunderbolt 4", "aliases": []}
+{"task_id": "ws-0200", "canonical": "Embedded DisplayPort (eDP) Standard Version 1.4a (HBR3/DSC enabling 8K)", "aliases": []}
+{"task_id": "ws-0200", "canonical": "DisplayPort™ Standard Version 1.4 (with DSC/HBR3 enabling 8K)", "aliases": []}
+{"task_id": "ws-0201", "canonical": "Google LLC (Alphabet)", "aliases": []}
+{"task_id": "ws-0201", "canonical": "Amazon", "aliases": ["Amazon.com", "Amazon.com, Inc."]}
+{"task_id": "ws-0201", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0201", "canonical": "Visa", "aliases": []}
+{"task_id": "ws-0201", "canonical": "JetBlue", "aliases": []}
+{"task_id": "ws-0202", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0202", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0202", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0202", "canonical": "Firefly Aerospace", "aliases": []}
+{"task_id": "ws-0202", "canonical": "LandSpace", "aliases": []}
+{"task_id": "ws-0202", "canonical": "Orbital Sciences", "aliases": []}
+{"task_id": "ws-0202", "canonical": "Isar Aerospace", "aliases": []}
+{"task_id": "ws-0203", "canonical": "Amazon Web Services (AWS) — Africa (Cape Town) region (af-south-1) generally available (Now Open – AWS Africa (Cape Town) Region)", "aliases": ["Amazon Web Services (AWS)", "Amazon Web Services"]}
+{"task_id": "ws-0203", "canonical": "Microsoft Azure — South Africa regions (Cape Town and Johannesburg) generally available (Microsoft announcement: general availability of Microsoft Azure from new cloud regions in Cape Town and Johannesburg)", "aliases": ["Microsoft Azure"]}
+{"task_id": "ws-0203", "canonical": "Google Cloud — South Africa (Johannesburg) region generally available (New Google Cloud region now open in Johannesburg)", "aliases": ["Google Cloud", "Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0203", "canonical": "Oracle Cloud — South Africa (Johannesburg) region generally available (Oracle Opens First Cloud Region in Africa — Johannesburg)", "aliases": ["Oracle Cloud Infrastructure (OCI)", "Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0204", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0204", "canonical": "Amazon Prime Video", "aliases": ["Prime Video"]}
+{"task_id": "ws-0204", "canonical": "HBO / HBO Max", "aliases": []}
+{"task_id": "ws-0204", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0205", "canonical": "GitHub Actions (GitHub-hosted macOS runners)", "aliases": ["GitHub Actions (GitHub-hosted runners)"]}
+{"task_id": "ws-0205", "canonical": "WarpBuild", "aliases": []}
+{"task_id": "ws-0205", "canonical": "Scaleway (Apple Silicon Mac mini runners)", "aliases": []}
+{"task_id": "ws-0205", "canonical": "MacinCloud", "aliases": []}
+{"task_id": "ws-0205", "canonical": "AppVeyor", "aliases": []}
+{"task_id": "ws-0205", "canonical": "AWS CodeBuild (macOS build support)", "aliases": []}
+{"task_id": "ws-0205", "canonical": "Azure Pipelines / Azure DevOps (Microsoft-hosted macOS agents)", "aliases": []}
+{"task_id": "ws-0205", "canonical": "MacStadium (cloud-hosted Mac infrastructure)", "aliases": []}
+{"task_id": "ws-0205", "canonical": "GitLab CI/CD (Hosted runners on macOS)", "aliases": []}
+{"task_id": "ws-0206", "canonical": "United States", "aliases": []}
+{"task_id": "ws-0206", "canonical": "United Kingdom", "aliases": []}
+{"task_id": "ws-0206", "canonical": "Japan", "aliases": []}
+{"task_id": "ws-0206", "canonical": "Australia", "aliases": []}
+{"task_id": "ws-0206", "canonical": "Canada", "aliases": []}
+{"task_id": "ws-0207", "canonical": "NOW (NOW Sports)", "aliases": []}
+{"task_id": "ws-0207", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0207", "canonical": "DAZN", "aliases": []}
+{"task_id": "ws-0207", "canonical": "DAZN Spain", "aliases": []}
+{"task_id": "ws-0207", "canonical": "DAZN Portugal", "aliases": []}
+{"task_id": "ws-0207", "canonical": "Fubo (Canada)", "aliases": []}
+{"task_id": "ws-0208", "canonical": "Fedora Linux 40", "aliases": []}
+{"task_id": "ws-0208", "canonical": "Debian Sid", "aliases": []}
+{"task_id": "ws-0208", "canonical": "Debian testing", "aliases": []}
+{"task_id": "ws-0208", "canonical": "openSUSE Tumbleweed", "aliases": []}
+{"task_id": "ws-0208", "canonical": "openSUSE/SUSE", "aliases": []}
+{"task_id": "ws-0208", "canonical": "Fedora", "aliases": []}
+{"task_id": "ws-0209", "canonical": "U.S. Treasury Department", "aliases": []}
+{"task_id": "ws-0209", "canonical": "U.S. Department of Commerce (National Telecommunications and Information Administration)", "aliases": []}
+{"task_id": "ws-0209", "canonical": "U.S. Department of Justice", "aliases": []}
+{"task_id": "ws-0209", "canonical": "U.S. Department of Energy (including the U.S. nuclear weapons agency)", "aliases": ["U.S. Department of Energy"]}
+{"task_id": "ws-0209", "canonical": "Administrative Office of the U.S. Courts", "aliases": []}
+{"task_id": "ws-0209", "canonical": "U.S. Department of Veterans Affairs", "aliases": []}
+{"task_id": "ws-0209", "canonical": "U.S. Department of the Treasury", "aliases": []}
+{"task_id": "ws-0209", "canonical": "National Aeronautics and Space Administration (NASA)", "aliases": []}
+{"task_id": "ws-0209", "canonical": "National Institutes of Health", "aliases": []}
+{"task_id": "ws-0210", "canonical": "Jean-Pierre Serre", "aliases": []}
+{"task_id": "ws-0210", "canonical": "John Milnor", "aliases": []}
+{"task_id": "ws-0210", "canonical": "John G. Thompson", "aliases": []}
+{"task_id": "ws-0210", "canonical": "Grigori Margulis", "aliases": []}
+{"task_id": "ws-0210", "canonical": "Pierre Deligne", "aliases": []}
+{"task_id": "ws-0211", "canonical": "Bollinger Shipyards", "aliases": []}
+{"task_id": "ws-0211", "canonical": "Seaspan Shipyards (Vancouver Shipyards)", "aliases": []}
+{"task_id": "ws-0211", "canonical": "Chantier Davie Canada Inc. (Davie Shipbuilding)", "aliases": []}
+{"task_id": "ws-0211", "canonical": "HD Hyundai Heavy Industries", "aliases": []}
+{"task_id": "ws-0211", "canonical": "thyssenkrupp Marine Systems", "aliases": []}
+{"task_id": "ws-0211", "canonical": "Hanwha Ocean", "aliases": []}
+{"task_id": "ws-0211", "canonical": "VT Halter Marine (United States)", "aliases": ["Halter Marine Inc"]}
+{"task_id": "ws-0211", "canonical": "Helsinki Shipyard", "aliases": []}
+{"task_id": "ws-0211", "canonical": "Seaspan Vancouver Shipyards", "aliases": []}
+{"task_id": "ws-0211", "canonical": "Baltic Shipyard (prime builder for Russia's Arktika-class nuclear-powered heavy icebreakers)", "aliases": []}
+{"task_id": "ws-0212", "canonical": "Kubernetes", "aliases": []}
+{"task_id": "ws-0212", "canonical": "gRPC", "aliases": []}
+{"task_id": "ws-0212", "canonical": "Istio", "aliases": []}
+{"task_id": "ws-0212", "canonical": "Knative", "aliases": []}
+{"task_id": "ws-0213", "canonical": "etranacogene dezaparvovec", "aliases": []}
+{"task_id": "ws-0213", "canonical": "eladocagene exuparvovec", "aliases": []}
+{"task_id": "ws-0213", "canonical": "fidanacogene elaparvovec", "aliases": []}
+{"task_id": "ws-0213", "canonical": "voretigene neparvovec", "aliases": []}
+{"task_id": "ws-0214", "canonical": "L3Harris Technologies", "aliases": []}
+{"task_id": "ws-0214", "canonical": "Sierra Space", "aliases": []}
+{"task_id": "ws-0214", "canonical": "Tyvak Nano-Satellite Systems", "aliases": []}
+{"task_id": "ws-0214", "canonical": "York Space Systems", "aliases": []}
+{"task_id": "ws-0215", "canonical": "Meta (Llama 3.3 70B - open weights on Hugging Face)", "aliases": ["Meta AI (Meta)", "Meta (Llama 2 70B)"]}
+{"task_id": "ws-0215", "canonical": "Z.ai (Zhipu AI)", "aliases": []}
+{"task_id": "ws-0215", "canonical": "Moonshot AI", "aliases": []}
+{"task_id": "ws-0215", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0215", "canonical": "Alibaba (Qwen)", "aliases": []}
+{"task_id": "ws-0215", "canonical": "MiniMax", "aliases": []}
+{"task_id": "ws-0215", "canonical": "Arcee AI", "aliases": []}
+{"task_id": "ws-0215", "canonical": "Mistral AI", "aliases": []}
+{"task_id": "ws-0215", "canonical": "NVIDIA", "aliases": []}
+{"task_id": "ws-0215", "canonical": "BigScience (BLOOM — 176B weights available on Hugging Face)", "aliases": ["BigScience (BigScience / BigScience workshop consortium)"]}
+{"task_id": "ws-0216", "canonical": "Vulcan Centaur", "aliases": []}
+{"task_id": "ws-0216", "canonical": "Ariane 6", "aliases": []}
+{"task_id": "ws-0216", "canonical": "Ariane 64", "aliases": []}
+{"task_id": "ws-0216", "canonical": "New Glenn", "aliases": []}
+{"task_id": "ws-0216", "canonical": "Vikram-1", "aliases": []}
+{"task_id": "ws-0216", "canonical": "Kinetica-2", "aliases": []}
+{"task_id": "ws-0216", "canonical": "Zhuque-3", "aliases": []}
+{"task_id": "ws-0216", "canonical": "Orienspace Gravity-1", "aliases": []}
+{"task_id": "ws-0217", "canonical": "GitHub Actions", "aliases": []}
+{"task_id": "ws-0217", "canonical": "Bitbucket Pipelines", "aliases": []}
+{"task_id": "ws-0217", "canonical": "CircleCI", "aliases": []}
+{"task_id": "ws-0217", "canonical": "AWS CodeBuild", "aliases": []}
+{"task_id": "ws-0217", "canonical": "GitLab CI (GitLab-hosted runners)", "aliases": []}
+{"task_id": "ws-0218", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0218", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0218", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0218", "canonical": "Oracle Cloud", "aliases": ["Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0218", "canonical": "IBM Cloud", "aliases": []}
+{"task_id": "ws-0219", "canonical": "The Walking Dead: Daryl Dixon", "aliases": []}
+{"task_id": "ws-0219", "canonical": "The Walking Dead: Dead City", "aliases": []}
+{"task_id": "ws-0219", "canonical": "Fear the Walking Dead", "aliases": []}
+{"task_id": "ws-0219", "canonical": "Anne Rice's Interview with the Vampire", "aliases": []}
 {"task_id": "ws-0220", "canonical": "Alibaba (Qwen / 阿里巴巴)", "aliases": ["Alibaba"]}
+{"task_id": "ws-0220", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
 {"task_id": "ws-0220", "canonical": "Moonshot AI (Kimi / 月之暗面)", "aliases": ["Moonshot AI"]}
 {"task_id": "ws-0220", "canonical": "Zhipu AI (GLM / 智谱AI)", "aliases": ["Z.ai", "Zhipu AI"]}
+{"task_id": "ws-0220", "canonical": "MiniMax", "aliases": []}
 {"task_id": "ws-0220", "canonical": "Tencent (Hunyuan / 腾讯混元)", "aliases": ["Tencent", "Tencent Hunyuan"]}
 {"task_id": "ws-0220", "canonical": "StepFun (阶跃星辰)", "aliases": ["StepFun"]}
+{"task_id": "ws-0220", "canonical": "NVIDIA (Nemotron)", "aliases": []}
+{"task_id": "ws-0220", "canonical": "OpenAI (GPT-oss)", "aliases": []}
+{"task_id": "ws-0221", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0221", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0221", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0221", "canonical": "Firefly Aerospace", "aliases": []}
+{"task_id": "ws-0221", "canonical": "Skyroot Aerospace", "aliases": []}
+{"task_id": "ws-0221", "canonical": "Orbital Sciences Corporation", "aliases": []}
+{"task_id": "ws-0221", "canonical": "蓝箭航天 (LandSpace)", "aliases": []}
+{"task_id": "ws-0221", "canonical": "iSpace (北京星际荣耀 / Hyperbola-1)", "aliases": []}
+{"task_id": "ws-0222", "canonical": "United States", "aliases": []}
+{"task_id": "ws-0222", "canonical": "Canada (ISED: decision and RSS-248 for RLANs operating in 5925–7125 MHz)", "aliases": ["Canada"]}
+{"task_id": "ws-0222", "canonical": "Brazil", "aliases": []}
+{"task_id": "ws-0223", "canonical": "U.S. Department of Commerce (including the National Telecommunications and Information Administration)", "aliases": ["U.S. Department of Commerce"]}
+{"task_id": "ws-0223", "canonical": "U.S. Department of Justice", "aliases": []}
+{"task_id": "ws-0223", "canonical": "U.S. federal judiciary / Administrative Office of U.S. Courts (CM/ECF system)", "aliases": []}
+{"task_id": "ws-0224", "canonical": "World Labs", "aliases": []}
+{"task_id": "ws-0224", "canonical": "Anthropic (founded 2021) — closed an up-to-$4 billion private investment with Amazon (reported Sept 2023)", "aliases": ["Anthropic"]}
+{"task_id": "ws-0224", "canonical": "xAI", "aliases": []}
+{"task_id": "ws-0225", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0225", "canonical": "Amazon Prime Video", "aliases": ["Amazon Prime Video with Ads", "Prime Video"]}
+{"task_id": "ws-0225", "canonical": "Crunchyroll", "aliases": []}
+{"task_id": "ws-0225", "canonical": "Peacock", "aliases": ["Peacock Premium", "Peacock Premium Plus"]}
+{"task_id": "ws-0225", "canonical": "Hulu", "aliases": []}
+{"task_id": "ws-0225", "canonical": "Crunchyroll Amazon Channel", "aliases": []}
+{"task_id": "ws-0226", "canonical": "Anthropic", "aliases": []}
+{"task_id": "ws-0226", "canonical": "OpenAI", "aliases": []}
+{"task_id": "ws-0226", "canonical": "Google DeepMind", "aliases": ["DeepMind"]}
+{"task_id": "ws-0227", "canonical": "CATL (Germany operations — European cell factory/mass production)", "aliases": ["CATL"]}
+{"task_id": "ws-0227", "canonical": "Automotive Cells Company (ACC) (Douvrin/Billy‑Berclau, France)", "aliases": ["ACC (Automotive Cells Company)"]}
+{"task_id": "ws-0227", "canonical": "Envision AESC", "aliases": []}
+{"task_id": "ws-0227", "canonical": "SK On", "aliases": []}
+{"task_id": "ws-0227", "canonical": "PowerCo / Volkswagen (Salzgitter, Germany)", "aliases": []}
+{"task_id": "ws-0228", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0228", "canonical": "Microsoft (Azure)", "aliases": []}
+{"task_id": "ws-0228", "canonical": "Oracle (OCI)", "aliases": []}
+{"task_id": "ws-0228", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0228", "canonical": "Huawei Cloud", "aliases": []}
+{"task_id": "ws-0228", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0228", "canonical": "Tencent Cloud", "aliases": []}
+{"task_id": "ws-0229", "canonical": "Bluetooth Core Specification 6.2", "aliases": []}
+{"task_id": "ws-0229", "canonical": "Bluetooth Core Specification 6.0", "aliases": []}
+{"task_id": "ws-0229", "canonical": "Bluetooth Core Specification 6.1", "aliases": []}
+{"task_id": "ws-0229", "canonical": "IEEE 802.11be (Wi-Fi 7)", "aliases": []}
+{"task_id": "ws-0229", "canonical": "Zigbee 4.0", "aliases": []}
+{"task_id": "ws-0229", "canonical": "Bluetooth Core Specification v6.0 — Bluetooth Special Interest Group (Bluetooth SIG) — adopted/released September 3, 2024", "aliases": []}
+{"task_id": "ws-0229", "canonical": "Wi‑Fi (Wi‑Fi 7 / Wi‑Fi CERTIFIED 7) — Wi‑Fi Alliance — technology/certification introduced January 2024 (Wi‑Fi CERTIFIED 7 available/announced in Q1 2024)", "aliases": []}
+{"task_id": "ws-0229", "canonical": "Thread specification v1.4 — Thread Group — published/available for implementation September 2024", "aliases": []}
+{"task_id": "ws-0230", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0230", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0230", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0230", "canonical": "Firefly Aerospace", "aliases": []}
+{"task_id": "ws-0230", "canonical": "Skyroot Aerospace", "aliases": []}
+{"task_id": "ws-0230", "canonical": "LandSpace (蓝箭航天)", "aliases": []}
+{"task_id": "ws-0230", "canonical": "iSpace/Interstellar Glory (星际荣耀)", "aliases": []}
+{"task_id": "ws-0230", "canonical": "Isar Aerospace", "aliases": []}
+{"task_id": "ws-0231", "canonical": "Mastcam", "aliases": []}
+{"task_id": "ws-0231", "canonical": "Mars Hand Lens Imager (MAHLI)", "aliases": []}
+{"task_id": "ws-0231", "canonical": "Chemistry & Camera (ChemCam)", "aliases": []}
+{"task_id": "ws-0231", "canonical": "Rover Environmental Monitoring Station (REMS)", "aliases": []}
+{"task_id": "ws-0231", "canonical": "Curiosity: MARDI (Mars Descent Imager)", "aliases": []}
+{"task_id": "ws-0232", "canonical": "Moonshot AI", "aliases": []}
+{"task_id": "ws-0232", "canonical": "Thinking Machines Lab", "aliases": []}
+{"task_id": "ws-0232", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0232", "canonical": "Alibaba Cloud (Qwen)", "aliases": []}
+{"task_id": "ws-0232", "canonical": "Zhipu AI (GLM)", "aliases": []}
+{"task_id": "ws-0232", "canonical": "Arcee AI", "aliases": []}
+{"task_id": "ws-0232", "canonical": "Meta", "aliases": []}
+{"task_id": "ws-0232", "canonical": "Z.ai", "aliases": []}
+{"task_id": "ws-0232", "canonical": "Yandex (YaLM‑100B)", "aliases": []}
+{"task_id": "ws-0232", "canonical": "OpenAI (gpt-oss-120b)", "aliases": []}
+{"task_id": "ws-0233", "canonical": "Qualcomm Snapdragon X Plus (X1P-64-100)", "aliases": []}
+{"task_id": "ws-0233", "canonical": "Intel Core Ultra 200V series (Lunar Lake)", "aliases": []}
+{"task_id": "ws-0233", "canonical": "AMD Ryzen AI 9 HX 475", "aliases": []}
+{"task_id": "ws-0233", "canonical": "AMD Ryzen AI 400 series", "aliases": []}
+{"task_id": "ws-0233", "canonical": "Qualcomm Snapdragon X Elite", "aliases": []}
+{"task_id": "ws-0234", "canonical": "LockBit", "aliases": []}
+{"task_id": "ws-0234", "canonical": "Hive", "aliases": []}
+{"task_id": "ws-0234", "canonical": "ALPHV/BlackCat", "aliases": []}
+{"task_id": "ws-0234", "canonical": "BlackSuit (aka Royal)", "aliases": ["BlackSuit"]}
+{"task_id": "ws-0234", "canonical": "8Base", "aliases": []}
+{"task_id": "ws-0235", "canonical": "Hydroxyurea (trade names: Droxia, Siklos)", "aliases": ["Hydroxyurea (Siklos)"]}
+{"task_id": "ws-0235", "canonical": "Endari (L-glutamine oral powder)", "aliases": ["L-glutamine"]}
+{"task_id": "ws-0235", "canonical": "Adakveo (crizanlizumab-tmca)", "aliases": []}
+{"task_id": "ws-0235", "canonical": "Oxbryta (voxelotor) — withdrawn 2024", "aliases": ["voxelotor (Oxbryta)", "Oxbryta"]}
+{"task_id": "ws-0235", "canonical": "Casgevy (exagamglogene autotemcel)", "aliases": []}
+{"task_id": "ws-0235", "canonical": "Lyfgenia (lovotibeglogene autotemcel)", "aliases": ["Lyfgenia (gene therapy)"]}
+{"task_id": "ws-0236", "canonical": "OpenAI", "aliases": []}
+{"task_id": "ws-0236", "canonical": "Google (Google DeepMind)", "aliases": []}
+{"task_id": "ws-0236", "canonical": "Meta", "aliases": []}
+{"task_id": "ws-0236", "canonical": "ByteDance (Seed team)", "aliases": []}
+{"task_id": "ws-0236", "canonical": "MiniMax AI", "aliases": []}
+{"task_id": "ws-0236", "canonical": "Alibaba (Qwen/Wan)", "aliases": []}
+{"task_id": "ws-0236", "canonical": "Tencent (HunyuanVideo)", "aliases": []}
+{"task_id": "ws-0236", "canonical": "Zhipu AI / THUDM (CogVideo)", "aliases": []}
+{"task_id": "ws-0237", "canonical": "Verifiable Credentials Data Model 2.0", "aliases": []}
+{"task_id": "ws-0237", "canonical": "Verifiable Credential Data Integrity 1.0", "aliases": []}
+{"task_id": "ws-0237", "canonical": "Data Integrity EdDSA Cryptosuites v1.0", "aliases": []}
+{"task_id": "ws-0237", "canonical": "Data Integrity ECDSA Cryptosuites v1.0", "aliases": []}
+{"task_id": "ws-0237", "canonical": "Securing Verifiable Credentials using JOSE and COSE", "aliases": []}
+{"task_id": "ws-0237", "canonical": "Controlled Identifiers v1.0", "aliases": []}
+{"task_id": "ws-0237", "canonical": "Bitstring Status List v1.0", "aliases": []}
+{"task_id": "ws-0237", "canonical": "Decentralized Identifiers (DIDs) v1.0", "aliases": []}
+{"task_id": "ws-0237", "canonical": "OpenID for Verifiable Credential Issuance 1.0 (OpenID4VCI)", "aliases": []}
+{"task_id": "ws-0237", "canonical": "OpenID Foundation — OpenID for Verifiable Presentations 1.0 (Final specification approved / published 10 July 2025)", "aliases": ["OpenID Foundation — OpenID for Verifiable Presentations 1.0 (Final Specification, Jul 2025)", "OpenID Foundation — OpenID for Verifiable Presentations 1.0 (OpenID Final Specification / approved 1.0)"]}
+{"task_id": "ws-0237", "canonical": "W3C — Verifiable Credentials Data Model 1.0 (W3C Recommendation, 19 Nov 2019)", "aliases": ["W3C — Verifiable Credentials Data Model 1.0 (W3C Recommendation, 2019)"]}
+{"task_id": "ws-0238", "canonical": "Space Pioneer", "aliases": []}
+{"task_id": "ws-0238", "canonical": "LandSpace", "aliases": []}
+{"task_id": "ws-0238", "canonical": "Virgin Orbit", "aliases": []}
+{"task_id": "ws-0239", "canonical": "LandSpace Technology", "aliases": []}
+{"task_id": "ws-0239", "canonical": "Beijing Land Space Science and Technology", "aliases": []}
+{"task_id": "ws-0239", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0240", "canonical": "CVE-2023-46805", "aliases": []}
+{"task_id": "ws-0240", "canonical": "CVE-2024-21887", "aliases": []}
+{"task_id": "ws-0240", "canonical": "CVE-2024-21893", "aliases": []}
+{"task_id": "ws-0241", "canonical": "Melbourne", "aliases": []}
+{"task_id": "ws-0241", "canonical": "Singapore", "aliases": []}
+{"task_id": "ws-0241", "canonical": "Tokyo", "aliases": []}
+{"task_id": "ws-0242", "canonical": "Seattle Kraken (NHL) — began play in the 2021–22 NHL season", "aliases": ["Seattle Kraken", "Seattle Kraken (NHL) — began play 2021–22"]}
+{"task_id": "ws-0242", "canonical": "Charlotte FC (MLS) — began MLS play in 2022", "aliases": ["Charlotte FC"]}
+{"task_id": "ws-0242", "canonical": "St. Louis City SC", "aliases": ["St. Louis City", "St. Louis CITY SC"]}
+{"task_id": "ws-0242", "canonical": "San Diego FC (MLS) — began play 2025", "aliases": ["San Diego FC"]}
+{"task_id": "ws-0243", "canonical": "Galactic Energy (Ceres-1 first reached orbit Nov 7, 2020)", "aliases": ["Galactic Energy"]}
+{"task_id": "ws-0243", "canonical": "Astra (Astra Space)", "aliases": ["Astra", "Astra Space"]}
+{"task_id": "ws-0243", "canonical": "Firefly Aerospace", "aliases": []}
+{"task_id": "ws-0243", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0243", "canonical": "Skyroot Aerospace", "aliases": []}
+{"task_id": "ws-0243", "canonical": "LandSpace (Zhuque-2) — first orbital success: 11 July 2023", "aliases": ["LandSpace"]}
+{"task_id": "ws-0243", "canonical": "Space Pioneer", "aliases": []}
+{"task_id": "ws-0244", "canonical": "Alice", "aliases": []}
+{"task_id": "ws-0244", "canonical": "Ralph", "aliases": []}
+{"task_id": "ws-0244", "canonical": "MVIC (Multicolor Visible Imaging Camera)", "aliases": []}
+{"task_id": "ws-0244", "canonical": "LEISA (Linear Etalon Imaging Spectral Array)", "aliases": []}
+{"task_id": "ws-0244", "canonical": "REX (Radio Experiment)", "aliases": []}
+{"task_id": "ws-0244", "canonical": "LORRI (Long Range Reconnaissance Imager)", "aliases": []}
+{"task_id": "ws-0244", "canonical": "SWAP (Solar Wind at Pluto)", "aliases": ["Solar Wind at Pluto (SWAP)"]}
+{"task_id": "ws-0244", "canonical": "PEPSSI (Pluto Energetic Particle Spectrometer Science Investigation)", "aliases": []}
+{"task_id": "ws-0244", "canonical": "Venetia Burney Student Dust Counter (SDC)", "aliases": ["SDC (Student Dust Counter)"]}
+{"task_id": "ws-0244", "canonical": "MAG (Magnetometer)", "aliases": []}
+{"task_id": "ws-0244", "canonical": "JADE (Jovian Auroral Distributions Experiment)", "aliases": ["JADE"]}
+{"task_id": "ws-0244", "canonical": "OTES (OSIRIS‑REx Thermal Emission Spectrometer)", "aliases": ["OTES"]}
+{"task_id": "ws-0244", "canonical": "JEDI (Jupiter Energetic Particle Detector Instrument)", "aliases": ["JEDI"]}
+{"task_id": "ws-0244", "canonical": "OLA (OSIRIS‑REx Laser Altimeter)", "aliases": ["OLA"]}
+{"task_id": "ws-0244", "canonical": "UVS / UVS (Ultraviolet Spectrograph)", "aliases": ["UVS (Juno-UVS)"]}
+{"task_id": "ws-0244", "canonical": "REXIS (Regolith X‑ray Imaging Spectrometer)", "aliases": ["REXIS"]}
+{"task_id": "ws-0244", "canonical": "OCAMS — MapCam", "aliases": ["MapCam"]}
+{"task_id": "ws-0244", "canonical": "JIRAM (Jovian Infrared Auroral Mapper)", "aliases": ["JIRAM"]}
+{"task_id": "ws-0244", "canonical": "JunoCam", "aliases": []}
+{"task_id": "ws-0244", "canonical": "PolyCam", "aliases": []}
+{"task_id": "ws-0244", "canonical": "TAGCAMS", "aliases": []}
+{"task_id": "ws-0245", "canonical": "SpaceX (Falcon 1)", "aliases": ["SpaceX"]}
+{"task_id": "ws-0245", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0245", "canonical": "Virgin Orbit", "aliases": []}
+{"task_id": "ws-0246", "canonical": "Seattle Kraken", "aliases": []}
+{"task_id": "ws-0246", "canonical": "Utah Hockey Club (Utah Mammoth)", "aliases": []}
+{"task_id": "ws-0246", "canonical": "Inter Miami CF", "aliases": []}
+{"task_id": "ws-0246", "canonical": "Nashville SC", "aliases": []}
+{"task_id": "ws-0246", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0246", "canonical": "Toronto WNBA expansion team (2026)", "aliases": []}
+{"task_id": "ws-0246", "canonical": "Austin FC (MLS, targeted/entered inaugural season 2021)", "aliases": ["Austin FC"]}
+{"task_id": "ws-0246", "canonical": "Charlotte FC (MLS, inaugural season announced for 2022)", "aliases": []}
+{"task_id": "ws-0247", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0247", "canonical": "Samsung", "aliases": []}
+{"task_id": "ws-0247", "canonical": "Google (Tensor)", "aliases": []}
+{"task_id": "ws-0247", "canonical": "HiSilicon (Kirin)", "aliases": []}
+{"task_id": "ws-0248", "canonical": "SOLAR-1 (formerly SWFO-L1)", "aliases": []}
+{"task_id": "ws-0248", "canonical": "DSCOVR", "aliases": []}
+{"task_id": "ws-0248", "canonical": "ACE (Advanced Composition Explorer)", "aliases": ["ACE"]}
+{"task_id": "ws-0248", "canonical": "IMAP (Interstellar Mapping and Acceleration Probe)", "aliases": []}
+{"task_id": "ws-0249", "canonical": "John Willard Milnor", "aliases": []}
+{"task_id": "ws-0249", "canonical": "Jean-Pierre Serre", "aliases": []}
+{"task_id": "ws-0249", "canonical": "Michael Atiyah", "aliases": []}
+{"task_id": "ws-0249", "canonical": "Gerd Faltings", "aliases": []}
+{"task_id": "ws-0249", "canonical": "Gregory Margulis", "aliases": []}
+{"task_id": "ws-0249", "canonical": "Pierre Deligne", "aliases": []}
+{"task_id": "ws-0249", "canonical": "John Griggs Thompson", "aliases": []}
+{"task_id": "ws-0250", "canonical": "Adobe", "aliases": []}
+{"task_id": "ws-0250", "canonical": "Amazon (AWS)", "aliases": ["AWS", "Amazon.com", "Amazon.com, Inc."]}
+{"task_id": "ws-0250", "canonical": "Anthropic", "aliases": []}
+{"task_id": "ws-0250", "canonical": "Box", "aliases": []}
+{"task_id": "ws-0250", "canonical": "Docusign", "aliases": []}
+{"task_id": "ws-0250", "canonical": "Elastic", "aliases": []}
+{"task_id": "ws-0250", "canonical": "Google (Gemini for Government / Google Cloud)", "aliases": ["Google"]}
+{"task_id": "ws-0250", "canonical": "Microsoft", "aliases": []}
+{"task_id": "ws-0250", "canonical": "OpenAI", "aliases": []}
+{"task_id": "ws-0250", "canonical": "Oracle", "aliases": []}
+{"task_id": "ws-0250", "canonical": "CORAS", "aliases": []}
+{"task_id": "ws-0251", "canonical": "South Korea", "aliases": []}
+{"task_id": "ws-0251", "canonical": "India", "aliases": []}
+{"task_id": "ws-0251", "canonical": "United States", "aliases": []}
 {"task_id": "ws-0252", "canonical": "Kimi K2", "aliases": ["Kimi-K2", "Kimi K2 Instruct", "moonshotai/Kimi-K2"]}
 {"task_id": "ws-0252", "canonical": "DeepSeek V3.1", "aliases": ["DeepSeek-V3.1"]}
 {"task_id": "ws-0252", "canonical": "Qwen3-235B", "aliases": ["Qwen 3 235B", "Qwen3 235B-A22B", "Qwen3-235B-A22B-Instruct-2507"]}
 {"task_id": "ws-0252", "canonical": "Llama 4 Maverick", "aliases": ["Llama-4 Maverick"]}
-{"task_id": "ws-0252", "canonical": "MiniMax-M1", "aliases": ["MiniMax M1"]}
+{"task_id": "ws-0252", "canonical": "MiniMax-M1", "aliases": ["MiniMax M1", "m1"]}
 {"task_id": "ws-0252", "canonical": "GLM-4.5", "aliases": ["GLM 4.5", "zai GLM-4.5"]}
+{"task_id": "ws-0252", "canonical": "DeepSeek-R1-0528", "aliases": []}
+{"task_id": "ws-0252", "canonical": "DeepSeek-R1", "aliases": ["r1"]}
+{"task_id": "ws-0252", "canonical": "GLM-4.5-Air", "aliases": []}
+{"task_id": "ws-0252", "canonical": "GPT-OSS 120B", "aliases": []}
+{"task_id": "ws-0252", "canonical": "Llama 4 Scout", "aliases": []}
+{"task_id": "ws-0252", "canonical": "Mistral Large 3", "aliases": []}
+{"task_id": "ws-0252", "canonical": "MiniMax-Text-01", "aliases": []}
+{"task_id": "ws-0253", "canonical": "Extended Pascal", "aliases": []}
+{"task_id": "ws-0253", "canonical": "Ada", "aliases": ["Ada (ISO/IEC 8652)", "Ada (ISO/IEC 8652:2023)"]}
+{"task_id": "ws-0253", "canonical": "Full BASIC", "aliases": []}
+{"task_id": "ws-0253", "canonical": "C", "aliases": ["C (ISO/IEC 9899)"]}
+{"task_id": "ws-0253", "canonical": "C++", "aliases": ["C++ (ISO/IEC 14882)", "C++ (ISO/IEC 14882:2024)"]}
+{"task_id": "ws-0253", "canonical": "SQL (ISO/IEC 9075 series, 2023 parts)", "aliases": []}
+{"task_id": "ws-0253", "canonical": "COBOL (ISO/IEC 1989)", "aliases": []}
+{"task_id": "ws-0254", "canonical": "Astera Labs", "aliases": []}
+{"task_id": "ws-0254", "canonical": "Cerebras Systems", "aliases": []}
+{"task_id": "ws-0254", "canonical": "Csquare, Inc.", "aliases": []}
+{"task_id": "ws-0255", "canonical": "Chandra X-ray Observatory", "aliases": []}
+{"task_id": "ws-0255", "canonical": "XMM-Newton", "aliases": []}
+{"task_id": "ws-0255", "canonical": "Imaging X-ray Polarimetry Explorer (IXPE)", "aliases": []}
+{"task_id": "ws-0255", "canonical": "X-Ray Imaging and Spectroscopy Mission (XRISM)", "aliases": []}
+{"task_id": "ws-0256", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0256", "canonical": "OpenAI", "aliases": []}
+{"task_id": "ws-0256", "canonical": "Mixhub AI", "aliases": []}
+{"task_id": "ws-0257", "canonical": "Apple A19", "aliases": ["a19", "A19"]}
+{"task_id": "ws-0257", "canonical": "Apple A19 Pro", "aliases": ["A19 Pro"]}
+{"task_id": "ws-0257", "canonical": "Qualcomm Snapdragon 8 Elite", "aliases": []}
+{"task_id": "ws-0257", "canonical": "Samsung Exynos 2500", "aliases": []}
+{"task_id": "ws-0258", "canonical": "EndeavorRx", "aliases": ["EndeavorRx (AKL-T01) — Akili Interactive — FDA marketing authorization (De Novo, DEN200026) — Permitted for marketing June 15, 2020", "EndeavorRx (Akili) — De Novo marketing authorization for a game-based digital therapeutic for ADHD"]}
+{"task_id": "ws-0258", "canonical": "reSET", "aliases": ["reSET (Pear Therapeutics) — De Novo marketing authorization for substance use disorder", "reSET (Pear Therapeutics) - De Novo authorization (DEN160018)"]}
+{"task_id": "ws-0258", "canonical": "Somryst", "aliases": ["Somryst (Pear Therapeutics) - FDA authorization (press releases)", "Somryst (Pear Therapeutics) — FDA authorization/clearance (510(k)) for chronic insomnia"]}
+{"task_id": "ws-0258", "canonical": "EaseVRx", "aliases": []}
+{"task_id": "ws-0258", "canonical": "reSET-O (Pear Therapeutics) - FDA authorization/clearance (news sources)", "aliases": ["reSET-O"]}
+{"task_id": "ws-0258", "canonical": "Luminopia One", "aliases": ["Luminopia One — De Novo DEN210005 (2021/2022)", "Luminopia One — De Novo (DEN210005)"]}
+{"task_id": "ws-0258", "canonical": "Regulora", "aliases": []}
+{"task_id": "ws-0259", "canonical": "Bluetooth Core 6.0 (Bluetooth Core Specification v6.0)", "aliases": []}
+{"task_id": "ws-0259", "canonical": "Bluetooth 6.0", "aliases": []}
+{"task_id": "ws-0259", "canonical": "Wi-Fi 7", "aliases": []}
+{"task_id": "ws-0259", "canonical": "Matter 1.4", "aliases": ["Matter (Connectivity Standards Alliance) Core Specification version 1.4 (published 2024-11-04)"]}
+{"task_id": "ws-0259", "canonical": "Bluetooth Core Specification version 6.0 (adopted 2024-08-27)", "aliases": []}
+{"task_id": "ws-0260", "canonical": "Hyundai Kona Electric", "aliases": []}
+{"task_id": "ws-0260", "canonical": "Chevrolet Bolt EV", "aliases": []}
+{"task_id": "ws-0260", "canonical": "Chevrolet Bolt EUV", "aliases": []}
+{"task_id": "ws-0260", "canonical": "Jaguar I-Pace", "aliases": []}
+{"task_id": "ws-0261", "canonical": "Chandra X-ray Observatory", "aliases": []}
+{"task_id": "ws-0261", "canonical": "XMM-Newton", "aliases": []}
+{"task_id": "ws-0261", "canonical": "X-Ray Imaging and Spectroscopy Mission (XRISM)", "aliases": []}
+{"task_id": "ws-0261", "canonical": "IXPE", "aliases": []}
+{"task_id": "ws-0261", "canonical": "Einstein Probe (爱因斯坦探针)", "aliases": []}
+{"task_id": "ws-0262", "canonical": "Austin FC (MLS) — inaugural season 2021", "aliases": ["Austin FC"]}
+{"task_id": "ws-0262", "canonical": "Charlotte FC (MLS, inaugural 2022)", "aliases": ["Charlotte FC"]}
+{"task_id": "ws-0262", "canonical": "St. Louis City SC", "aliases": ["St. Louis City", "St. Louis CITY SC"]}
+{"task_id": "ws-0262", "canonical": "Bay FC", "aliases": []}
+{"task_id": "ws-0262", "canonical": "Boston Legacy FC", "aliases": ["Boston Legacy"]}
+{"task_id": "ws-0262", "canonical": "Denver Summit FC", "aliases": ["Denver Summit"]}
+{"task_id": "ws-0262", "canonical": "Golden State Valkyries", "aliases": []}
+{"task_id": "ws-0262", "canonical": "Portland Fire", "aliases": []}
+{"task_id": "ws-0262", "canonical": "Toronto Tempo", "aliases": []}
+{"task_id": "ws-0262", "canonical": "Seattle Torrent", "aliases": []}
+{"task_id": "ws-0263", "canonical": "Solar Orbiter", "aliases": []}
+{"task_id": "ws-0263", "canonical": "STEREO", "aliases": []}
+{"task_id": "ws-0263", "canonical": "SOHO (Solar and Heliospheric Observatory)", "aliases": ["SOHO"]}
+{"task_id": "ws-0263", "canonical": "Hinode", "aliases": []}
+{"task_id": "ws-0263", "canonical": "PROBA-2", "aliases": []}
+{"task_id": "ws-0263", "canonical": "PROBA-3", "aliases": []}
+{"task_id": "ws-0263", "canonical": "SDO", "aliases": []}
+{"task_id": "ws-0263", "canonical": "PUNCH", "aliases": []}
+{"task_id": "ws-0264", "canonical": "CATL (Contemporary Amperex Technology)", "aliases": []}
+{"task_id": "ws-0264", "canonical": "EVE Energy (EVE Power)", "aliases": []}
+{"task_id": "ws-0264", "canonical": "Samsung SDI", "aliases": []}
+{"task_id": "ws-0265", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0265", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0265", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0265", "canonical": "Skyroot Aerospace", "aliases": []}
+{"task_id": "ws-0265", "canonical": "Orbital Sciences Corporation", "aliases": []}
+{"task_id": "ws-0265", "canonical": "Orbital ATK", "aliases": []}
+{"task_id": "ws-0265", "canonical": "Firefly Aerospace", "aliases": []}
+{"task_id": "ws-0265", "canonical": "Galactic Energy", "aliases": []}
+{"task_id": "ws-0265", "canonical": "Virgin Orbit (LauncherOne)", "aliases": []}
+{"task_id": "ws-0266", "canonical": "Winnipeg", "aliases": []}
+{"task_id": "ws-0266", "canonical": "Las Vegas", "aliases": []}
+{"task_id": "ws-0266", "canonical": "Los Angeles", "aliases": []}
+{"task_id": "ws-0267", "canonical": "Chandra X-ray Observatory", "aliases": []}
+{"task_id": "ws-0267", "canonical": "XMM-Newton", "aliases": []}
+{"task_id": "ws-0267", "canonical": "XRISM (X-Ray Imaging and Spectroscopy Mission)", "aliases": []}
+{"task_id": "ws-0267", "canonical": "IXPE (Imaging X-ray Polarimetry Explorer)", "aliases": []}
+{"task_id": "ws-0267", "canonical": "Einstein Probe", "aliases": []}
+{"task_id": "ws-0267", "canonical": "SVOM (Space Variable Objects Monitor)", "aliases": []}
+{"task_id": "ws-0268", "canonical": "Alibaba Group", "aliases": []}
+{"task_id": "ws-0268", "canonical": "Google (Google DeepMind / Google Brain)", "aliases": []}
+{"task_id": "ws-0268", "canonical": "Meta Platforms", "aliases": []}
+{"task_id": "ws-0268", "canonical": "OpenAI", "aliases": []}
+{"task_id": "ws-0268", "canonical": "Tencent", "aliases": []}
+{"task_id": "ws-0269", "canonical": "OSO-8", "aliases": []}
+{"task_id": "ws-0269", "canonical": "IXPE (Imaging X-ray Polarimetry Explorer)", "aliases": []}
+{"task_id": "ws-0269", "canonical": "XPoSat", "aliases": []}
+{"task_id": "ws-0269", "canonical": "CXPD CubeSat", "aliases": []}
+{"task_id": "ws-0270", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0270", "canonical": "Google Cloud Platform (GCP)", "aliases": ["Google Cloud", "Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0270", "canonical": "Microsoft Azure — Brazil South (São Paulo)", "aliases": ["Microsoft Azure"]}
+{"task_id": "ws-0270", "canonical": "IBM Cloud (SoftLayer)", "aliases": []}
+{"task_id": "ws-0271", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0271", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0271", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0271", "canonical": "Oracle Cloud Infrastructure (OCI)", "aliases": ["Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0271", "canonical": "Liquid Intelligent Technologies", "aliases": []}
+{"task_id": "ws-0271", "canonical": "Huawei Cloud (Huawei)", "aliases": []}
+{"task_id": "ws-0272", "canonical": "Vikram-1", "aliases": []}
+{"task_id": "ws-0272", "canonical": "Relativity Space new orbital rocket", "aliases": []}
+{"task_id": "ws-0272", "canonical": "Rocket Lab new orbital rocket", "aliases": []}
+{"task_id": "ws-0272", "canonical": "PLD Space new orbital rocket", "aliases": []}
+{"task_id": "ws-0272", "canonical": "Eclipse", "aliases": []}
+{"task_id": "ws-0273", "canonical": "Glowbug", "aliases": []}
+{"task_id": "ws-0273", "canonical": "Fermi Gamma-ray Burst Monitor (Fermi GBM)", "aliases": []}
+{"task_id": "ws-0273", "canonical": "CALET", "aliases": []}
+{"task_id": "ws-0273", "canonical": "Insight-HXMT/HE", "aliases": []}
+{"task_id": "ws-0273", "canonical": "GRID (GRID-09B, GRID-10B, GRID-11B)", "aliases": []}
+{"task_id": "ws-0273", "canonical": "GECAM-B", "aliases": []}
+{"task_id": "ws-0273", "canonical": "GRBAlpha", "aliases": []}
+{"task_id": "ws-0273", "canonical": "Konus‑Wind", "aliases": []}
+{"task_id": "ws-0274", "canonical": "Apple Watch", "aliases": []}
+{"task_id": "ws-0274", "canonical": "Samsung Galaxy Watch family (ECG/Irregular Rhythm/ECG App — e.g., Galaxy Watch3, Watch Active2)", "aliases": ["Samsung Galaxy Watch", "Samsung Galaxy Watch (Samsung ECG Monitor Application with Irregular Heart Rhythm Notification)"]}
+{"task_id": "ws-0274", "canonical": "Fitbit (Fitbit ECG App — e.g., Fitbit Sense family)", "aliases": ["Fitbit Sense"]}
+{"task_id": "ws-0274", "canonical": "Garmin smartwatches", "aliases": []}
+{"task_id": "ws-0274", "canonical": "Garmin Venu / Garmin ECG App (e.g., Venu 2 Plus)", "aliases": []}
+{"task_id": "ws-0275", "canonical": "Roscosmos (Russia, inheriting the Soviet space program)", "aliases": []}
+{"task_id": "ws-0275", "canonical": "NASA (United States)", "aliases": []}
+{"task_id": "ws-0275", "canonical": "China National Space Administration / China Manned Space Agency (Shenzhou program)", "aliases": []}
+{"task_id": "ws-0275", "canonical": "SpaceX (private, United States)", "aliases": ["SpaceX", "SpaceX (Crew Dragon)"]}
+{"task_id": "ws-0276", "canonical": "Perforce Helix TeamHub (TeamHub)", "aliases": []}
+{"task_id": "ws-0276", "canonical": "SCM-Manager", "aliases": []}
+{"task_id": "ws-0276", "canonical": "Savannah", "aliases": []}
+{"task_id": "ws-0276", "canonical": "foss.heptapod.net (Heptapod)", "aliases": []}
+{"task_id": "ws-0277", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0277", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0277", "canonical": "Syngenta", "aliases": []}
+{"task_id": "ws-0277", "canonical": "Amazon", "aliases": ["Amazon.com", "Amazon.com, Inc."]}
+{"task_id": "ws-0277", "canonical": "Zillow", "aliases": []}
+{"task_id": "ws-0277", "canonical": "Redfin", "aliases": []}
+{"task_id": "ws-0278", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0278", "canonical": "United Launch Alliance (ULA)", "aliases": []}
+{"task_id": "ws-0278", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0278", "canonical": "Orbital ATK", "aliases": []}
+{"task_id": "ws-0278", "canonical": "International Launch Services (ILS)", "aliases": []}
+{"task_id": "ws-0278", "canonical": "Arianespace", "aliases": []}
+{"task_id": "ws-0278", "canonical": "Relativity Space", "aliases": []}
+{"task_id": "ws-0279", "canonical": "Kymriah (tisagenlecleucel)", "aliases": []}
+{"task_id": "ws-0279", "canonical": "Yescarta (axicabtagene ciloleucel)", "aliases": []}
+{"task_id": "ws-0279", "canonical": "Tecartus (brexucabtagene autoleucel)", "aliases": []}
+{"task_id": "ws-0279", "canonical": "Breyanzi (lisocabtagene maraleucel)", "aliases": []}
+{"task_id": "ws-0279", "canonical": "Abecma (idecabtagene vicleucel)", "aliases": []}
+{"task_id": "ws-0279", "canonical": "Carvykti (ciltacabtagene autoleucel)", "aliases": []}
+{"task_id": "ws-0279", "canonical": "Luxturna (voretigene neparvovec)", "aliases": []}
+{"task_id": "ws-0279", "canonical": "Zolgensma (onasemnogene abeparvovec)", "aliases": []}
+{"task_id": "ws-0280", "canonical": "Patisiran", "aliases": []}
+{"task_id": "ws-0280", "canonical": "Onpattro", "aliases": []}
+{"task_id": "ws-0280", "canonical": "Givosiran", "aliases": []}
+{"task_id": "ws-0280", "canonical": "Oxlumo", "aliases": []}
+{"task_id": "ws-0280", "canonical": "Inclisiran", "aliases": []}
+{"task_id": "ws-0280", "canonical": "Leqvio", "aliases": []}
+{"task_id": "ws-0280", "canonical": "Vutrisiran", "aliases": []}
+{"task_id": "ws-0280", "canonical": "nedosiran", "aliases": []}
+{"task_id": "ws-0280", "canonical": "lumasiran", "aliases": []}
+{"task_id": "ws-0281", "canonical": "Wembley Stadium", "aliases": []}
+{"task_id": "ws-0281", "canonical": "Santiago Bernabéu", "aliases": []}
+{"task_id": "ws-0281", "canonical": "Olympiastadion Munich", "aliases": []}
+{"task_id": "ws-0281", "canonical": "Wankdorf Stadium", "aliases": []}
+{"task_id": "ws-0282", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0282", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0282", "canonical": "Meta Platforms", "aliases": []}
+{"task_id": "ws-0283", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0283", "canonical": "Microsoft Azure — South Africa North (Johannesburg) and South Africa West (Cape Town)", "aliases": ["Microsoft Azure", "Microsoft Azure — South Africa (Johannesburg and Cape Town) regions"]}
+{"task_id": "ws-0283", "canonical": "Google Cloud — Johannesburg region (South Africa)", "aliases": ["Google Cloud", "Google Cloud — South Africa (Johannesburg) region", "Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0283", "canonical": "Oracle Cloud Infrastructure (OCI)", "aliases": ["Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0283", "canonical": "IBM Cloud — Johannesburg data center / cloud region", "aliases": ["IBM Cloud"]}
+{"task_id": "ws-0284", "canonical": "Austria", "aliases": []}
+{"task_id": "ws-0284", "canonical": "Belgium", "aliases": []}
+{"task_id": "ws-0284", "canonical": "Denmark", "aliases": []}
+{"task_id": "ws-0284", "canonical": "Finland", "aliases": []}
+{"task_id": "ws-0284", "canonical": "France", "aliases": []}
+{"task_id": "ws-0285", "canonical": "Amazon Web Services (AWS) — Middle East (UAE) Region (me-central-1), launched Aug 29, 2022", "aliases": ["Amazon Web Services (AWS)", "Amazon Web Services (AWS) — Middle East (UAE) Region (now open, Dubai)", "Amazon Web Services"]}
+{"task_id": "ws-0285", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0285", "canonical": "Oracle Cloud — Abu Dhabi region (Oracle Cloud Abu Dhabi Region, live)", "aliases": ["Oracle Cloud Infrastructure (OCI)", "Oracle Cloud", "Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0285", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0286", "canonical": "mada", "aliases": []}
 {"task_id": "ws-0286", "canonical": "Jaywan", "aliases": ["Al Etihad Payments"]}
 {"task_id": "ws-0286", "canonical": "KNET", "aliases": ["K-Net", "KNet"]}
 {"task_id": "ws-0286", "canonical": "BENEFIT", "aliases": ["Benefit Company", "BENEFIT Company"]}
 {"task_id": "ws-0286", "canonical": "OmanNet", "aliases": ["Oman Net", "Oman national payment card", "OmanNet national card"]}
-{"task_id": "ws-0286", "canonical": "NAPS", "aliases": ["QPay", "Himyan", "National ATM and POS Switch"]}
+{"task_id": "ws-0286", "canonical": "NAPS", "aliases": ["QPay", "Himyan", "National ATM and POS Switch", "Qatar — NAPS (National ATM & POS Switch)"]}
+{"task_id": "ws-0286", "canonical": "Oman — Maal", "aliases": ["Maal (Oman)"]}
+{"task_id": "ws-0287", "canonical": "Desert Sunlight Solar Farm", "aliases": []}
+{"task_id": "ws-0287", "canonical": "Edwards & Sanborn", "aliases": []}
+{"task_id": "ws-0287", "canonical": "Sunlight Storage I", "aliases": []}
+{"task_id": "ws-0287", "canonical": "Sunlight Storage II", "aliases": []}
+{"task_id": "ws-0288", "canonical": "Heartbleed (CVE-2014-0160)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "POODLE (CVE-2014-3566)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "CRIME (CVE-2012-4929)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "Lucky 13 (CVE-2013-0169, CVE-2013-1619, CVE-2013-1620, CVE-2013-1621, CVE-2013-1622)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "Berserk", "aliases": []}
+{"task_id": "ws-0288", "canonical": "BREACH (CVE-2013-3587)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "BEAST (CVE-2011-3389)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "Logjam (CVE-2015-4000)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "SWEET32 (CVE-2016-2183)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "FREAK (CVE-2015-0204)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "DROWN (CVE-2016-0800)", "aliases": []}
+{"task_id": "ws-0288", "canonical": "ROBOT (e.g., CVE-2017-13099)", "aliases": []}
+{"task_id": "ws-0289", "canonical": "Hemlibra", "aliases": []}
+{"task_id": "ws-0289", "canonical": "Qfitlia", "aliases": []}
+{"task_id": "ws-0289", "canonical": "concizumab", "aliases": []}
+{"task_id": "ws-0289", "canonical": "Roctavian", "aliases": []}
+{"task_id": "ws-0289", "canonical": "Hemgenix", "aliases": []}
+{"task_id": "ws-0289", "canonical": "BEQVEZ", "aliases": []}
+{"task_id": "ws-0289", "canonical": "Alhemo", "aliases": []}
+{"task_id": "ws-0290", "canonical": "General Dynamics Ordnance and Tactical Systems (GD-OTS)", "aliases": []}
+{"task_id": "ws-0290", "canonical": "Day & Zimmermann", "aliases": []}
+{"task_id": "ws-0290", "canonical": "American Ordnance LLC", "aliases": []}
+{"task_id": "ws-0290", "canonical": "Nammo Perry Inc.", "aliases": []}
+{"task_id": "ws-0291", "canonical": "OpenAI", "aliases": []}
+{"task_id": "ws-0291", "canonical": "Google", "aliases": []}
+{"task_id": "ws-0291", "canonical": "Runway", "aliases": []}
+{"task_id": "ws-0291", "canonical": "Pika Labs", "aliases": []}
+{"task_id": "ws-0291", "canonical": "StepFun", "aliases": []}
+{"task_id": "ws-0291", "canonical": "Tencent", "aliases": []}
+{"task_id": "ws-0291", "canonical": "Adobe", "aliases": []}
+{"task_id": "ws-0291", "canonical": "Lightricks (LTX)", "aliases": []}
+{"task_id": "ws-0292", "canonical": "Express (Hangzhou) Technology Services Co. (American Express–LianLian DigiTech joint venture)", "aliases": []}
+{"task_id": "ws-0292", "canonical": "Mastercard NUCC Information Technology (Beijing) Co., Ltd. (Mastercard–NetsUnion Clearing Corporation joint venture)", "aliases": []}
+{"task_id": "ws-0292", "canonical": "连通（杭州）技术服务有限公司 (the LianTong joint venture — established by American Express and 连连数字科技有限公司)", "aliases": []}
+{"task_id": "ws-0293", "canonical": "Node.js", "aliases": []}
+{"task_id": "ws-0293", "canonical": "Kubernetes", "aliases": []}
+{"task_id": "ws-0293", "canonical": "LibreOffice", "aliases": []}
+{"task_id": "ws-0293", "canonical": "Django", "aliases": []}
+{"task_id": "ws-0293", "canonical": "Eclipse", "aliases": []}
+{"task_id": "ws-0293", "canonical": "Xen Project", "aliases": []}
+{"task_id": "ws-0293", "canonical": "openMAMA", "aliases": []}
+{"task_id": "ws-0294", "canonical": "iPhone 15 Pro Max", "aliases": ["Apple iPhone 15 Pro Max (A17 Pro, TSMC 3nm)", "Apple iPhone 15 Pro Max"]}
+{"task_id": "ws-0294", "canonical": "iPhone 16", "aliases": []}
+{"task_id": "ws-0294", "canonical": "iPhone 16 Plus", "aliases": []}
+{"task_id": "ws-0294", "canonical": "iPhone 16e", "aliases": []}
+{"task_id": "ws-0294", "canonical": "Vivo X300 Pro", "aliases": []}
+{"task_id": "ws-0294", "canonical": "iPhone 16 Pro Max", "aliases": []}
+{"task_id": "ws-0295", "canonical": "KubeEdge", "aliases": []}
+{"task_id": "ws-0295", "canonical": "TiKV (CNCF)", "aliases": ["TiKV"]}
+{"task_id": "ws-0295", "canonical": "Dragonfly", "aliases": []}
+{"task_id": "ws-0295", "canonical": "TARS", "aliases": []}
+{"task_id": "ws-0295", "canonical": "Apache Dubbo", "aliases": []}
+{"task_id": "ws-0295", "canonical": "Apache RocketMQ", "aliases": []}
 {"task_id": "ws-0296", "canonical": "Exa", "aliases": ["Exa AI", "exa.ai"]}
 {"task_id": "ws-0296", "canonical": "Tavily", "aliases": ["tavily.com"]}
 {"task_id": "ws-0296", "canonical": "Brave Search API", "aliases": ["Brave", "Brave Search"]}
@@ -39,4 +1710,119 @@
 {"task_id": "ws-0296", "canonical": "Linkup", "aliases": ["linkup.so"]}
 {"task_id": "ws-0296", "canonical": "SerpApi", "aliases": ["SERP API"]}
 {"task_id": "ws-0296", "canonical": "You.com", "aliases": ["You API", "ydc"]}
+{"task_id": "ws-0296", "canonical": "Firecrawl", "aliases": []}
+{"task_id": "ws-0296", "canonical": "Serper", "aliases": []}
+{"task_id": "ws-0296", "canonical": "SearchAPI.io", "aliases": []}
+{"task_id": "ws-0296", "canonical": "ScrapingBee", "aliases": []}
+{"task_id": "ws-0296", "canonical": "Serpex", "aliases": []}
+{"task_id": "ws-0296", "canonical": "DataForSEO", "aliases": []}
+{"task_id": "ws-0296", "canonical": "Keirolabs", "aliases": []}
+{"task_id": "ws-0296", "canonical": "LLMLayer", "aliases": []}
+{"task_id": "ws-0296", "canonical": "Oxylabs", "aliases": []}
+{"task_id": "ws-0296", "canonical": "Parallel AI", "aliases": []}
+{"task_id": "ws-0296", "canonical": "Scrapingdog", "aliases": []}
+{"task_id": "ws-0296", "canonical": "Cloudflare AI Search", "aliases": []}
+{"task_id": "ws-0296", "canonical": "Jina Reader", "aliases": []}
 {"task_id": "ws-0296", "canonical": "秘塔搜索 (Metaso)", "aliases": ["Metaso"]}
+{"task_id": "ws-0296", "canonical": "Diffbot Web Search API / Plans & Pricing - diffbot.com", "aliases": []}
+{"task_id": "ws-0297", "canonical": "Intel", "aliases": []}
+{"task_id": "ws-0297", "canonical": "TSMC (Taiwan Semiconductor Manufacturing Co.)", "aliases": []}
+{"task_id": "ws-0297", "canonical": "GlobalFoundries", "aliases": []}
+{"task_id": "ws-0297", "canonical": "Micron Technology", "aliases": ["Micron"]}
+{"task_id": "ws-0297", "canonical": "Polar Semiconductor", "aliases": []}
+{"task_id": "ws-0298", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0298", "canonical": "Prime Video (Amazon Prime Video)", "aliases": []}
+{"task_id": "ws-0298", "canonical": "Paramount+", "aliases": []}
+{"task_id": "ws-0298", "canonical": "NFL+", "aliases": []}
+{"task_id": "ws-0298", "canonical": "ESPN+", "aliases": []}
+{"task_id": "ws-0298", "canonical": "ESPN Unlimited", "aliases": []}
+{"task_id": "ws-0298", "canonical": "YouTube Primetime Channels (NFL Sunday Ticket)", "aliases": []}
+{"task_id": "ws-0298", "canonical": "YouTube TV (NFL Sunday Ticket)", "aliases": ["YouTube TV (with NFL Sunday Ticket add-on)", "YouTube TV"]}
+{"task_id": "ws-0298", "canonical": "Fubo", "aliases": []}
+{"task_id": "ws-0298", "canonical": "Fox One", "aliases": []}
+{"task_id": "ws-0299", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0299", "canonical": "Alibaba Cloud", "aliases": []}
+{"task_id": "ws-0299", "canonical": "G42 / Core42 (Injazat)", "aliases": []}
+{"task_id": "ws-0300", "canonical": "DeepSeek", "aliases": ["DeepSeek AI"]}
+{"task_id": "ws-0300", "canonical": "Zhipu AI", "aliases": []}
+{"task_id": "ws-0300", "canonical": "Mistral AI", "aliases": []}
+{"task_id": "ws-0300", "canonical": "Alibaba (Qwen3.8-2.4T-A95B)", "aliases": []}
+{"task_id": "ws-0300", "canonical": "Thinking Machines Lab — Inkling (975B total parameters, Mixture-of-Experts, open weights, released July 15, 2026)", "aliases": ["Thinking Machines Lab"]}
+{"task_id": "ws-0301", "canonical": "Canada", "aliases": []}
+{"task_id": "ws-0301", "canonical": "United Kingdom", "aliases": []}
+{"task_id": "ws-0301", "canonical": "Germany", "aliases": []}
+{"task_id": "ws-0301", "canonical": "France", "aliases": []}
+{"task_id": "ws-0301", "canonical": "Spain", "aliases": []}
+{"task_id": "ws-0301", "canonical": "Italy", "aliases": []}
+{"task_id": "ws-0302", "canonical": "Wi-Fi Alliance", "aliases": []}
+{"task_id": "ws-0302", "canonical": "Bluetooth SIG", "aliases": []}
+{"task_id": "ws-0302", "canonical": "Connectivity Standards Alliance (Zigbee Alliance)", "aliases": []}
+{"task_id": "ws-0302", "canonical": "Wireless Power Consortium (Qi)", "aliases": []}
+{"task_id": "ws-0302", "canonical": "Thread Group (Thread Certified)", "aliases": []}
+{"task_id": "ws-0302", "canonical": "NFC Forum (N-Mark / NFC Forum certification)", "aliases": []}
+{"task_id": "ws-0302", "canonical": "FiRa (UWB) Consortium", "aliases": []}
+{"task_id": "ws-0302", "canonical": "Z‑Wave Alliance (Z‑Wave Certification Program)", "aliases": []}
+{"task_id": "ws-0303", "canonical": "Nepal", "aliases": []}
+{"task_id": "ws-0303", "canonical": "United Arab Emirates (UAE)", "aliases": []}
+{"task_id": "ws-0303", "canonical": "Sri Lanka", "aliases": []}
+{"task_id": "ws-0303", "canonical": "Israel", "aliases": []}
+{"task_id": "ws-0303", "canonical": "France", "aliases": []}
+{"task_id": "ws-0303", "canonical": "Qatar", "aliases": []}
+{"task_id": "ws-0303", "canonical": "Bhutan", "aliases": []}
+{"task_id": "ws-0303", "canonical": "Cambodia", "aliases": []}
+{"task_id": "ws-0303", "canonical": "Greece", "aliases": []}
+{"task_id": "ws-0304", "canonical": "Northern Virginia / Ashburn", "aliases": []}
+{"task_id": "ws-0304", "canonical": "Mexico City–Querétaro", "aliases": []}
+{"task_id": "ws-0304", "canonical": "São Paulo", "aliases": []}
+{"task_id": "ws-0304", "canonical": "London", "aliases": []}
+{"task_id": "ws-0304", "canonical": "Paris", "aliases": []}
+{"task_id": "ws-0304", "canonical": "Zurich", "aliases": []}
+{"task_id": "ws-0305", "canonical": "Apollo 11", "aliases": []}
+{"task_id": "ws-0305", "canonical": "Apollo 12", "aliases": []}
+{"task_id": "ws-0305", "canonical": "Apollo 16", "aliases": []}
+{"task_id": "ws-0305", "canonical": "Apollo 17", "aliases": []}
+{"task_id": "ws-0305", "canonical": "Chandrayaan-3", "aliases": []}
+{"task_id": "ws-0305", "canonical": "InSight lander", "aliases": []}
+{"task_id": "ws-0305", "canonical": "NASA InSight (SEIS)", "aliases": []}
+{"task_id": "ws-0305", "canonical": "Viking 2 seismometer", "aliases": []}
+{"task_id": "ws-0306", "canonical": "Amazon Web Services (AWS)", "aliases": []}
+{"task_id": "ws-0306", "canonical": "Microsoft Azure", "aliases": []}
+{"task_id": "ws-0306", "canonical": "Google Cloud", "aliases": ["Google Cloud Platform", "GCP"]}
+{"task_id": "ws-0306", "canonical": "Oracle Cloud", "aliases": ["Oracle Cloud Infrastructure", "OCI"]}
+{"task_id": "ws-0307", "canonical": "Solar Dynamics Observatory (SDO) / AIA", "aliases": []}
+{"task_id": "ws-0307", "canonical": "Solar Orbiter", "aliases": ["Solar Orbiter / EUI", "Solar Orbiter / SPICE"]}
+{"task_id": "ws-0307", "canonical": "SOHO", "aliases": ["SOHO / EIT", "SOHO / SUMER"]}
+{"task_id": "ws-0307", "canonical": "Hinode / EIS", "aliases": []}
+{"task_id": "ws-0308", "canonical": "SpaceX", "aliases": []}
+{"task_id": "ws-0308", "canonical": "Blue Origin", "aliases": []}
+{"task_id": "ws-0308", "canonical": "Rocket Lab", "aliases": []}
+{"task_id": "ws-0308", "canonical": "CASC (China Aerospace Science and Technology Corporation)", "aliases": []}
+{"task_id": "ws-0308", "canonical": "China (state sector / Long March 10B)", "aliases": []}
+{"task_id": "ws-0309", "canonical": "Visa", "aliases": []}
+{"task_id": "ws-0309", "canonical": "Mastercard", "aliases": []}
+{"task_id": "ws-0309", "canonical": "American Express", "aliases": []}
+{"task_id": "ws-0309", "canonical": "Discover", "aliases": []}
+{"task_id": "ws-0309", "canonical": "UnionPay", "aliases": []}
+{"task_id": "ws-0309", "canonical": "JCB", "aliases": []}
+{"task_id": "ws-0310", "canonical": "Apple", "aliases": []}
+{"task_id": "ws-0310", "canonical": "Meta", "aliases": []}
+{"task_id": "ws-0310", "canonical": "Alphabet (Google)", "aliases": []}
+{"task_id": "ws-0311", "canonical": "Samsung Electronics", "aliases": []}
+{"task_id": "ws-0311", "canonical": "TSMC", "aliases": []}
+{"task_id": "ws-0311", "canonical": "Intel", "aliases": []}
+{"task_id": "ws-0311", "canonical": "Texas Instruments", "aliases": []}
+{"task_id": "ws-0311", "canonical": "Micron Technology", "aliases": ["Micron"]}
+{"task_id": "ws-0311", "canonical": "Rapidus", "aliases": []}
+{"task_id": "ws-0311", "canonical": "Tata Electronics", "aliases": []}
+{"task_id": "ws-0312", "canonical": "Netflix", "aliases": []}
+{"task_id": "ws-0312", "canonical": "Peacock", "aliases": []}
+{"task_id": "ws-0312", "canonical": "Prime Video", "aliases": []}
+{"task_id": "ws-0312", "canonical": "Paramount+", "aliases": []}
+{"task_id": "ws-0312", "canonical": "HBO Max", "aliases": []}
+{"task_id": "ws-0312", "canonical": "Disney+", "aliases": []}
+{"task_id": "ws-0313", "canonical": "Dexcom G6 Continuous Glucose Monitoring System", "aliases": []}
+{"task_id": "ws-0313", "canonical": "Dexcom G7 Continuous Glucose Monitoring System", "aliases": []}
+{"task_id": "ws-0313", "canonical": "Dexcom G7 15 Day Continuous Glucose Monitoring System", "aliases": []}
+{"task_id": "ws-0313", "canonical": "FreeStyle Libre 2 Flash Glucose Monitoring System", "aliases": []}
+{"task_id": "ws-0313", "canonical": "FreeStyle Libre 3 Plus Sensor", "aliases": []}
+{"task_id": "ws-0313", "canonical": "Dexcom G6 Glucose Program Continuous Glucose Monitoring System", "aliases": []}

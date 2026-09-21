@@ -1,19 +1,8 @@
-"""LLM wrapper with two providers, selected by model-string prefix:
+"""LLM clients selected by model prefix.
 
-  "openrouter/<vendor>/<model>"  -> OpenRouter (OpenAI-compatible), e.g.
-                                    openrouter/<vendor>/<model>
-  anything else                  -> Anthropic SDK (base_url overridable via
-                                    ANTHROPIC_BASE_URL override)
-
-Invariants shared by both paths:
-- STATELESS single-turn calls only (one system + one user message). Any
-  reasoning/thinking content in responses is read-only and never echoed back —
-  this sidesteps preserved-thinking-history instability in reasoning models entirely.
-- Real usage tokens captured per call into `last_usage` when the provider
-  reports them (OpenRouter does; runner prefers this over estimates).
-- JSON contract enforced by prompt + tolerant parsing (parse_json), with one
-  retry on parse failure appended by complete_json.
-"""
+openai: uses OpenAI, openrouter/ uses OpenRouter, and other model names use
+Anthropic. Clients expose reported usage through last_usage; complete_json
+retries once when the response cannot be parsed as JSON."""
 from __future__ import annotations
 
 import json
@@ -49,9 +38,13 @@ class _BaseLLM:
         try:
             return parse_json(text)
         except (json.JSONDecodeError, ValueError) as e:
+            first_usage = dict(self.last_usage)
             retry_user = (f"{user}\n\nYour previous output failed JSON parsing "
                           f"({str(e)[:200]}). Return ONLY the JSON, no prose, no fences.")
-            return parse_json(self.complete(system, retry_user, max_tokens))
+            text = self.complete(system, retry_user, max_tokens)
+            self.last_usage = {k: first_usage.get(k, 0) + self.last_usage.get(k, 0)
+                               for k in first_usage.keys() | self.last_usage.keys()}
+            return parse_json(text)
 
 
 class AnthropicLLM(_BaseLLM):
@@ -155,11 +148,13 @@ _tls = _threading.local()
 def _worker_llm(model: Optional[str], max_tokens: int) -> "_BaseLLM":
     """One LLM client per worker thread (httpx.Client isn't meant to be shared
     across threads for concurrent requests)."""
-    llm = getattr(_tls, "llm", None)
-    if llm is None:
-        llm = make_llm(model, max_tokens)
-        _tls.llm = llm
-    return llm
+    clients = getattr(_tls, "clients", None)
+    if clients is None:
+        clients = _tls.clients = {}
+    key = (model or os.environ.get("WIDESEARCH_MODEL", DEFAULT_MODEL), max_tokens)
+    if key not in clients:
+        clients[key] = make_llm(*key)
+    return clients[key]
 
 
 def concurrent_map(fn, items: list, model: Optional[str] = None,
@@ -186,7 +181,6 @@ def concurrent_map(fn, items: list, model: Optional[str] = None,
 class OpenAILLM(_BaseLLM):
     """OpenAI official API (api.openai.com). Handles reasoning-model contract:
     max_completion_tokens (not max_tokens), reasoning_effort, no temperature.
-    Used for the integrity audit's gpt-5 judge (OpenRouter rate-limits it hard).
     """
 
     def __init__(self, model: str, max_tokens: int = 2000, max_retries: int = 4) -> None:

@@ -1,6 +1,6 @@
 """Dataset & result schema for WideSearch-Bench.
 
-Task JSONL format (one task per line) mirrors the v0.1 design doc:
+Task JSONL format (one task per line):
 type T1 (enumeration) / T2 (matrix) / T3 (survey) / T4 (single-fact control).
 """
 from __future__ import annotations
@@ -52,7 +52,7 @@ class Task:
     set_size: Optional[SetSize] = None
     term_drift: str = "low"            # low | mid | high
     language: str = "en"               # en | zh | mixed
-    min_gold_domains: int = 4          # anti-fake-fanout: gold evidence must span >= N domains
+    min_gold_domains: int = 4          # minimum distinct source-domain metadata entries
     gold_source_domains: list[str] = field(default_factory=list)
     time_scope: Optional[str] = None   # e.g. "2025": push published-time filter to retrieval (all arms)
     notes: str = ""
@@ -71,7 +71,7 @@ class Task:
             if len(set(self.gold_source_domains)) < self.min_gold_domains:
                 errs.append(
                     f"{self.id}: gold spans {len(set(self.gold_source_domains))} domains "
-                    f"< min {self.min_gold_domains} (fake-fanout risk)")
+                    f"< min {self.min_gold_domains} (source-domain metadata threshold)")
         if not self.as_of:
             errs.append(f"{self.id}: missing as_of timestamp")
         if self.time_scope is not None and not re.fullmatch(r"\d{4}", self.time_scope):
@@ -89,12 +89,15 @@ class ArmRun:
     answer_matrix: dict[str, dict[str, str]] = field(default_factory=dict)  # T2
     answer_text: str = ""          # T3/T4 raw answer
     retrieved_urls: list[str] = field(default_factory=list)
-    api_calls: int = 0           # billed API calls (broad_search = 1)
-    n_queries: int = 0           # REAL searches performed (broad_search fans out to N sub-queries)
+    subqueries: list[str] = field(default_factory=list)
+    api_calls: int = 0           # logical retrieval invocations, not verified billing units
+    http_requests: int = 0       # requests actually issued, retries included
+    n_queries: int = 0           # observed subqueries or issued agent search actions
     latency_s: float = 0.0
     search_time_s: float = 0.0   # time spent in search calls (retrieval only)
     e2e_time_s: float = 0.0      # end-to-end: search + reader/agent reasoning
-    downstream_tokens: int = 0
+    retrieval_errors: list[str] = field(default_factory=list)
+    downstream_tokens: int | None = 0
     error: Optional[str] = None
 
 

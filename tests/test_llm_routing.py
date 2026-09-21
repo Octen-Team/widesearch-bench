@@ -48,3 +48,25 @@ if __name__ == "__main__":
         if n.startswith("test_"):
             f(); print(f"PASS {n}")
     print("all routing tests passed")
+
+
+def test_json_retry_usage_includes_both_completions():
+    from widesearch_bench.llm import _BaseLLM
+    class Fake(_BaseLLM):
+        calls = 0
+        def complete(self, *args):
+            self.calls += 1
+            self.last_usage = {'prompt_tokens':10, 'completion_tokens':5}
+            return 'invalid' if self.calls == 1 else '{"ok":true}'
+    llm = Fake()
+    assert llm.complete_json('s','u') == {'ok':True}
+    assert llm.last_usage == {'prompt_tokens':20, 'completion_tokens':10}
+
+
+def test_thread_client_cache_respects_model_and_budget(monkeypatch):
+    from widesearch_bench import llm
+    monkeypatch.setattr(llm._tls, 'clients', {}, raising=False)
+    monkeypatch.setattr(llm, 'make_llm', lambda model, budget: (model,budget))
+    assert llm._worker_llm('model-a',1200) == ('model-a',1200)
+    assert llm._worker_llm('model-b',2000) == ('model-b',2000)
+    assert llm._worker_llm('model-a',2000) == ('model-a',2000)

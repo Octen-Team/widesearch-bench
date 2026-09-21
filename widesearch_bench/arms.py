@@ -1,10 +1,12 @@
-"""Evaluation arms. The ONLY variable across arms is the retrieval layer;
-reader model, prompts, and token budgets are fixed by the runner.
+"""Retrieval configurations consumed by the runner.
 
-octen-search: single octen search (count=10)                      — baseline floor
-octen-broad-search: octen broad_search single call (max_queries=8)      — object under test
+octen-search: single octen search (count=10)
+octen-broad-search: octen broad_search single call (max_queries=8)
 octen-fanout: client-side fan-out: LLM writes 8 sub-queries ->
-    8 concurrent searches -> RRF fusion                 — width ceiling
+    8 concurrent searches -> RRF fusion
+
+Backend, excerpt length, time-filter support and agent answering protocol can
+vary. Equal maximum result counts do not imply equal evidence or actual work.
 
 Each arm returns (hits, api_calls, subqueries_used). Latency is measured by
 the runner around the whole retrieval phase.
@@ -12,6 +14,7 @@ the runner around the whole retrieval phase.
 from __future__ import annotations
 
 import asyncio
+import os
 from typing import Any, Optional
 
 from .llm import LLM
@@ -22,8 +25,7 @@ RRF_K = 60
 
 def time_bounds(time_scope: Optional[str]) -> tuple[Optional[str], Optional[str]]:
     """task.time_scope ("2025") -> ISO published-time window pushed down to
-    retrieval. Applied identically to all arms — arm fairness is a hard
-    requirement. None -> no filter."""
+    retrieval by adapters that support time filtering. None -> no filter."""
     if not time_scope:
         return None, None
     y = int(time_scope)
@@ -58,10 +60,8 @@ async def arm_a1(octen: OctenClient, question: str,
 
 async def arm_competitor(provider: str, question: str,
                          time_scope: Optional[str] = None) -> tuple[list[SearchHit], int, list[str]]:
-    """Competitor octen-search arm: a single search on Exa/Tavily/Brave (count=10), same
-    reader/grading downstream — directly comparable to Octen octen-search. Time filtering
-    is not pushed down (adapters don't uniformly support it); time_scope is
-    ignored here and this is noted in the competitor report."""
+    """Single-provider search followed by the shared reader and grader.
+    These adapters do not push time_scope down to the provider."""
     from .competitors import ADAPTERS
     hits = await ADAPTERS[provider](question, count=10)
     return hits, 1, [question]
@@ -71,7 +71,10 @@ async def arm_a2(octen: OctenClient, question: str,
                  max_queries: int = 8,
                  time_scope: Optional[str] = None) -> tuple[list[SearchHit], int, list[str]]:
     st, et = time_bounds(time_scope)
-    hits = await octen.broad_search(question, max_queries=max_queries, count=3,
+    # Match the default maximum hits per search. Providers can return fewer
+    # hits, and agents can stop early, so observed evidence volumes vary.
+    per = int(os.environ.get("OCTEN_BROAD_COUNT", "5"))
+    hits = await octen.broad_search(question, max_queries=max_queries, count=per,
                                     start_time=st, end_time=et)
     subs = sorted({h.sub_query for h in hits if h.sub_query})
     return hits, 1, subs or [question]

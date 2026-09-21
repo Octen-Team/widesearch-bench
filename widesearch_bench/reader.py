@@ -1,13 +1,11 @@
-"""Fixed downstream reader. Grounded-only by contract: the reader may use
-ONLY the provided snippets; parametric knowledge is prohibited and the
-hallucination-rate metric polices violations.
+"""Reader prompts and evidence rendering.
 
-Reader prompts are stable prefixes (cache-friendly); snippets and the
-question are appended at the END of the user turn.
-"""
+The prompt text below is used by the recorded evaluation runs. Evidence
+snippets and the question are appended to the user message."""
 from __future__ import annotations
 
 import json
+import os
 from typing import Any
 
 from .llm import LLM
@@ -17,8 +15,17 @@ from .schema import Task, TaskType
 _COMMON_RULES = """\
 STRICT GROUNDING RULES:
 - Use ONLY the evidence snippets provided. Do NOT use prior knowledge.
-- If an item is not supported by the snippets, omit it. An incomplete honest
-  answer scores better than a padded one.
+- Evidence may be spread across snippets. If the question asks for items meeting
+  several conditions, you may combine snippets to establish that an item meets
+  them all -- that is reading the evidence, not guessing.
+- Include an item when the evidence supports it on balance. Leaving out a
+  correct item is penalised exactly as much as including a wrong one, so do not
+  withhold an item merely because the support is partial. Returning nothing when
+  the evidence points somewhere is the worst outcome.
+- Still omit anything the evidence does not point to at all, and never fall back
+  on prior knowledge.
+- When several members of a family qualify, name each one separately rather than
+  the family.
 - Return ONLY JSON in the exact schema specified. No prose, no fences."""
 
 READER_T1 = f"""\
@@ -62,11 +69,16 @@ def _interleave_by_subquery(hits: list[SearchHit]) -> list[SearchHit]:
     return out
 
 
-def _render_snippets(hits: list[SearchHit], max_chars: int = 40000) -> str:
+def _render_snippets(hits: list[SearchHit], max_chars: int | None = None) -> str:
+    """Render snippets in order, optionally limited by max_chars or
+    WIDESEARCH_READER_MAX_CHARS. The default has no text-length cap."""
+    if max_chars is None:
+        env = os.environ.get("WIDESEARCH_READER_MAX_CHARS", "").strip()
+        max_chars = int(env) if env else 0          # 0 -> no limit
     parts, used = [], 0
     for i, h in enumerate(hits):
         block = f"[{i}] {h.url}\n{h.title}\n{h.snippet}\n"
-        if used + len(block) > max_chars:
+        if max_chars and used + len(block) > max_chars:
             break
         parts.append(block)
         used += len(block)
