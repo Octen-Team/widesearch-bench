@@ -94,10 +94,18 @@ def build():
         lines.append(f"| {LABEL[arm]} | {s['f1']:.4f} | {s['precision']:.4f} | {s['recall']:.4f} |")
     lines += ['', '</details>']
     best = max(stats, key=lambda a: stats[a]['f1'])
-    if (best == max(strict_stats, key=lambda a: strict_stats[a]['f1'])
+    if (all(stats[best][metric] == max(s[metric] for s in stats.values())
+            for metric in ['f1', 'precision', 'recall'])
+            and best == max(strict_stats, key=lambda a: strict_stats[a]['f1'])
             and best == min(stats, key=lambda a: stats[a]['e2e_time_s'])
             and best == min(stats, key=lambda a: stats[a]['downstream_tokens'])):
-        lines += ['', f"On this dataset, {LABEL[best]} has the highest mean Entity-F1 against both reference sets and the lowest recorded mean latency and downstream-token usage."]
+        def ratio_range(metric):
+            ratios = [s[metric] / stats[best][metric] for a,s in stats.items() if a != best]
+            return f'{min(ratios):.1f}–{max(ratios):.1f}×'
+        best_pairs = [p for p in paired if best in (p['a'], p['b'])]
+        significance = (f", with higher F1 than all {len(stats)-1} agent configurations (Holm-adjusted p < 0.01)"
+                        if all(p['p_holm'] < 0.01 for p in best_pairs) else '')
+        lines += ['', f"On these {len(gold)} questions, {LABEL[best]} ranks first in pooled F1, precision and recall{significance}; compared with Octen, the agent configurations use {ratio_range('api_calls')} as many logical API calls and {ratio_range('downstream_tokens')} as many recorded downstream tokens, and take {ratio_range('e2e_time_s')} as long end to end."]
     lines += ['', f'Quality metrics average all {len(gold)} tasks; other columns average completed runs. API calls count logical retrieval invocations; searches count recorded subqueries/search actions. Tokens are recorded downstream LLM usage; source domains count distinct retrieved domains per run.']
     block='\n'.join(lines)
     emit('results/RESULTS.md', '# Results\n\n'+block+'\n\n[All pairwise comparisons](PAIRED_STATS.md) · [Configuration and measurements](../data/PROVENANCE.md)')

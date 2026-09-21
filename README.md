@@ -38,7 +38,7 @@ Pooled references:
 
 </details>
 
-On this dataset, Octen broad_search has the highest mean Entity-F1 against both reference sets and the lowest recorded mean latency and downstream-token usage.
+On these 313 questions, Octen broad_search ranks first in pooled F1, precision and recall, with higher F1 than all 3 agent configurations (Holm-adjusted p < 0.01); compared with Octen, the agent configurations use 6.1–6.7× as many logical API calls and 3.4–4.2× as many recorded downstream tokens, and take 3.2–3.5× as long end to end.
 
 Quality metrics average all 313 tasks; other columns average completed runs. API calls count logical retrieval invocations; searches count recorded subqueries/search actions. Tokens are recorded downstream LLM usage; source domains count distinct retrieved domains per run.
 <!-- END GENERATED -->
