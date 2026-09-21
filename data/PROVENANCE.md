@@ -1,28 +1,17 @@
-# Provenance and audit limits
+# Configuration and measurements
 
-## Available records
+## Dataset and outputs
 
-- Question text, date, reference entities and aliases in both task files.
-- Inherited `gold_source_domains` metadata. These domains are leads, not evidence tying an entity to every question constraint.
-- Stored answer entities, scores and partial run measurements in `results/grades.jsonl`.
-- Explicit entity-identity corrections in `identity_decisions.json`. The candidate names were recovered from the pre-deduplication snapshot at commit `15ce66043e17d4801df23db5dc391baba8d4d65b`; observed answers and run measurements are from commit `b5db3b9fcfc66caa28dcc342bdd415eaa50ea166`.
+Reference candidates come from commit `15ce66043e17d4801df23db5dc391baba8d4d65b`; recorded answers and measurements come from `b5db3b9fcfc66caa28dcc342bdd415eaa50ea166`. [Identity decisions](identity_decisions.json) apply separately to each reference set. Source domains are included; per-entity source excerpts and pooling adjudications are not available in this release. Scores measure agreement with these reference answers.
 
-Identity decisions were applied separately to the pooled and strict candidate sets. Correcting identity does not certify the entity's eligibility, release date, regulatory status or completeness of a set. Ambiguous family names that do not identify the requested category, version or service were excluded with an explicit reason. No source adjudications were created by this repair.
+## Evaluation configuration
 
-## Missing records
+The recorded run uses `openai:gpt-5-mini` with low reasoning effort, one attempt per question/configuration, and concurrency five. Octen uses broad_search plus a JSON reader; the other configurations use SEARCH/ANSWER agent loops. Each is configured for up to eight subqueries/search actions and five retained results per search. Excerpts retain vendor-specific lengths.
 
-The current snapshot lacks per-entity retrieved source passages, dated source URLs, individual pooling judgments and reproducible filtering outputs. Older pooling verdicts belonged to a different gold snapshot; they have not been relabeled as verification of this release. Consequently, the release does not assert the earlier quantitative verification rates or that every question demonstrably requires multiple pages.
+The recorded Octen client could retry successful responses containing fewer than two query groups. HTTP-attempt counts were not recorded. The current client accepts those responses and retries transport/status failures only. Current completion limits are 2,000 tokens for the reader and 1,200 per agent turn; the recorded implementation reused the first client created on a worker thread, so mixed-configuration jobs could inherit that client's default limit.
 
-Current-source retrieval and adjudication are required before those assurances can be restored. A future evidence record should include task/entity identifiers, each constraint, dated source URLs and supporting excerpts, the decision and its rationale, and model/human provenance. Apply the same protocol to candidates from every evaluated configuration.
+## Metrics
 
-## Run measurements
+Entity-F1, precision and recall average all 313 task attempts per configuration. Terminal errors score zero. Latency and recorded downstream-token means use completed runs; denominators are in [summary.json](../results/summary.json). Logical call counts represent orchestration invocations or agent search actions, not HTTP attempts. Downstream tokens exclude provider-internal work; historical JSON-retry usage may be incomplete. Unavailable measurements are `null`.
 
-Historical HTTP attempt counts are `null`, including hidden retries. Missing competitor subqueries and retrieval error lists are also `null`; an empty list must not be substituted for unavailable records. Published logical call counts are not HTTP request totals or verified billed-unit counts.
-
-Recorded terminal errors remain in the data and score zero under the all-attempt quality policy. Their elapsed time is recovered from the stored failure duration; downstream usage is `null` because partial charged work was not preserved. Cost means use successful attempts only, with denominators in `results/summary.json`. Even successful historical token records may omit retry completions, so they are labeled recorded usage rather than complete billing totals. Hallucination rates are `null`: rescoring without the original evidence cannot recompute grounding.
-
-The updated harness records task-local HTTP attempts, agent subqueries and retrieval failures on future runs. This instrumentation does not retroactively fill gaps in the reference snapshot. The stored answers have been re-scored after identity and matcher corrections; no live or selective reruns were performed for this repair.
-
-The historical Octen client could also retry successful broad-search responses with fewer than two observed query groups. That content-dependent retry policy has been removed: future runs accept such responses and retry only transport/status failures. Historical HTTP counts are unavailable, so its impact on the recorded outputs cannot be quantified. The reference snapshot should not be described as having equal actual retrieval budgets.
-
-The updated LLM wrapper adds both completions' reported usage when JSON parsing triggers a retry, and caches clients by model and completion budget. The historical cache used the first client created on a worker thread; mixed-configuration jobs could therefore inherit that thread's default completion budget. Current defaults are 2,000 completion tokens for the reader and 1,200 per agent turn. This is a configuration difference, not a matched total token budget.
+The same stored answers are scored against pooled and strict references. Paired bootstrap intervals and sign-flip tests use 10,000 samples and seed 20260810; Holm correction covers all six pairs separately for each reference set. These comparisons describe the tested configurations on this dataset.

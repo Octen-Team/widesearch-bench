@@ -1,10 +1,7 @@
-"""Fixed downstream reader. Grounded-only by contract: the reader may use
-ONLY the provided snippets; parametric knowledge is prohibited and the
-hallucination-rate metric polices violations.
+"""Reader prompts and evidence rendering.
 
-Reader prompts are stable prefixes (cache-friendly); snippets and the
-question are appended at the END of the user turn.
-"""
+The prompt text below is used by the recorded evaluation runs. Evidence
+snippets and the question are appended to the user message."""
 from __future__ import annotations
 
 import json
@@ -15,12 +12,6 @@ from .llm import LLM
 from .octen_client import SearchHit
 from .schema import Task, TaskType
 
-# The old wording told the reader an incomplete answer scored better than a
-# padded one. Under Entity-F1 that is false -- a correct entity left out costs
-# recall exactly as a wrong one costs precision -- and it was read as a ban on
-# combining snippets: on a question whose conditions were each documented in a
-# different snippet, every gold entity was present in the evidence and the reader
-# still returned nothing, because no single snippet stated the full conjunction.
 _COMMON_RULES = """\
 STRICT GROUNDING RULES:
 - Use ONLY the evidence snippets provided. Do NOT use prior knowledge.
@@ -79,12 +70,8 @@ def _interleave_by_subquery(hits: list[SearchHit]) -> list[SearchHit]:
 
 
 def _render_snippets(hits: list[SearchHit], max_chars: int | None = None) -> str:
-    """Render every retrieved snippet. There is no cap by default: the agent
-    arms accumulate their hits in a transcript with no cumulative limit, so a
-    cap here would give the reader LESS of what its arm retrieved than the agent
-    arms get of theirs. At 8 sub-queries x 5 results x ~2,000 chars the old
-    40,000-char cap was dropping about half the evidence before the reader saw
-    it. WIDESEARCH_READER_MAX_CHARS re-imposes a limit if one is ever needed."""
+    """Render snippets in order, optionally limited by max_chars or
+    WIDESEARCH_READER_MAX_CHARS. The default has no text-length cap."""
     if max_chars is None:
         env = os.environ.get("WIDESEARCH_READER_MAX_CHARS", "").strip()
         max_chars = int(env) if env else 0          # 0 -> no limit

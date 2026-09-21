@@ -52,7 +52,7 @@ class Task:
     set_size: Optional[SetSize] = None
     term_drift: str = "low"            # low | mid | high
     language: str = "en"               # en | zh | mixed
-    min_gold_domains: int = 4          # anti-fake-fanout: gold evidence must span >= N domains
+    min_gold_domains: int = 4          # minimum distinct source-domain metadata entries
     gold_source_domains: list[str] = field(default_factory=list)
     time_scope: Optional[str] = None   # e.g. "2025": push published-time filter to retrieval (all arms)
     notes: str = ""
@@ -71,7 +71,7 @@ class Task:
             if len(set(self.gold_source_domains)) < self.min_gold_domains:
                 errs.append(
                     f"{self.id}: gold spans {len(set(self.gold_source_domains))} domains "
-                    f"< min {self.min_gold_domains} (fake-fanout risk)")
+                    f"< min {self.min_gold_domains} (source-domain metadata threshold)")
         if not self.as_of:
             errs.append(f"{self.id}: missing as_of timestamp")
         if self.time_scope is not None and not re.fullmatch(r"\d{4}", self.time_scope):

@@ -1,11 +1,6 @@
-"""`widesearch doctor` — one-shot preflight so a local run needs zero
-round-trips: env check for every key the published arms need, one live probe
-per search engine (Octen search + broad_search, Exa, Tavily, Parallel), and a
-reader completion + JSON-mode probe.
+"""Check configured credentials, search endpoints and the answering model.
 
-Every check prints PASS/FAIL with an actionable next step; exit code 0 only
-when the harness is fully runnable.
-"""
+Reports PASS/FAIL for each probe and exits nonzero when a probe fails."""
 from __future__ import annotations
 
 import asyncio

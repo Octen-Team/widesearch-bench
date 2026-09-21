@@ -1,15 +1,7 @@
-"""Multi-turn search agent (ReAct-style loop).
+"""Multi-turn search agent using SEARCH and ANSWER actions.
 
-Unlike the fan-out arm (one-shot decompose then parallel search), here the model
-drives the search itself, round by round: it issues one query, reads the
-results, then decides its NEXT query or stops and answers. The running
-transcript (all prior queries + results) is fed back each round, so token cost
-GROWS per round — this is exactly the "intermediate token of letting the model
-loop the search tool" that fan-out under-counts.
-
-Metrics captured: total LLM tokens across ALL rounds (agent_tokens), number of
-search calls issued, and the final answer for F1/hallucination grading.
-"""
+Each turn includes the preceding search transcript. Returned measurements
+include reported LLM tokens, issued queries, retrieved hits and the answer."""
 from __future__ import annotations
 
 import json
@@ -21,15 +13,8 @@ from .octen_client import SearchHit
 from .reader import _COMMON_RULES
 from .telemetry import record_query, record_error
 
-# The agent arms restated the grounding rules in their own words, so fixing
-# reader.py silently left the two halves of the comparison on different
-# instructions. Derive them from one source: a divergence here is
-# indistinguishable from a mechanism difference in the results.
+# Share evidence rules while keeping the agent action format.
 _COMMON_RULES_BODY = "\n".join(
-    # Share the EVIDENCE rules, never the output-format rule. reader.py ends with
-    # "Return ONLY JSON, no prose", which contradicts this arm's SEARCH:/ANSWER:
-    # protocol; copying it wholesale made the agent emit bare JSON that the
-    # parser could not match, and one arm stopped answering almost entirely.
     block for block in re.split(r"\n(?=- )", _COMMON_RULES.split("\n", 1)[1])
     if "ONLY JSON" not in block
 ).replace("evidence snippets provided", "evidence returned by YOUR searches")
@@ -47,10 +32,7 @@ __RULES__"""
 
 
 def _render(hits: list[SearchHit], k: int = 5) -> str:
-    # Render each hit in full. A per-snippet cut here is invisible in the arm
-    # definition but decides how much of the retrieved text the model ever sees,
-    # so it reads as a mechanism difference in the results. The non-agent arms
-    # hand whole snippets to the reader; this loop does the same.
+    # Retain up to k hits without truncating snippet text.
     return "\n".join(f"- {h.title} | {h.snippet}" for h in hits[:k]) or "(no results)"
 
 

@@ -1,14 +1,6 @@
-"""Competitor search adapters — Exa / Tavily / Brave / Parallel.
+"""Search adapters for Exa, Tavily, Brave and Parallel.
 
-Each returns a list[SearchHit] with the same shape as OctenClient.search, so a
-competitor cross-arm study can swap the single-search retrieval layer per provider
-while keeping reader/prompt/grading fixed. Endpoints/fields verified against
-official docs 2026-07-24.
-
-Perplexity is an answer engine (returns a synthesized answer, not a ranked hit
-list), so it is NOT a drop-in retrieval arm — it belongs in a separate
-full-pipeline comparison, noted but not implemented here.
-"""
+Each adapter returns SearchHit records for use by the reader or agent loop."""
 from __future__ import annotations
 
 import os

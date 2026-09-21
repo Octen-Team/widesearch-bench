@@ -25,8 +25,7 @@ RRF_K = 60
 
 def time_bounds(time_scope: Optional[str]) -> tuple[Optional[str], Optional[str]]:
     """task.time_scope ("2025") -> ISO published-time window pushed down to
-    retrieval. Applied identically to all arms — arm fairness is a hard
-    requirement. None -> no filter."""
+    retrieval by adapters that support time filtering. None -> no filter."""
     if not time_scope:
         return None, None
     y = int(time_scope)
@@ -61,10 +60,8 @@ async def arm_a1(octen: OctenClient, question: str,
 
 async def arm_competitor(provider: str, question: str,
                          time_scope: Optional[str] = None) -> tuple[list[SearchHit], int, list[str]]:
-    """Competitor octen-search arm: a single search on Exa/Tavily/Brave (count=10), same
-    reader/grading downstream — directly comparable to Octen octen-search. Time filtering
-    is not pushed down (adapters don't uniformly support it); time_scope is
-    ignored here and this is noted in the competitor report."""
+    """Single-provider search followed by the shared reader and grader.
+    These adapters do not push time_scope down to the provider."""
     from .competitors import ADAPTERS
     hits = await ADAPTERS[provider](question, count=10)
     return hits, 1, [question]

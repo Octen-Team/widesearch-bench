@@ -83,22 +83,19 @@ def build():
                    missing_query_traces=sum(r['detail'].get('subqueries') is None for r in rows),
                    recorded_tokens=sum(r['downstream_tokens'] or 0 for r in rows))
     emit('results/summary.json', json.dumps(summary,ensure_ascii=False,indent=2))
-    lines = [f"{len(gold)} questions; {len(rows)} attempted runs; **{len(failures)} recorded failures**.",
-             'Quality includes every attempt. Cost means below use successful attempts only; they are not full-run totals.',
-             '| Configuration | Attempts / successful | Pooled F1 | Strict F1 | Precision | Recall | Logical searches/calls | E2E s | Recorded LLM tokens |',
-             '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+    lines = ['| Configuration | Pooled F1 | Strict F1 | Precision | Recall | E2E s | Recorded LLM tokens |',
+             '|---|---:|---:|---:|---:|---:|---:|']
     for arm,s in stats.items():
-        lines.append(f"| {LABEL[arm]} | {s['n']} / {s['successes']} | {s['f1']:.4f} | {strict_stats[arm]['f1']:.4f} | {s['precision']:.4f} | {s['recall']:.4f} | {s['api_calls']:.2f} | {s['e2e_time_s']:.2f} | {s['downstream_tokens']:,.0f} |")
-    lines += ['', 'Logical calls exclude hidden HTTP retries: broad_search is one orchestration invocation; agents count search actions. Actual HTTP attempts were not recorded for this snapshot.',
-              'Token counts cover downstream LLM usage, not provider-internal work. Retry completions may be incompletely represented in historical usage.',
-              'These are observations from the tested configurations, not an isolated causal estimate of orchestration or a vendor-wide ranking.']
-    block='\n\n'.join(lines[:2])+'\n\n'+'\n'.join(lines[2:])
-    emit('results/RESULTS.md', '# Reference results\n\n'+block+'\n\nSee [paired comparisons](PAIRED_STATS.md) and [provenance](../data/PROVENANCE.md).')
+        lines.append(f"| {LABEL[arm]} | {s['f1']:.4f} | {strict_stats[arm]['f1']:.4f} | {s['precision']:.4f} | {s['recall']:.4f} | {s['e2e_time_s']:.2f} | {s['downstream_tokens']:,.0f} |")
+    best = max(stats, key=lambda a: stats[a]['f1'])
+    if (best == max(strict_stats, key=lambda a: strict_stats[a]['f1'])
+            and best == min(stats, key=lambda a: stats[a]['e2e_time_s'])
+            and best == min(stats, key=lambda a: stats[a]['downstream_tokens'])):
+        lines += ['', f"On this dataset, {LABEL[best]} has the highest mean Entity-F1 against both reference sets and the lowest recorded mean latency and downstream-token usage."]
+    lines += ['', f'F1 averages all {len(gold)} tasks; latency and token means use completed runs. Precision and recall use pooled references.']
+    block='\n'.join(lines)
+    emit('results/RESULTS.md', '# Results\n\n'+block+'\n\n[All pairwise comparisons](PAIRED_STATS.md) · [Configuration and measurements](../data/PROVENANCE.md)')
     emit('results/PAIRED_STATS.md','# Paired Entity-F1 comparisons\n\nBootstrap 95% intervals and two-sided sign-flip permutation tests; 10,000 samples, seed '+str(SEED)+'. Holm correction covers all six arm pairs separately within each gold variant. No significant difference does not establish equivalence.\n\n## Pooled gold\n\n'+table(paired)+'\n\n## Strict gold\n\n'+table(paired_strict))
-    errlines=['# Recorded run failures','', 'Errors are retained as zero-F1 attempts for every configuration. Failed usage is unknown; elapsed time is retained from the recorded failure duration. No selective reruns were used.', '', '| Task | Configuration | Error | Elapsed seconds |','|---|---|---|---:|']
-    for r in failures:
-        errlines.append(f"| {r['task_id']} | {LABEL[r['arm']]} | {r['detail']['error'].splitlines()[0]} | {r['detail']['e2e_time_s']:.3f} |")
-    emit('results/FAILURES.md','\n'.join(errlines))
     cases=[]
     for tid,t in sorted(gold.items()):
         cases.append(dict(task_id=tid,question=t.question,

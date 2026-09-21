@@ -1,10 +1,7 @@
-"""Runner: execute tasks x arms x repeats, grade, aggregate, report.
+"""Runner: execute tasks, grade answers and aggregate results.
 
-Latency measured around the retrieval phase only (reader latency is fixed
-across arms by design, so retrieval latency is the arm-attributable cost).
-Downstream tokens approximated as len(evidence)/4 + reader output budget —
-replace with true usage counts when the LLM wrapper exposes them.
-"""
+Records retrieval and end-to-end timings separately. Downstream token usage
+comes from the LLM wrapper, with an evidence-length estimate as a fallback."""
 from __future__ import annotations
 
 import asyncio
@@ -60,7 +57,7 @@ async def run_one_concurrent(octen, model, task, arm, repeat,
             _s = subs
             run.n_queries = len(subs)
         elif arm.endswith("-agent"):
-            # REAL multi-turn search agent (ReAct loop) on <engine>. The
+            # Multi-turn search agent (ReAct loop) on <engine>. The
             # model drives the search round by round; all LLM rounds' tokens are
             # the true "let the model loop" cost. Produces its own answer (no
             # separate reader).
@@ -149,7 +146,7 @@ async def run_one(octen: OctenClient, reader_llm: LLM, subq_llm: LLM,
                   time_pushdown: bool = True,
                   raw_dir: Path | None = None) -> tuple[ArmRun, str]:
     run = ArmRun(task_id=task.id, arm=arm, repeat=repeat)
-    # identical for every arm — arm fairness is a hard requirement
+    # Apply time filters when supported by the selected adapter.
     ts = task.time_scope if time_pushdown else None
     t0 = time.time()
     subq_tokens = 0

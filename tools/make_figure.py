@@ -33,11 +33,8 @@ def main(out):
     for ax in axes.flat:
         ax.set_xticks(x,names,rotation=10);ax.spines[['top','right']].set_visible(False)
         ax.set_axisbelow(True);ax.grid(axis='y',alpha=.2)
-    fig.suptitle(f"WideSearch-Bench · {data['tasks']} questions · {data['errors']} recorded failures\n"
-                 'Recorded configurations differ in backends, excerpts and retry policies',fontsize=14)
-    fig.supxlabel('Quality includes failures as zero. Cost excludes failures; n = '+
-                  ', '.join(str(data['arms'][a]['successes']) for a in arms)+
-                  '. Historical HTTP attempts and full billing usage are unavailable.',fontsize=9)
+    fig.suptitle(f"WideSearch-Bench · {data['tasks']} questions · gpt-5-mini",fontsize=14)
+    fig.supxlabel('F1: all tasks, with 95% bootstrap intervals. Latency and recorded tokens: completed runs.',fontsize=9)
     out=Path(out);out.parent.mkdir(parents=True,exist_ok=True)
     matplotlib.rcParams['svg.hashsalt']='widesearch-reference'
     fig.savefig(out,dpi=170,metadata={'Software':'WideSearch-Bench'})

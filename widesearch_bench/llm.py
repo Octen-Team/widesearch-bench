@@ -1,19 +1,8 @@
-"""LLM wrapper with two providers, selected by model-string prefix:
+"""LLM clients selected by model prefix.
 
-  "openrouter/<vendor>/<model>"  -> OpenRouter (OpenAI-compatible), e.g.
-                                    openrouter/<vendor>/<model>
-  anything else                  -> Anthropic SDK (base_url overridable via
-                                    ANTHROPIC_BASE_URL override)
-
-Invariants shared by both paths:
-- STATELESS single-turn calls only (one system + one user message). Any
-  reasoning/thinking content in responses is read-only and never echoed back —
-  this sidesteps preserved-thinking-history instability in reasoning models entirely.
-- Real usage tokens captured per call into `last_usage` when the provider
-  reports them (OpenRouter does; runner prefers this over estimates).
-- JSON contract enforced by prompt + tolerant parsing (parse_json), with one
-  retry on parse failure appended by complete_json.
-"""
+openai: uses OpenAI, openrouter/ uses OpenRouter, and other model names use
+Anthropic. Clients expose reported usage through last_usage; complete_json
+retries once when the response cannot be parsed as JSON."""
 from __future__ import annotations
 
 import json

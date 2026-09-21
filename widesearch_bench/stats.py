@@ -1,9 +1,6 @@
-"""Statistics: per-task paired comparisons between arms.
+"""Per-task paired bootstrap comparisons and stratified means.
 
-Design-doc requirements: 3 repeats per config, mean ± bootstrap 95% CI,
-paired tests on same-task deltas, effect sizes reported alongside p-values.
-Pure stdlib + random — no scipy dependency.
-"""
+Repeated observations are averaged per task before comparison."""
 from __future__ import annotations
 
 import random
