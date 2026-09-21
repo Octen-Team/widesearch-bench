@@ -88,12 +88,12 @@ async def exa_instant_search(query: str, count: int = 10) -> list[SearchHit]:
                          headers={"x-api-key": key, "Content-Type": "application/json"},
                          json={"query": query[:500], "numResults": max(1, min(count, 100)),
                                "type": "instant",
-                               "contents": {"highlights": {"numSentences": 3}}})
+                               "contents": {"highlights": True}})
         r.raise_for_status()
         data = r.json()
     lat = data.get("searchTime")
     out = [SearchHit(url=h.get("url", ""), title=h.get("title") or "",
-                     snippet=(" … ".join(h.get("highlights") or []) or h.get("text") or "")[:500],
+                     snippet=(" … ".join(h.get("highlights") or []) or h.get("text") or ""),
                      published=h.get("publishedDate"), reported_latency_ms=lat, raw=h)
            for h in data.get("results", [])]
     return [h for h in out if h.url]
@@ -112,7 +112,7 @@ async def tavily_ultrafast_search(query: str, count: int = 10) -> list[SearchHit
     rt = data.get("response_time")
     lat = float(rt) * 1000 if isinstance(rt, (int, float)) else None
     out = [SearchHit(url=h.get("url", ""), title=h.get("title", ""),
-                     snippet=(h.get("content") or "")[:500],
+                     snippet=(h.get("content") or ""),
                      published=h.get("published_date"), reported_latency_ms=lat, raw=h)
            for h in data.get("results", [])[:count]]
     return [h for h in out if h.url]
@@ -126,12 +126,11 @@ async def parallel_turbo_search(query: str, count: int = 10) -> list[SearchHit]:
                          headers={"x-api-key": key, "Content-Type": "application/json"},
                          json={"objective": query[:400], "search_queries": [query[:400]],
                                "mode": "turbo",
-                               "advanced_settings": {"max_results": max(1, min(count, 40)),
-                                                     "excerpt_settings": {"max_chars_per_result": 500}}})
+                               "advanced_settings": {"max_results": max(1, min(count, 40))}})
         r.raise_for_status()
         data = r.json()
     out = [SearchHit(url=h.get("url", ""), title=h.get("title") or "",
-                     snippet=(" … ".join(h.get("excerpts") or []))[:500],
+                     snippet=(" … ".join(h.get("excerpts") or [])),
                      published=h.get("publish_date"), raw=h)
            for h in data.get("results", [])[:count]]
     return [h for h in out if h.url]

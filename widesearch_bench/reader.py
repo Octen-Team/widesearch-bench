@@ -8,17 +8,33 @@ question are appended at the END of the user turn.
 from __future__ import annotations
 
 import json
+import os
 from typing import Any
 
 from .llm import LLM
 from .octen_client import SearchHit
 from .schema import Task, TaskType
 
+# The old wording told the reader an incomplete answer scored better than a
+# padded one. Under Entity-F1 that is false -- a correct entity left out costs
+# recall exactly as a wrong one costs precision -- and it was read as a ban on
+# combining snippets: on a question whose conditions were each documented in a
+# different snippet, every gold entity was present in the evidence and the reader
+# still returned nothing, because no single snippet stated the full conjunction.
 _COMMON_RULES = """\
 STRICT GROUNDING RULES:
 - Use ONLY the evidence snippets provided. Do NOT use prior knowledge.
-- If an item is not supported by the snippets, omit it. An incomplete honest
-  answer scores better than a padded one.
+- Evidence may be spread across snippets. If the question asks for items meeting
+  several conditions, you may combine snippets to establish that an item meets
+  them all -- that is reading the evidence, not guessing.
+- Include an item when the evidence supports it on balance. Leaving out a
+  correct item is penalised exactly as much as including a wrong one, so do not
+  withhold an item merely because the support is partial. Returning nothing when
+  the evidence points somewhere is the worst outcome.
+- Still omit anything the evidence does not point to at all, and never fall back
+  on prior knowledge.
+- When several members of a family qualify, name each one separately rather than
+  the family.
 - Return ONLY JSON in the exact schema specified. No prose, no fences."""
 
 READER_T1 = f"""\
@@ -62,11 +78,20 @@ def _interleave_by_subquery(hits: list[SearchHit]) -> list[SearchHit]:
     return out
 
 
-def _render_snippets(hits: list[SearchHit], max_chars: int = 40000) -> str:
+def _render_snippets(hits: list[SearchHit], max_chars: int | None = None) -> str:
+    """Render every retrieved snippet. There is no cap by default: the agent
+    arms accumulate their hits in a transcript with no cumulative limit, so a
+    cap here would give the reader LESS of what its arm retrieved than the agent
+    arms get of theirs. At 8 sub-queries x 5 results x ~2,000 chars the old
+    40,000-char cap was dropping about half the evidence before the reader saw
+    it. WIDESEARCH_READER_MAX_CHARS re-imposes a limit if one is ever needed."""
+    if max_chars is None:
+        env = os.environ.get("WIDESEARCH_READER_MAX_CHARS", "").strip()
+        max_chars = int(env) if env else 0          # 0 -> no limit
     parts, used = [], 0
     for i, h in enumerate(hits):
         block = f"[{i}] {h.url}\n{h.title}\n{h.snippet}\n"
-        if used + len(block) > max_chars:
+        if max_chars and used + len(block) > max_chars:
             break
         parts.append(block)
         used += len(block)

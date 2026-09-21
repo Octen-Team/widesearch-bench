@@ -36,6 +36,8 @@ PATH_SEARCH = os.environ.get("OCTEN_PATH_SEARCH", "/search")
 PATH_BROAD = os.environ.get("OCTEN_PATH_BROAD", "/broad-search")
 PATH_EXTRACT = os.environ.get("OCTEN_PATH_EXTRACT", "/extract")
 
+
+
 RETRYABLE = {429, 500, 502, 503, 504}
 
 
@@ -60,6 +62,7 @@ class OctenClient:
         self.api_key = api_key or os.environ["OCTEN_API_KEY"]
         self.base_url = base_url.rstrip("/")
         self.max_retries = max_retries
+        self.n_requests = 0
         self._sem = asyncio.Semaphore(max_concurrency)
         self._client = httpx.AsyncClient(
             timeout=timeout, headers={"x-api-key": self.api_key}
@@ -74,6 +77,10 @@ class OctenClient:
         last: Optional[Exception] = None
         for attempt in range(self.max_retries + 1):
             async with self._sem:
+                # Counted per attempt, not per call. api_calls reports the
+                # billed unit (one broad_search = 1); a retry is invisible
+                # there, so report what actually went over the wire too.
+                self.n_requests += 1
                 try:
                     resp = await self._client.post(url, json=payload)
                 except httpx.TransportError as e:  # network flake -> retry

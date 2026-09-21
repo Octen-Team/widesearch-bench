@@ -2,7 +2,7 @@
 paired sign-flip permutation p, Holm correction over the three comparisons.
 Reads a grades jsonl (task_id / arm / f1). No retrieval.
 
-Usage: python tools/paired_stats.py results/grades_expanded.jsonl
+Usage: python tools/paired_stats.py results/grades.jsonl
 """
 import json, sys
 import numpy as np

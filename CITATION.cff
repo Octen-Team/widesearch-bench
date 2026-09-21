@@ -3,8 +3,8 @@ title: "WideSearch-Bench: Isolating How Retrieval Width Is Delivered"
 message: "If you use this benchmark, please cite it and pin the version."
 authors:
   - name: Octen
-date-released: 2026-08-10
-version: "2026.08"
+date-released: 2026-09-20
+version: "2026.09"
 license: MIT
 url: "https://github.com/Octen-Team/widesearch-bench"
 repository-code: "https://github.com/Octen-Team/widesearch-bench"

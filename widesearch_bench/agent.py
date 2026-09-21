@@ -18,6 +18,20 @@ import time
 from typing import Any, Awaitable, Callable
 
 from .octen_client import SearchHit
+from .reader import _COMMON_RULES
+
+# The agent arms restated the grounding rules in their own words, so fixing
+# reader.py silently left the two halves of the comparison on different
+# instructions. Derive them from one source: a divergence here is
+# indistinguishable from a mechanism difference in the results.
+_COMMON_RULES_BODY = "\n".join(
+    # Share the EVIDENCE rules, never the output-format rule. reader.py ends with
+    # "Return ONLY JSON, no prose", which contradicts this arm's SEARCH:/ANSWER:
+    # protocol; copying it wholesale made the agent emit bare JSON that the
+    # parser could not match, and one arm stopped answering almost entirely.
+    block for block in re.split(r"\n(?=- )", _COMMON_RULES.split("\n", 1)[1])
+    if "ONLY JSON" not in block
+).replace("evidence snippets provided", "evidence returned by YOUR searches")
 
 AGENT_SYS = """\
 You are a web-search research agent answering an ENUMERATION question. Work in a
@@ -28,29 +42,48 @@ Use MULTIPLE searches with different angles to cover the set before answering.
 You have at most __MAXROUNDS__ searches; when in doubt, search more.
 
 STRICT GROUNDING RULES (identical to the non-agent arms, for fair comparison):
-- Use ONLY the evidence returned by YOUR searches. Do NOT use prior knowledge.
-- If an entity is not supported by your search results, OMIT it. An incomplete
-  honest answer scores better than a padded one."""
+__RULES__"""
 
 
 def _render(hits: list[SearchHit], k: int = 5) -> str:
-    return "\n".join(f"- {h.title} | {h.snippet[:200]}" for h in hits[:k]) or "(no results)"
+    # Render each hit in full. A per-snippet cut here is invisible in the arm
+    # definition but decides how much of the retrieved text the model ever sees,
+    # so it reads as a mechanism difference in the results. The non-agent arms
+    # hand whole snippets to the reader; this loop does the same.
+    return "\n".join(f"- {h.title} | {h.snippet}" for h in hits[:k]) or "(no results)"
 
 
 async def agent_loop(search_fn: Callable[[str, int], Awaitable[list[SearchHit]]],
                      complete_threaded: Callable[[str, str], Awaitable[tuple[str, dict]]],
-                     question: str, max_rounds: int = 8, per_search: int = 5) -> dict:
+                     question: str, max_rounds: int = 8, per_search: int = 5,
+                     seed: list[SearchHit] | None = None,
+                     seed_label: str = "initial broad search") -> dict:
     """search_fn(query, k) -> hits (async). complete_threaded(system, user) ->
     (text, usage) runs the sync LLM off-thread. Returns dict with entities,
     agent_tokens, n_searches, evidence."""
-    sys = AGENT_SYS.replace("__MAXROUNDS__", str(max_rounds))
+    sys = (AGENT_SYS.replace("__MAXROUNDS__", str(max_rounds))
+                    .replace("__RULES__", _COMMON_RULES_BODY))
     transcript = f"QUESTION: {question}\n"
     total_tokens = 0
     n_searches = 0
+    # A seeded loop starts from evidence gathered elsewhere, so the model
+    # spends its rounds on gaps. The seed counts as one search: it cost an
+    # API call, and hiding it would understate the retrieval budget.
+    if seed:
+        n_searches += 1
+        transcript += f"\nSEARCH: {seed_label}\nRESULTS:\n{_render(seed, k=len(seed))}\n"
     search_time = 0.0
     evidence_parts: list[str] = []
     urls: list[str] = []
     entities: list[str] = []
+    all_hits: list[SearchHit] = list(seed) if seed else []
+    if seed:
+        # The seed is evidence the arm actually retrieved, so it belongs in the
+        # returned evidence and urls too -- not only in the transcript. Leaving
+        # it out makes source_diversity count a fraction of what was fetched and
+        # marks entities the model read in the seed as ungrounded.
+        evidence_parts.append(_render(seed, k=len(seed)))
+        urls.extend(h.url for h in seed if h.url)
 
     for _ in range(max_rounds + 2):  # a couple extra turns to allow a final answer
         text, usage = await complete_threaded(sys, transcript + "\nYour next action:")
@@ -78,6 +111,7 @@ async def agent_loop(search_fn: Callable[[str, int], Awaitable[list[SearchHit]]]
             search_time += (rep / 1000.0) if rep is not None else wall
             n_searches += 1
             urls.extend(h.url for h in hits if h.url)
+            all_hits.extend(hits)
             evidence_parts.append(_render(hits))
             transcript += f"\nSEARCH: {query}\nRESULTS:\n{_render(hits)}\n"
         else:
@@ -97,4 +131,7 @@ async def agent_loop(search_fn: Callable[[str, int], Awaitable[list[SearchHit]]]
                 break
     return {"entities": entities, "agent_tokens": total_tokens,
             "n_searches": n_searches, "search_time": round(search_time, 3),
-            "urls": urls, "evidence": "\n".join(evidence_parts)}
+            "urls": urls, "evidence": "\n".join(evidence_parts),
+            # the raw hits, so a caller can hand the pooled evidence to a reader
+            # instead of using the agent's own answer
+            "hits": all_hits}

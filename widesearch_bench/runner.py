@@ -89,17 +89,25 @@ async def run_one_concurrent(octen, model, task, arm, repeat,
             run.answer_entities = res["entities"]
             return run, res["evidence"]
         elif arm in COMPETITOR_ARMS:
+            _req0 = octen.n_requests
             hits, calls, _s = await arm_competitor(arm, task.question, time_scope=ts)
         else:
+            _req0 = octen.n_requests
             hits, calls, _s = await ARMS[arm](octen, task.question, time_scope=ts)
         # real searches: broad_search fans out to len(_s) sub-queries under 1 API call
         run.n_queries = len(_s) if isinstance(_s, list) else calls
+        # Keep the sub-queries themselves, not just how many there were. When an
+        # arm misses a gold entity the first question is whether its queries
+        # could ever have reached it -- a decomposition failure and an index gap
+        # look identical from the count alone.
+        run.subqueries = list(_s) if isinstance(_s, list) else []
         wall_search = round(time.time() - t0, 3)
         # search time = provider-reported server-side latency (fallback to wall-clock)
         rep = next((h.reported_latency_ms for h in hits if h.reported_latency_ms is not None), None)
         run.search_time_s = round(rep / 1000.0, 3) if rep is not None else wall_search
         run.latency_s = wall_search
         run.api_calls = calls
+        run.http_requests = octen.n_requests - _req0
         run.retrieved_urls = [h.url for h in hits]
         if raw_dir is not None:
             _dump_raw(raw_dir, task.id, arm, repeat, hits)

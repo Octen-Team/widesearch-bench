@@ -86,3 +86,17 @@ if __name__ == "__main__":
             fn()
             print(f"PASS {name}")
     print("all tests passed")
+
+
+def test_shared_parenthetical_gloss_is_not_identity():
+    """A gloss describes an entity; two entities sharing one are still distinct."""
+    from widesearch_bench.normalize import entity_match
+    from widesearch_bench.schema import GoldEntity
+
+    gold = GoldEntity(canonical="Freevee (standalone app) — shut down August 2025",
+                      aliases=[])
+    assert not entity_match("Showtime (standalone app)", gold)
+    # but a gloss may still reach a PRIMARY form on the other side
+    sierra = GoldEntity(canonical="Sierra Nevada Corporation / Sierra Space (Dream Chaser)",
+                        aliases=[])
+    assert entity_match("Sierra Space", sierra)

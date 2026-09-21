@@ -12,6 +12,7 @@ the runner around the whole retrieval phase.
 from __future__ import annotations
 
 import asyncio
+import os
 from typing import Any, Optional
 
 from .llm import LLM
@@ -71,7 +72,13 @@ async def arm_a2(octen: OctenClient, question: str,
                  max_queries: int = 8,
                  time_scope: Optional[str] = None) -> tuple[list[SearchHit], int, list[str]]:
     st, et = time_bounds(time_scope)
-    hits = await octen.broad_search(question, max_queries=max_queries, count=3,
+    # Evidence per arm has to match, not just query count. The agent arms take 5
+    # results per search (agent.per_search) and render all 5 into the transcript,
+    # so this defaults to 5 as well: 8 sub-queries x 5 = the same 40 snippets
+    # the agent arms accumulate over 8 searches. At 3 it would be 24, a 1.7x
+    # evidence deficit that reads as a recall difference.
+    per = int(os.environ.get("OCTEN_BROAD_COUNT", "5"))
+    hits = await octen.broad_search(question, max_queries=max_queries, count=per,
                                     start_time=st, end_time=et)
     subs = sorted({h.sub_query for h in hits if h.sub_query})
     return hits, 1, subs or [question]
@@ -98,3 +105,4 @@ async def arm_a3(octen: OctenClient, llm: LLM, question: str,
 
 
 ARMS = {"octen-search": arm_a1, "octen-broad-search": arm_a2, "octen-fanout": arm_a3}
+

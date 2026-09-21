@@ -1,17 +1,17 @@
 """Rebuild results/cases.jsonl — the per-question view of what every arm answered.
 
-Joins data/tasks.jsonl (question + gold) with results/grades_expanded.jsonl
+Joins data/tasks.jsonl (question + gold) with results/grades.jsonl
 (per-run scores against the pooled gold), so the file always agrees with the
 reported numbers. Run from the repository root:
 
     python tools/make_cases.py
 
-Pass grades_strict.jsonl instead if you want the strict-gold view.
+Pass a different grades file to score another run.
 """
 import json
 import sys
 
-GRADES = sys.argv[1] if len(sys.argv) > 1 else "results/grades_expanded.jsonl"
+GRADES = sys.argv[1] if len(sys.argv) > 1 else "results/grades.jsonl"
 READER_MODEL = "openai:gpt-5-mini"
 
 

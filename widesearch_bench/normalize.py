@@ -79,7 +79,16 @@ def _subforms(s: str) -> tuple[set[str], set[str]]:
     if not raw:
         return prim, sec
     prim.add(raw)
-    prim.add(re.split(r"[\(（]", raw, maxsplit=1)[0].strip())
+    head = re.split(r"[\(（]", raw, maxsplit=1)[0].strip()
+    prim.add(head)
+    # "A / B" lists two names for the same entity (a rename, a JV partner, a
+    # network/brand pair). Each side is a primary form in its own right —
+    # without this the corporate-suffix stripper only fires on the trailing
+    # name, so "Sierra Nevada Corporation" never lines up with the gold
+    # "Sierra Nevada Corporation / Sierra Space".
+    for part in re.split(r"\s+/\s+", head):
+        if part.strip():
+            prim.add(part.strip())
     dash_parts = _DASH.split(raw, maxsplit=1)
     prim.add(dash_parts[0].strip())
     if len(dash_parts) > 1:                 # tail after "X — Y": Y is a candidate entity
@@ -104,22 +113,26 @@ def entity_match(pred: str, gold: GoldEntity) -> bool:
         a, b = _subforms(form)
         g_prim |= a
         g_sec |= b
-    p_all, g_all = p_prim | p_sec, g_prim | g_sec
+    # A parenthetical gloss or appositive tail DESCRIBES an entity, it does not
+    # name one: "Showtime (standalone app)" and "Freevee (standalone app)" share
+    # a description, not an identity. So a secondary form may be matched against
+    # a PRIMARY form on the other side -- that is how "Sierra Space" reaches
+    # gold "Sierra Nevada Corporation / Sierra Space (...)" -- but never against
+    # another secondary. Branch (c) already had this restriction.
+    pairs = [(p, g) for p in p_prim for g in (g_prim | g_sec)]
+    pairs += [(p, g) for p in (p_sec - p_prim) for g in g_prim]
 
-    # (a) exact normalized / tight (CJK) equality, any-form vs any-form
-    for p in p_all:
-        pt = _tight(p)
-        for g in g_all:
-            if p == g or pt == _tight(g):
-                return True
-    # (b) order-insensitive token-multiset equality (>=2 tokens), any vs any
-    for p in p_all:
+    # (a) exact normalized / tight (CJK) equality
+    for p, g in pairs:
+        if p == g or _tight(p) == _tight(g):
+            return True
+    # (b) order-insensitive token-multiset equality (>=2 tokens)
+    for p, g in pairs:
         ptoks = tuple(sorted(p.split()))
         if len(ptoks) < 2:
             continue
-        for g in g_all:
-            if ptoks == tuple(sorted(g.split())):
-                return True
+        if ptoks == tuple(sorted(g.split())):
+            return True
     # (c) guarded token-containment — PRIMARY forms only (no descriptions)
     for p in p_prim:
         for g in g_prim:
@@ -131,6 +144,12 @@ def entity_match(pred: str, gold: GoldEntity) -> bool:
 # After normalization, dots split ("K2.5" -> "k2 5"), so a version suffix is a
 # pure digit run or v<digits> token right after the matched span.
 _VERSION_TOK = re.compile(r"v?\d+")
+
+# A trailing "in X" / "for X" narrows a name to one member of a family, the same
+# way a version suffix does: "Nobel Prize" is not "Nobel Prize in Chemistry" any
+# more than "Kimi K2" is "Kimi K2.5". Without this the generic name matches every
+# sibling, so an answer that never named the specific award still scores.
+_QUALIFIER_TOK = {"in", "for", "of", "at"}
 
 
 def _token_contained(shorter: str, longer: str) -> bool:
@@ -155,13 +174,26 @@ def _token_contained(shorter: str, longer: str) -> bool:
         return False
     if len(st) == 1 and len(st[0]) < 5:
         return False
-    if len(st) / len(lt) < 0.5:
+    ratio = len(st) / len(lt)
+    # A mid-span match needs the halves to be comparable in length, so a short
+    # name can't be pulled out of a long unrelated phrase. An ANCHORED match is
+    # different evidence: when the shorter name is exactly how the longer one
+    # begins or ends, the longer is almost always the same entity described more
+    # fully ("Apollo 11" vs "Apollo 11 Passive Seismic Experiment"). Agent loops
+    # answer with those fuller forms far more often than a one-shot reader does,
+    # so a flat ratio floor silently penalises verbosity rather than error.
+    if ratio < 0.25:
         return False
     for i in range(len(lt) - len(st) + 1):
         if lt[i:i + len(st)] == st:
+            anchored = (i == 0 or i + len(st) == len(lt))
+            if ratio < 0.5 and not (anchored and len(st) >= 2):
+                continue
             nxt = lt[i + len(st)] if i + len(st) < len(lt) else ""
             if nxt and _VERSION_TOK.fullmatch(nxt):
                 continue  # version boundary — not the same entity
+            if nxt in _QUALIFIER_TOK:
+                continue  # the longer side is narrowed to one of a family
             return True
     return False
 

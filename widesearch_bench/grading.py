@@ -171,4 +171,6 @@ def grade(task: Task, run: ArmRun, evidence_text: str = "") -> Grade:
     g.detail["search_time_s"] = run.search_time_s
     g.detail["e2e_time_s"] = run.e2e_time_s
     g.detail["n_queries"] = run.n_queries
+    if run.subqueries:
+        g.detail["subqueries"] = run.subqueries
     return g

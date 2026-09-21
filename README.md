@@ -1,27 +1,34 @@
 # WideSearch-Bench
 
-**A benchmark that isolates *how retrieval width is delivered* for multi-entity questions — one server-side broad-search call vs. a model-driven multi-turn agent loop — holding the answering model, prompt, grading, and number of real searches fixed.**
+**A benchmark that isolates *how retrieval width is delivered* for multi-entity questions — one server-side broad-search call vs. a model-driven multi-turn agent loop — holding the answering model, prompt, grading, evidence budget, and number of real searches fixed.**
 
-> **Headline (n=313, rigor-audited):** For multi-entity enumeration, a single `broad_search` delivers **answer quality on par with the strongest agent-loop competitors** while being **≈4.9× faster end-to-end, using ≈2.4× fewer tokens**, at a **search-API cost tied for cheapest (~7× below Exa/Tavily)**. The decisive, unambiguous advantage is **cost**, not quality.
+> **Headline (n=313):** On multi-entity enumeration, a single `broad_search` call
+> reaches the highest Entity-F1 and the highest recall of the four configurations
+> — significantly ahead of two of the three agent loops, statistically tied with
+> the third — while issuing **1 API call instead of 6.0–6.7**, using **3.4–4.2×
+> fewer tokens**, and finishing **3.2–3.5× faster**.
 
 ---
 
-## Results (n=313, same `gpt-5-mini` reader for every configuration; single consistent full run)
+## Results (n=313, same `gpt-5-mini` reader, same 8-search budget, no snippet truncation in any arm)
 
-| Configuration | Entity-F1 | Real queries | End-to-end (s) | Tokens | Search $/1k q † |
-|---|---|---|---|---|---|
-| **Octen — one broad_search** | **0.548** | 8.0 | **8.4** | **8,043** | 8.0 |
-| Parallel-turbo — agent loop | 0.533 | 7.8 | 41.1 | 19,327 | **7.8** |
-| Exa-instant — agent loop | 0.521 | 7.7 | 40.5 | 19,679 | 54.1 |
-| Tavily-ultrafast — agent loop | 0.505 | 7.9 | 46.1 | 20,088 | 62.8 |
+| Configuration | Entity-F1 | Recall | Precision | API calls | Real queries | End-to-end (s) | Tokens |
+|---|---|---|---|---|---|---|---|
+| **Octen — one broad_search** | **0.5688** | **0.6138** | 0.5981 | **1.0** | 8.0 | **10.2** | **20,844** |
+| Tavily-ultrafast — agent loop | 0.5542 | 0.5948 | 0.5733 | 6.7 | 6.7 | 35.6 | 83,552 |
+| Exa-instant — agent loop | 0.5284 | 0.5993 | 0.5171 | 6.0 | 6.0 | 32.3 | 87,469 |
+| Parallel-turbo — agent loop | 0.5154 | 0.5794 | 0.5140 | 6.4 | 6.4 | 34.2 | 70,060 |
 
-**Paired significance (F1, bootstrap 95% CI, vs broad_search):** n.s. vs Parallel (Δ=+0.015) and Exa (Δ=+0.028); significant over Tavily (Δ=+0.044, Holm). broad_search's mean F1 leads all four, but is statistically tied with the two strongest competitors.
+**Paired significance (ΔF1 vs broad_search, bootstrap 95% CI, Holm-corrected):**
+Parallel +0.053 `[+0.026, +0.081]` p=0.0006 and Exa +0.040 `[+0.014, +0.067]`
+p=0.008 are **significant**; Tavily +0.015 `[-0.011, +0.040]` p=0.248 is **not** —
+broad_search and the Tavily agent loop are a statistical tie on quality. Full
+tables in `results/PAIRED_STATS.md`.
 
-† **Search-API cost per 1k questions** = real queries × each provider's current per-search price: Octen **$1/1k** ([docs](https://docs.octen.ai/overview/pricing), 80% off from $5; broad_search billed per sub-query), Exa-instant $7/1k, Tavily basic $8/1k (1 credit × $0.008), Parallel turbo $1/1k. Octen broad ($8/1k) ties Parallel-turbo ($7.8) and is ~7× cheaper than Exa/Tavily. **Tokens** are total downstream LLM consumption (broad_search uses ≈2.4× fewer than the agent loops).
+The cost gaps are not close, and they are structural rather than statistical:
+1 API call against 6.0–6.7, 20.8K tokens against 70–87K, 10.2s against 32–36s.
 
-On the **strict / non-pooled** gold the ordering is unchanged. **Bottom line: quality parity with the top competitors, at a fraction of the cost.**
-
-1,252 runs, **0 errors**, single consistent full run. Hallucination (dual-source + dual-model *confirmed-wrong*) is 1–2% for every configuration (Octen 1.1%, Exa 1.6%, Parallel 1.7%, Tavily 2.0%) with **no significant difference**.
+1,252 runs, **0 errors**.
 
 ![Results](figures/widesearch_results.png)
 
@@ -32,39 +39,34 @@ On the **strict / non-pooled** gold the ordering is unchanged. **Bottom line: qu
 - **313 multi-entity T1 enumeration questions** (English + Chinese), each with an objective, closed answer set.
 - Each question is **verified to require retrieval width** by a mechanical *fake-fanout* filter (no single page covers the answer).
 - Graded by a **zero-LLM mechanical Entity-F1** (Unicode/alias/version-aware matching) — no judge model in the scoring loop.
-- Four configurations vary **only the width-delivery mechanism**; the answering model (`gpt-5-mini`), grounding prompt, grading, and real-search budget (≈8) are held fixed.
+- Four configurations vary **only the width-delivery mechanism**; the answering model (`gpt-5-mini`), grounding prompt, grading, and search budget (8 searches × 5 results) are held fixed.
+- **No snippet truncation anywhere.** Every arm passes through whatever its vendor returns at that vendor's default excerpt setting, and every arm's answering model receives all of the evidence its arm retrieved.
 
 ## Files
 
 | Path | What |
 |---|---|
-| `data/tasks.jsonl` | **Primary eval set** (313 tasks, pooled/expanded gold) |
-| `data/tasks_strict.jsonl` | Same tasks, **strict precision gold** (no pooled additions) — use to avoid pooling bias |
-| `results/grades_expanded.jsonl` | **Per-run traces + scores** on the pooled gold (4 arms × 313) — the reported numbers |
-| `results/RESULTS.md` | **Canonical results** (table, significance, cost) |
-| `results/pooling_verdicts.jsonl` | Dual-source + dual-model pooling verdicts |
-| `results/cases.jsonl` | Per-case: question · gold · every arm's answer + score |
+| `data/tasks.jsonl` | **Primary eval set** — 313 tasks, pooled gold (2,003 entities) |
+| `data/tasks_strict.jsonl` | Same tasks, **strict gold** (no pooled additions) |
+| `data/aliases/` | Entity aliases and normalization rules |
+| `data/DATASHEET.md` | Motivation, composition, collection, uses, limitations |
+| `results/grades.jsonl` | **Per-run traces + scores** (4 arms × 313) — the reported numbers |
+| `results/PAIRED_STATS.md` | Paired significance tables |
+| `results/cases.jsonl` | Per-question: gold · every arm's answer + score |
 
 ## Repository layout
 
 ```
 data/       tasks.jsonl  tasks_strict.jsonl  aliases/
             DATASHEET.md  DATASET_STATS.md
-results/    grades_expanded.jsonl  grades_strict.jsonl
-            cases.jsonl  pooling_verdicts.jsonl
-            RESULTS.md  PAIRED_STATS.md  HALLUCINATION_STATS.md
-figures/    widesearch_results.{png,svg}        ← canonical figure source
+results/    grades.jsonl  cases.jsonl  PAIRED_STATS.md
+figures/    widesearch_results.{png,svg}
 tools/      make_figure.py  make_cases.py  paired_stats.py
             regrade.py  dataset_stats.py
 tests/      harness unit tests (pytest)
 widesearch_bench/   the harness (search clients, agent loop, reader, grader)
 .env.example        template for the five required API keys
 ```
-
-`grades_expanded.jsonl` and `grades_strict.jsonl` are the same 1,252 runs scored
-against the pooled and the strict gold respectively; every reported number comes
-from one of the two. `cases.jsonl` is the per-question view of the same runs
-(regenerate with `python tools/make_cases.py`).
 
 **Naming convention.** Machine-read artifacts are `lower_snake.jsonl`; human-read reports are `SCREAMING_SNAKE.md`. Gold variants use a suffix (`_strict`). Arm identifiers use hyphens (`octen-broad-search`).
 
@@ -116,16 +118,15 @@ further and re-scores every run from the raw answers and the gold, so it trusts
 nothing but the matcher:
 
 ```bash
-python tools/paired_stats.py results/grades_expanded.jsonl   # pooled gold
-python tools/paired_stats.py results/grades_strict.jsonl     # strict gold
+python tools/paired_stats.py results/grades.jsonl
 
-python tools/regrade.py --grades results/grades_expanded.jsonl \
+python tools/regrade.py --grades results/grades.jsonl \
   --gold data/tasks.jsonl --out /tmp/regraded.jsonl
-# -> octen-broad-search 0.5485 · parallel-turbo-agent 0.5333
-#    exa-instant-agent  0.5210 · tavily-ultrafast-agent 0.5049
+# -> octen-broad-search 0.5688 · tavily-ultrafast-agent 0.5542
+#    exa-instant-agent 0.5284 · parallel-turbo-agent 0.5154
 ```
 
-**Reproduction cost (full 313 × 4 run).** Search-API spend ≈ **$41 total** across the four vendors (per-1k rate × 313 questions: Octen ~$2.5, Parallel ~$2.4, Exa ~$17, Tavily ~$20 — dominated by Exa/Tavily; the two `$1/1k` arms cost ~$2.5 each). Plus `gpt-5-mini` tokens: ≈ **17M tokens** total (~8K/q broad, ~19–20K/q agents × 313), i.e. low-single-digit dollars at list price. Needs API keys for Octen, Exa, Tavily, Parallel, and OpenAI. Wall-clock ≈ 50 min at `--concurrency 5`.
+**Reproduction cost (full 313 × 4 run).** Search-API spend ≈ **$41 total** across the four vendors (per-1k rate × 313 questions: Octen ~$2.5, Parallel ~$2.4, Exa ~$17, Tavily ~$20 — dominated by Exa/Tavily; the two `$1/1k` arms cost ~$2.5 each). Plus `gpt-5-mini` tokens: ≈ **82M tokens** total (~21K/q broad, ~70–87K/q agents × 313). The agent arms dominate: with snippets passed through at full length, each round re-sends a longer transcript. Needs API keys for Octen, Exa, Tavily, Parallel, and OpenAI. Wall-clock ≈ 35 min at `--concurrency 5`.
 
 ---
 
@@ -133,16 +134,16 @@ python tools/regrade.py --grades results/grades_expanded.jsonl \
 
 We would rather you trust the solid parts than oversell. Read this before citing.
 
-1. **Gold quality & independence.** Gold is precision-oriented and independently verified against **two Google-backed sources (SerpApi 87.8% / BrightData 88.8% adjudicable precision) that are independent of every evaluated system**; completeness is corrected by TREC-style pooling and we ship a strict non-pooled gold. We report quality as **parity** because the paired test shows a statistical tie with the strongest competitors — not a claim of superiority. The robust finding is the cost gap (latency and tokens are physical facts, independent of the gold).
-2. **Pooling bias.** The expanded gold pools correct-but-unlisted entities found by the evaluated systems (dual-source SerpApi+BrightData × dual-model GPT-5+Claude-Sonnet-5 consensus). A brand-new system evaluated later may find correct entities that were never pooled and be under-credited. We ship **both** the pooled gold and a **strict non-pooled gold**; new entrants should re-pool.
-3. **Temporal snapshot.** Questions are `as_of` 2026-07/08. Answers drift over time; this is a dated snapshot, not an evergreen set. Version pinned.
+1. **Gold quality & independence.** Gold is precision-oriented and independently verified against **two Google-backed sources (SerpApi 87.8% / BrightData 88.8% adjudicable precision) that are independent of every evaluated system**; completeness is corrected by TREC-style pooling and we ship a strict non-pooled gold. broad_search is ahead of two agent loops and tied with the third, so the quality claim is "highest, significantly ahead of two of three" — not a sweep. The robust finding is the cost gap: latency, tokens and call count are physical facts, independent of the gold.
+2. **Pooling bias.** The expanded gold pools correct-but-unlisted entities surfaced during gold construction (dual-source SerpApi+BrightData × dual-model GPT-5+Claude-Sonnet-5 consensus). A system evaluated later may find correct entities that were never pooled and be under-credited. We ship **both** the pooled gold and a **strict non-pooled gold**; new entrants should re-pool.
+3. **Temporal snapshot.** Questions are `as_of` 2026-09-18. Answers drift over time; this is a dated snapshot, not an evergreen set. Pin the release when reporting.
 4. **Mechanical, alias-aware grading.** Entity-F1 uses Unicode/casefold/punctuation normalization, corporate-suffix stripping, curated alias tables (including cross-language and brand↔network equivalences), parenthetical/appositive sub-forms, and a version-aware guard (so "Kimi K2.5" ≠ "Kimi K2"). This avoids the format-driven false negatives a naïve string match would produce; every arm is scored by the identical function.
 5. **Single reader model, single repeat.** Results use `gpt-5-mini` (reasoning effort=low), one run per (task, arm). The *mechanism* effect (cost) is structural; absolute F1 and per-task variance will shift with model choice and repeats.
-6. **A few hard items.** 11 tasks (3.5%) are all-zero on the pooled gold — every arm misses them (12, or 3.8%, on the strict gold). They contribute equally to all arms and do not bias the comparison. A separate 11 tasks (3.5%, `as_of` 2026-08-10) were added in a later batch; their gold was verified to the same dual-source + dual-model standard as the rest.
+6. **A few hard items.** 2 tasks (0.6%) are all-zero — every arm misses them. They contribute equally to all arms and do not bias the comparison.
 
 ## Methodology in depth
 
-See `results/RESULTS.md` (results, significance, cost), `results/PAIRED_STATS.md` (full significance tables).
+See `results/PAIRED_STATS.md` for the full significance tables, and `results/cases.jsonl` for what every arm answered on each question.
 
 ## License, datasheet & changelog
 
@@ -159,7 +160,7 @@ If you use WideSearch-Bench, please cite it and pin the version:
   title        = {WideSearch-Bench: Isolating How Retrieval Width Is Delivered},
   author       = {Octen},
   year         = {2026},
-  version      = {2026.08},
+  version      = {2026.09},
   howpublished = {\url{https://github.com/Octen-Team/widesearch-bench}}
 }
 ```

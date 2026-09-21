@@ -89,7 +89,9 @@ class ArmRun:
     answer_matrix: dict[str, dict[str, str]] = field(default_factory=dict)  # T2
     answer_text: str = ""          # T3/T4 raw answer
     retrieved_urls: list[str] = field(default_factory=list)
+    subqueries: list[str] = field(default_factory=list)
     api_calls: int = 0           # billed API calls (broad_search = 1)
+    http_requests: int = 0       # requests actually issued, retries included
     n_queries: int = 0           # REAL searches performed (broad_search fans out to N sub-queries)
     latency_s: float = 0.0
     search_time_s: float = 0.0   # time spent in search calls (retrieval only)

@@ -3,15 +3,11 @@
 WideSearch-Bench results figure.
 
 Layout (option 3):
-  Row 1 : [ absolute Entity-F1, pooled + strict, marginal 95% CI ] [ paired ΔF1 vs broad_search ]
+  Row 1 : [ absolute Entity-F1, marginal 95% CI ] [ paired ΔF1 vs broad_search ]
   Row 2 : [ end-to-end latency ] [ downstream tokens ] [ search-API cost ]
 
-The two F1 panels answer different questions on purpose:
-  - left  : how good is each arm (marginal CIs -> read the level)
-  - right : is the gap real (paired CIs -> read the significance)
-Overlapping marginal intervals on the left do NOT contradict a significant
-paired delta on the right; the paired test removes per-question difficulty
-variance, which is most of the marginal spread.
+The two top panels answer different questions on purpose: the left shows absolute
+scores with marginal intervals, the right the paired test that decides significance.
 
 Usage:  python3 make_figure.py [--out PATH]
 """
@@ -25,38 +21,28 @@ import numpy as np
 from matplotlib.patches import Patch
 
 # ----------------------------------------------------------------------------
-# DATA  — everything below is transcribed from results/
+# DATA  — regenerated from results/grades.jsonl and results/PAIRED_STATS.md
 # ----------------------------------------------------------------------------
 
-ARMS = ["Octen\nbroad_search", "Parallel\nturbo agent", "Exa\ninstant agent", "Tavily\nbasic agent"]
-SHORT = ["Octen", "Parallel", "Exa", "Tavily"]
+ARMS = ["Octen\nbroad_search", "Exa\ninstant agent", "Parallel\nturbo agent", "Tavily\nultrafast agent"]
+SHORT = ["Octen", "Exa", "Parallel", "Tavily"]
 
-F1_POOLED = [0.548, 0.533, 0.521, 0.505]
-F1_STRICT = [0.545, 0.503, 0.490, 0.480]
+F1_POOLED = [0.5688, 0.5284, 0.5154, 0.5542]
+API_CALLS = [1.0, 6.0, 6.4, 6.7]
+LATENCY_S = [10.2, 32.3, 34.2, 35.6]
+TOKENS = [20844, 87469, 70060, 83552]
 
-LATENCY_S = [8.4, 41.1, 40.5, 46.1]
-TOKENS = [8043, 19327, 19679, 20088]
-COST_PER_1K = [8.0, 7.8, 54.1, 62.8]
-
-# Paired deltas vs broad_search, pooled gold: (point, ci_lo, ci_hi, holm_p)
+# Paired deltas vs broad_search: (point, ci_lo, ci_hi, holm_p) -- these are the
+# same numbers results/PAIRED_STATS.md reports; regenerate both together.
 PAIRED_POOLED = {
-    "Parallel": (0.015, -0.014, 0.045, 0.31),
-    "Exa":      (0.028, -0.006, 0.060, 0.20),
-    "Tavily":   (0.044, +0.012, 0.075, 0.028),
+    "Exa":      (0.040, 0.014, 0.067, 0.0082),
+    "Parallel": (0.053, 0.026, 0.081, 0.0006),
+    "Tavily":   (0.015, -0.011, 0.040, 0.2481),
 }
-# Strict gold deltas (point estimates only; Holm p <= 0.007 for all three)
-PAIRED_STRICT_POINT = {"Parallel": 0.042, "Exa": 0.055, "Tavily": 0.065}
 
-# ---------------------------------------------------------------------------
-# >>> REPLACE THESE <<<
-# Per-arm MARGINAL 95% bootstrap CIs for pooled F1, as half-widths.
-# These are placeholders derived from an assumed per-question sd of 0.30 at
-# n=313 (SE ~ 0.017 -> +-0.033). Paste your real values and set
-# PLACEHOLDER_CIS = False to drop the watermark.
-PLACEHOLDER_CIS = False
-# real per-arm marginal 95% bootstrap CI half-widths (10k resamples over 313 items)
-CI_POOLED_HALFWIDTH = [0.032, 0.034, 0.035, 0.035]
-CI_STRICT_HALFWIDTH = [0.034, 0.035, 0.036, 0.035]
+# Per-arm marginal 95% bootstrap CI half-widths for pooled F1
+# (10k resamples over the 313 items, same seed as PAIRED_STATS.md).
+CI_POOLED_HALFWIDTH = [0.0278, 0.0310, 0.0315, 0.0287]
 # ---------------------------------------------------------------------------
 
 TEAL = "#0F8A80"
@@ -114,24 +100,18 @@ def main(out_path):
         left=0.055, right=0.968, top=0.855, bottom=0.075,
     )
 
-    # ---------------- Panel A: absolute F1, pooled + strict -----------------
+    # ---------------- Panel A: absolute Entity-F1 ---------------------------
     axA = fig.add_subplot(gs[0, 0:2])
     x = np.arange(4)
     w = 0.34
     ebar = dict(elinewidth=1.2, capsize=3.5, capthick=1.2, ecolor=INK, alpha=0.85)
 
-    axA.bar(x - w / 2, F1_POOLED, w, yerr=CI_POOLED_HALFWIDTH,
+    axA.bar(x, F1_POOLED, w * 1.6, yerr=CI_POOLED_HALFWIDTH,
             color=[TEAL] + [GREY_LIGHT] * 3, edgecolor="white", linewidth=0.8,
-            error_kw=ebar, label="pooled gold")
-    axA.bar(x + w / 2, F1_STRICT, w, yerr=CI_STRICT_HALFWIDTH,
-            color=[TEAL_LIGHT] + [GREY] * 3, edgecolor="white", linewidth=0.8,
-            hatch="///", error_kw=ebar, label="strict gold")
-
-    for xi, (p, s) in enumerate(zip(F1_POOLED, F1_STRICT)):
-        axA.text(xi - w / 2, p + CI_POOLED_HALFWIDTH[xi] + 0.008, f"{p:.3f}",
-                 ha="center", fontsize=8, fontweight="bold" if xi == 0 else "normal")
-        axA.text(xi + w / 2, s + CI_STRICT_HALFWIDTH[xi] + 0.008, f"{s:.3f}",
-                 ha="center", fontsize=8, color=GREY)
+            error_kw=ebar)
+    for xi, v in enumerate(F1_POOLED):
+        axA.text(xi, v + 0.045, f"{v:.3f}", ha="center", fontsize=9,
+                 fontweight="bold" if xi == 0 else "normal")
 
     axA.set_xticks(x)
     axA.set_xticklabels(ARMS, fontsize=8.5)
@@ -139,10 +119,6 @@ def main(out_path):
     axA.set_ylim(0, 0.68)
     style(axA, "Answer quality  —  Entity-F1",
           "bars = mean; error bars = marginal 95% bootstrap CI (see note)")
-    axA.legend(handles=[
-        Patch(facecolor=TEAL, label="pooled gold"),
-        Patch(facecolor=TEAL_LIGHT, hatch="///", label="strict gold"),
-    ], loc="upper right", frameon=False, fontsize=8.5, ncol=2)
 
     # ---------------- Panel B: paired deltas --------------------------------
     axB = fig.add_subplot(gs[0, 2])
@@ -157,8 +133,6 @@ def main(out_path):
         axB.plot([lo, hi], [yi, yi], color=col, lw=2.6, solid_capstyle="round", zorder=3)
         axB.plot([pt], [yi], "o", color=col, ms=7, zorder=4,
                  markeredgecolor="white", markeredgewidth=1.1)
-        axB.plot([PAIRED_STRICT_POINT[name]], [yi], "D", color=col, ms=5,
-                 alpha=0.55, zorder=4, markeredgecolor="white", markeredgewidth=0.8)
         axB.text(hi + 0.006, yi, f"{'*' if sig else 'n.s.'}  p={p:.2f}",
                  va="center", fontsize=8, color=col,
                  fontweight="bold" if sig else "normal")
@@ -175,7 +149,7 @@ def main(out_path):
     axB.tick_params(length=0)
     axB.set_title("Is the gap real?  —  paired test", fontsize=10.5,
                   fontweight="bold", loc="left", pad=14)
-    axB.text(0, 1.02, "● pooled (95% CI, Holm-corrected)   ◆ strict, point est.",
+    axB.text(0, 1.02, "● ΔF1 with 95% CI, Holm-corrected",
              transform=axB.transAxes, fontsize=8, color=GREY, va="bottom")
 
     # ---------------- Row 2 --------------------------------------------------
@@ -192,17 +166,17 @@ def main(out_path):
     axD.set_ylabel("tokens per question")
 
     axE = fig.add_subplot(gs[1, 2])
-    bar_panel(axE, COST_PER_1K, "Search-API cost",
-              "USD / 1k questions, PAYG  ·  rate card",
-              lambda v: f"${v:.1f}")
-    axE.set_ylabel("USD / 1k questions")
+    bar_panel(axE, API_CALLS, "API calls per question",
+              "one call vs. one per agent round  ·  structural",
+              lambda v: f"{v:.1f}")
+    axE.set_ylabel("API calls")
 
     # ---------------- Titles + notes ----------------------------------------
     fig.text(0.055, 0.955, "WideSearch-Bench: one broad search vs. an agent loop",
              fontsize=15, fontweight="bold", ha="left")
     fig.text(0.055, 0.915,
              "313 enumeration questions · same answering model (gpt-5-mini), prompt and scorer · "
-             "~8 real queries per question in every arm",
+             "same 8-search budget, no snippet truncation in any arm",
              fontsize=9, color=GREY, ha="left")
 
     fig.text(0.055, 0.012,
@@ -210,16 +184,10 @@ def main(out_path):
              "where overlap of marginal intervals does not imply a null result.",
              fontsize=8, color=GREY, ha="left")
 
-    if PLACEHOLDER_CIS:
-        fig.text(0.5, 0.5, "PREVIEW\nmarginal CIs are placeholders",
-                 fontsize=44, color="#E11D48", alpha=0.16, ha="center", va="center",
-                 rotation=24, fontweight="bold", zorder=99)
 
     fig.savefig(out_path, dpi=200, facecolor="white")
     fig.savefig(out_path.replace(".png", ".svg"), facecolor="white")
     print("wrote", out_path, "and", out_path.replace(".png", ".svg"))
-    if PLACEHOLDER_CIS:
-        print("WARNING: PLACEHOLDER_CIS is True — marginal error bars are NOT your real numbers.")
 
 
 if __name__ == "__main__":
