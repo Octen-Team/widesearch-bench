@@ -86,11 +86,11 @@ def build():
     lines = ['Pooled references:', '',
              '| Configuration | F1 | Precision | Recall | API calls | Searches | Tokens | E2E (s) | Source domains |',
              '|---|---:|---:|---:|---:|---:|---:|---:|---:|']
-    for arm,s in stats.items():
+    for arm,s in sorted(stats.items(), key=lambda item: (-item[1]['f1'], item[0])):
         lines.append(f"| {LABEL[arm]} | {s['f1']:.4f} | {s['precision']:.4f} | {s['recall']:.4f} | {s['api_calls']:.2f} | {s['n_queries']:.2f} | {s['downstream_tokens']:,.0f} | {s['e2e_time_s']:.2f} | {s['source_diversity']:.2f} |")
     lines += ['', '<details>', '<summary>Strict reference scores</summary>', '',
               '| Configuration | F1 | Precision | Recall |', '|---|---:|---:|---:|']
-    for arm,s in strict_stats.items():
+    for arm,s in sorted(strict_stats.items(), key=lambda item: (-item[1]['f1'], item[0])):
         lines.append(f"| {LABEL[arm]} | {s['f1']:.4f} | {s['precision']:.4f} | {s['recall']:.4f} |")
     lines += ['', '</details>']
     best = max(stats, key=lambda a: stats[a]['f1'])

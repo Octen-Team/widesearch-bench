@@ -10,7 +10,7 @@
 
 ## Evaluation
 
-Every configuration uses the same questions, answering model (`gpt-5-mini`, low reasoning effort), shared evidence-grounding rules and Entity-F1 scorer. Entity identities and aliases are shared across configurations. Results include both reference sets and all six pairwise comparisons, with Holm correction; configurations appear alphabetically with equal visual emphasis.
+Every configuration uses the same questions, answering model (`gpt-5-mini`, low reasoning effort), shared evidence-grounding rules and Entity-F1 scorer. Entity identities and aliases are shared across configurations. Results include both reference sets and all six pairwise comparisons, with Holm correction; tables are sorted by descending F1 with equal visual emphasis.
 
 Octen uses broad_search followed by a reader; Exa, Parallel and Tavily use search-agent loops. The configured limit is eight subqueries/search actions with five retained results each. Backends, excerpts and answering workflows differ. See [configuration and measurement details](data/PROVENANCE.md).
 
@@ -21,20 +21,20 @@ Pooled references:
 
 | Configuration | F1 | Precision | Recall | API calls | Searches | Tokens | E2E (s) | Source domains |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Exa-instant | 0.4835 | 0.4726 | 0.5484 | 6.05 | 6.05 | 88,031 | 32.47 | 15.34 |
 | Octen broad_search | 0.5428 | 0.5709 | 0.5849 | 1.00 | 7.98 | 20,911 | 10.20 | 22.73 |
-| Parallel-turbo | 0.4632 | 0.4620 | 0.5204 | 6.46 | 6.46 | 70,511 | 34.39 | 13.21 |
 | Tavily-ultrafast | 0.4920 | 0.5039 | 0.5316 | 6.72 | 6.72 | 83,552 | 35.63 | 17.26 |
+| Exa-instant | 0.4835 | 0.4726 | 0.5484 | 6.05 | 6.05 | 88,031 | 32.47 | 15.34 |
+| Parallel-turbo | 0.4632 | 0.4620 | 0.5204 | 6.46 | 6.46 | 70,511 | 34.39 | 13.21 |
 
 <details>
 <summary>Strict reference scores</summary>
 
 | Configuration | F1 | Precision | Recall |
 |---|---:|---:|---:|
-| Exa-instant | 0.4542 | 0.4218 | 0.5507 |
 | Octen broad_search | 0.5342 | 0.5352 | 0.6124 |
-| Parallel-turbo | 0.4361 | 0.4130 | 0.5250 |
 | Tavily-ultrafast | 0.4655 | 0.4537 | 0.5336 |
+| Exa-instant | 0.4542 | 0.4218 | 0.5507 |
+| Parallel-turbo | 0.4361 | 0.4130 | 0.5250 |
 
 </details>
 
